@@ -60,7 +60,7 @@ export default function Navbar() {
                 setCart(cart);
             });
         }
-    }, [user]);
+    }, [setCart, user]);
 
     useEffect(() => {
         const changecolor = () => {

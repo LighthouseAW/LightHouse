@@ -28,6 +28,8 @@ export default function SignUp({form, handleChange, setClick}) {
         })
     }
 
+    const sub = "I want to subscribe to Jonny Nice's newsletter and I have read and accept the"
+
     return (
         <div className="h-screen ">
             <h1 className="grid grid-cols-2 font-bold text-4xl pb-2 pt-80">
@@ -51,7 +53,7 @@ export default function SignUp({form, handleChange, setClick}) {
                             <input className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-none bg-white checked:bg-black checked:border-black focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckDefault" />
                             <div className="flex">
                                 <label className="form-check-label text-gray-800 inline-block" for="flexCheckDefault">
-                                I want to subscribe to Jonny Nice's newsletter and I have read and accept the <em className="font-medium underline not-italic">Privacy Policy</em>.
+                                {sub} <em className="font-medium underline not-italic">Privacy Policy</em>.
                                 </label>
                             </div>
                         </div>

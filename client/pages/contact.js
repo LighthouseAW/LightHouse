@@ -9,12 +9,14 @@ export default function Contact() {
       setSubmitted(true);
     }, 100);
   };
+  const ty = "Thank You!"
+  const it = "We'll be in touch soon."
 
   if (submitted) {
     return (
       <>
-        <h2>Thank you!</h2>
-        <div>We'll be in touch soon.</div>
+        <h2>{ty}</h2>
+        <div>{it}</div>
       </>
     );
   }  else {

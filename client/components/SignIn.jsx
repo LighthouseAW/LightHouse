@@ -36,6 +36,8 @@ export default function SignIn({ setClick }) {
         setForm({...form, [e.target.name]: e.target.value})
     }
 
+    const act = "Don't have an account?"
+
 
     return (
         <div className="h-screen">
@@ -49,7 +51,7 @@ export default function SignIn({ setClick }) {
                     <div className="items-center mt-2 w-[500px]">
                         <button className='w-[500px] bg-black rounded-full text-white text-base font-medium m-2 py-3 px-10 mb-5 mt-5'>Enter</button>
                         <h1>{errors}</h1>
-                        <p className="text-center">Don't have an account? <button onClick={() => setClick(true)}><em className="font-medium underline not-italic">Create one</em></button></p>
+                        <p className="text-center">{act} <button onClick={() => setClick(true)}><em className="font-medium underline not-italic">Create one</em></button></p>
                     </div>
                 </form>
             </div>
