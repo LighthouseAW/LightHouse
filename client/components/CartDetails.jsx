@@ -10,6 +10,7 @@ import Link from 'next/link';
 import CartItemCard from './CartItemCard'
 import ArrowLeft from '../public/icons/arrow-left--dark.svg'
 import CartContext from '../contexts/CartContext';
+import { checkout } from "./Checkout"
 
 
 export default function CartDetails () {
@@ -47,7 +48,7 @@ export default function CartDetails () {
 
     if (!cart) {
         return (
-            <div className="mt-32 w-screen">
+        <div className="mt-32 w-screen">
             <div className="ml-32">
                 <h1 className="font-bold text-4xl mt-5">Shopping Cart</h1>
                 <Link href="/instrumentals" className='flex items-center mt-5 -ml-4 cursor-pointer '>
@@ -108,7 +109,17 @@ export default function CartDetails () {
                         </tbody>
                     </table>
                     <div className='items-center text-center mt-2'>
-                        <button className='bg-black text-white rounded-full text-sm m-2 py-3 px-64'>Continue</button>
+                        <button onClick={(()=>{
+                        checkout({
+                            lineItems: [{
+                                price: "price_1MZ0Z9DhAuw7r76Wl0KuxzbN"
+                            }]
+                        })
+                            })}
+                            className='bg-black text-white rounded-full text-sm m-2 py-3 px-64'
+                        >
+                            Continue
+                        </button>
                     </div>
                 </div>
             </div>
