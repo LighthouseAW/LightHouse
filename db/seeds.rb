@@ -9,6 +9,7 @@
 AudioFile.destroy_all
 Instrumental.destroy_all
 Genre.destroy_all
+Lease.destroy_all
 
 
 g1 = Genre.create(name: "Drill")
