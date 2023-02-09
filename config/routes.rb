@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  namespace :api do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
     resources :instrumentals, only: [:index, :show]
     resources :audio_files, only: [:index, :show]
@@ -20,6 +19,5 @@ Rails.application.routes.draw do
     delete "/logout", to: "sessions#destroy"
     get "/me", to: "users#show"
     post "/signup", to: "users#create"
-  end
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 end
