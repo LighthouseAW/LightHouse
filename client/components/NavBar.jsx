@@ -116,7 +116,7 @@ export default function Navbar() {
                     {color == 'transparent' ? <Image src={SearchIcon} alt="Search Icon" width={20} height={20} /> : <Image src={SearchDark} alt="Search Icon" width={30} height={30} />}
                 </Link>
             </div>
-            {user?.email != "Guest" ? <div>
+            {user?.email != "Guest" || user == null ? <div>
                 {color == 'transparent' ?
                 <Link href="/" onClick={handleLogOut} className="px-5 text-white">
                     Logout

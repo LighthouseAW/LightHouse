@@ -12,7 +12,7 @@ export default function account({user, handleChange, setClick, form}) {
 
         return (
             <>
-            {user?.email === "Guest" || user?.email === null ?
+            {user?.email === "Guest" || user == null ?
             <div className="h-screen">
                 <h1 className="grid grid-cols-2 font-bold text-4xl pb-2 pt-80">
                     Account
