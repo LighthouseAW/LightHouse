@@ -21,6 +21,8 @@ class Api::UsersController < ApplicationController
     end
 
     def create
+        guest if !session[:user_id]
+
         user = User.create!(user_params)
         user.carts.create!
         session[:user_id] = user.id
@@ -43,12 +45,6 @@ class Api::UsersController < ApplicationController
     def find_user
         @user = User.find(params[:id])
     end
-
-    # def guest_user
-    #     @guest = User.new(:email => "Guest" )
-    #     @guest.save(:validate => false)
-    #     CartDetails.create(user_id: guest.id)
-    # end
 
     def user_params
         params.permit(:email, :password, :password_confirmation)
