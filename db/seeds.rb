@@ -16,16 +16,16 @@
 
 # g1 = Genre.create(name: "Drill")
 
-# i1 = Instrumental.create(title: "Vile", picture: "", info: "about this track", genre: g1)
-# i2 = Instrumental.create(title: "Ritual", picture: "", info: "about this track", genre: g1)
+i1 = Instrumental.create(title: "Vile", picture: "", info: "about this track", genre: g1)
+i2 = Instrumental.create(title: "Ritual", picture: "", info: "about this track", genre: g1)
 # i3 = Instrumental.create(title: "Idols", picture: "", info: "about this track", genre: g1)
 
-# l1 = Lease.create(contract_info: 'mp3 lease, unlimited use', price: 40)
-# l2 = Lease.create(contract_info: 'mp3 lease, unlimited use', price: 40)
+l1 = Lease.create(contract_info: 'mp3 lease, unlimited use', price: 40)
+l2 = Lease.create(contract_info: 'mp3 lease, unlimited use', price: 40)
 # l3 = Lease.create(contract_info: 'mp3 lease, unlimited use', price: 40)
 
-# i1mp3 = AudioFile.create(instrumental_id: i1.id, lease: l1)
-# i2mp3 = AudioFile.create(instrumental_id: i2.id, lease: l2)
+i1mp3 = AudioFile.create(instrumental_id: i1.id, lease: l1)
+i2mp3 = AudioFile.create(instrumental_id: i2.id, lease: l2)
 # i3mp3 = AudioFile.create(instrumental_id: i3.id, lease: l3)
 
 # i1mp3.file.attach(io: File.open('./public/Vile x train x flemps.mp3'), filename: 'Vile x train x flemps.mp3', content_type: 'audio/mp3')
