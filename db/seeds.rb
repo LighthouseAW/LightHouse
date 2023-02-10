@@ -28,7 +28,7 @@ i3mp3 = AudioFile.create(instrumental_id: i3.id, lease: l3)
 
 # i1mp3.file.attach(io: File.open('./public/Vile x train x flemps.mp3'), filename: 'Vile x train x flemps.mp3', content_type: 'audio/mp3')
 # i2mp3.file.attach(io: File.open('./public/ritual.mp3'), filename: 'Again.mp3', content_type: 'audio/mp3')
-# i3mp3.file.attach(io: File.open('./public/khxncollab.mp3'), filename: 'khxncollab.mp3', content_type: 'audio/mp3')
+i3mp3.file.attach(io: File.open('./public/khxncollab.mp3'), filename: 'khxncollab.mp3', content_type: 'audio/mp3')
 
 # ian = User.create(email: 'ianholsteen@gmail.com', password: '67508rhys')
 

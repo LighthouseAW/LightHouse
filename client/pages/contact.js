@@ -21,6 +21,8 @@ export default function Contact() {
     );
   }  else {
 
+    const message = "Send me a message, I'll get back to you as soon as possible "
+
   return (
     <div className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover bg-home">
             <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/50 z-[2]"/>
@@ -37,7 +39,7 @@ export default function Contact() {
             <h2 className="text-6xl font-bold">Contact</h2>
             </div>
             <div>
-            <p className="py-5 text-xl">Send me a message, I'll get back to you as soon as possible </p>
+            <p className="py-5 text-xl">{message}</p>
             </div>
         <div>
             <input
