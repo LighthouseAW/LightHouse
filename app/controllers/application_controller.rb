@@ -2,8 +2,9 @@ class ApplicationController < ActionController::API
   include ActionController::Cookies
   rescue_from ActiveRecord::RecordNotFound, with: :not_found_response
   rescue_from ActiveRecord::RecordInvalid, with: :invalid_response
-  before_action :authorize
   before_action :guest
+  before_action :authorize
+
 
   private
 
