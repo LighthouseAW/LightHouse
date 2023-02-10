@@ -58,7 +58,7 @@ export default function CartDetails () {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ charge: charge, price: price * 100 })
+            body: JSON.stringify({ charge: charge, price: total * 100 })
         };
     
         fetch(CHARGES_URL, config)
