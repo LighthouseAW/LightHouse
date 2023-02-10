@@ -11,11 +11,6 @@ Rails.application.routes.draw do
     end
     resources :leases
 
-
-
-
-  # Defines the root path route ("/")
-  # root "articles#index"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
     get "/me", to: "users#show"
