@@ -1,7 +1,6 @@
-import React, { useState } from "react"
+import React from "react"
 
 export default function account({user, handleChange, setClick, form}) {
-    const [errors, setErrors] = useState([]);
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -68,7 +67,6 @@ export default function account({user, handleChange, setClick, form}) {
                             </div>
                         </div>
                         <button className='w-[500px] bg-black rounded-full text-white text-base font-medium m-2 py-3 px-10 mb-5 mt-5'>Register</button>
-                        <h1>{errors}</h1>
                         <p className="text-center">Already have an account? <button onClick={() => setClick(false)}><em className="font-medium underline not-italic">Log in</em></button></p>
                     </div>
                 </form>
