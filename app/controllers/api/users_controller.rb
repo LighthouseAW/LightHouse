@@ -1,14 +1,13 @@
 class Api::UsersController < ApplicationController
+    skip_before_action :guest, only: [:create, :show, :index, :update, :destroy]
     skip_before_action :authorize, only: [:create, :guest, :show, :index]
     before_action :find_user, only: [:update, :destroy]
-    before_action :guest, only: [:show]
 
     def index
         render json: User.all
     end
 
     def show
-        guest if !session[:user_id]
         authorize
         render json: @current_user
     end
