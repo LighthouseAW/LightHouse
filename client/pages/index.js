@@ -2,14 +2,17 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import Carousel from '../components/Carousel'
 import Hero from '../components/Hero'
-
+import React, { useEffect } from 'react'
 import { loadStripe } from "@stripe/stripe-js"
 import { Elements } from '@stripe/react-stripe-js'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  return (
+
+  const stripe = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
+
+   return (
     <>
       <Head>
         <title>Jonny Nice Productions</title>

@@ -11,6 +11,7 @@ import CartItemCard from './CartItemCard'
 import ArrowLeft from '../public/icons/arrow-left--dark.svg'
 import CartContext from '../contexts/CartContext';
 import { checkout } from "./Checkout"
+import StripeCheckout from 'react-stripe-checkout';
 
 
 export default function CartDetails () {
@@ -45,6 +46,26 @@ export default function CartDetails () {
             return;
         }
     }, [cart]);
+
+    const onToken = (token) => {
+
+        const charge = {
+            token: token.id
+        };
+    
+        const config = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ charge: charge, price: price * 100 })
+        };
+    
+        fetch(CHARGES_URL, config)
+        .then(res => res.json())
+        .then(console.log)
+    }
+    
 
     if (!cart) {
         return (
@@ -121,6 +142,10 @@ export default function CartDetails () {
                         >
                             Continue
                         </button>
+                        <StripeCheckout
+                            token={onToken}
+                            stripeKey={process.env.REACT_APP_STRIPE_KEY}
+                        />
                     </div>
                 </div>
             </div>
