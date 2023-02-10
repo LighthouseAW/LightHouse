@@ -9,10 +9,11 @@ class ApplicationController < ActionController::API
 
   def guest
     return if session[:user_id]
-    @guest = User.find_or_create_by(email: "Guest")
+    @guest = User.new(:email => "Guest")
+    @guest.save(validate: false)
     session[:user_id] = @guest.id
     carts = @guest.carts.create!
-  end
+end
 
 
   def authorize
