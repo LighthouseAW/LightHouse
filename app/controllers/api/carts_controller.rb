@@ -2,7 +2,7 @@ class Api::CartsController < ApplicationController
 
     before_action :find_carts, only: [:create, :show]
 
-    # skip_before_action :authorize
+    skip_before_action :authorize
 
     def index
         render json: Cart.all

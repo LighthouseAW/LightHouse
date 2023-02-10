@@ -1,6 +1,6 @@
 class Api::UsersController < ApplicationController
     skip_before_action :guest, only: [:create, :show, :index, :update, :destroy]
-    # skip_before_action :authorize, only: [:create, :guest, :show, :index]
+    skip_before_action :authorize, only: [:create, :guest, :show, :index]
     before_action :find_user, only: [:update, :destroy]
 
     def index
@@ -8,6 +8,12 @@ class Api::UsersController < ApplicationController
     end
 
     def show
+        if session[:user_id].nil?
+            @guest = User.new(:email => "Guest")
+            @guest.save(validate: false)
+            session[:user_id] = @guest.id
+            carts = @guest.carts.create!
+        end
         authorize
         render json: @current_user
     end
