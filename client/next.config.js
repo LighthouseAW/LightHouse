@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    unoptimized: true,
+  },
 }
-
 module.exports = {
   async rewrites() {
     return [
@@ -11,5 +14,8 @@ module.exports = {
         destination: 'http://localhost:3000/:path*'
       },
     ]
+  },
+  images: {
+    unoptimized: true,
   },
 }

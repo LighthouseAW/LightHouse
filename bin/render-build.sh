@@ -8,7 +8,7 @@ bundle install
 
 npm i --prefix client && npm run build --prefix client
 
-cp -a client/.next/. public/
+cp -a client/out/_next/. public/
 
 
 bundle exec rake db:migrate
