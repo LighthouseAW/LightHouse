@@ -1,8 +1,11 @@
-
+import {useStripe, useElements, PaymentElement} from '@stripe/react-stripe-js';
 
 export default function Checkout() {
     const { initPaymentSheet, presentPaymentSheet } = useStripe();
     const [loading, setLoading] = useState(false);
+    const stripe = useStripe();
+    const elements = useElements();
+
 
     const fetchPaymentSheetParams = async () => {
         const response = await fetch(`${API_URL}/payment-sheet`, {
