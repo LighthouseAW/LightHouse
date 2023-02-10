@@ -10,7 +10,7 @@ import Link from 'next/link';
 import CartItemCard from './CartItemCard'
 import ArrowLeft from '../public/icons/arrow-left--dark.svg'
 import CartContext from '../contexts/CartContext';
-import { checkout } from "./Checkout"
+import Checkout from "./Checkout"
 import StripeCheckout from 'react-stripe-checkout';
 
 
@@ -47,24 +47,24 @@ export default function CartDetails () {
         }
     }, [cart]);
 
-    const onToken = (token) => {
+    // const onToken = (token) => {
 
-        const charge = {
-            token: token.id
-        };
+    //     const charge = {
+    //         token: token.id
+    //     };
     
-        const config = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ charge: charge, price: total * 100 })
-        };
+    //     const config = {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify({ charge: charge, price: total * 100 })
+    //     };
     
-        fetch(CHARGES_URL, config)
-        .then(res => res.json())
-        .then(console.log)
-    }
+    //     fetch(CHARGES_URL, config)
+    //     .then(res => res.json())
+    //     .then(console.log)
+    // }
     
 
     if (!cart) {
@@ -142,8 +142,7 @@ export default function CartDetails () {
                         >
                             Continue
                         </button>
-                        <StripeCheckout
-                            token={onToken}
+                        <Checkout
                             stripeKey={process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}
                         />
                     </div>
