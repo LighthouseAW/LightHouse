@@ -9,10 +9,12 @@ export default function About() {
                     Jonny moved to LA in late 2018 and has been producing and writing for artists such as MARG, Sunny Malouf, B'Noir, The Brodcast, BlkSknn, and more.`
 
     return(
-        <div className="">
-            <p>
-                {text}
-            </p>
+        <div className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover bg-home">
+            <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/50 z-[2]"/>
+                <div className="p-5 text-white z-[2] text-center w-[900px]">
+                    <h2 className="text-6xl font-bold">*picture</h2>
+                    <p className="py-5 text-xl">{text}</p>
+            </div>
         </div>
     )
 }

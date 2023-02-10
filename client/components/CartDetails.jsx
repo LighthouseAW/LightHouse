@@ -10,10 +10,8 @@ import Link from 'next/link';
 import CartItemCard from './CartItemCard'
 import ArrowLeft from '../public/icons/arrow-left--dark.svg'
 import CartContext from '../contexts/CartContext';
-import Checkout from "./Checkout"
+import { checkout } from "./Checkout"
 import StripeCheckout from 'react-stripe-checkout';
-import {ElementsConsumer, PaymentElement} from '@stripe/react-stripe-js';
-
 
 
 export default function CartDetails () {
@@ -34,7 +32,7 @@ export default function CartDetails () {
 
     const createCartItems = cart?.map((cartItem) => {
         console.log(cartItem)
-        // total += cartItem.lease.price
+        total += cartItem.lease.price
         return <CartItemCard
             key={cartItem.id}
             cartItem={cartItem}
@@ -49,24 +47,24 @@ export default function CartDetails () {
         }
     }, [cart]);
 
-    // const onToken = (token) => {
+    const onToken = (token) => {
 
-    //     const charge = {
-    //         token: token.id
-    //     };
+        const charge = {
+            token: token.id
+        };
     
-    //     const config = {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify({ charge: charge, price: total * 100 })
-    //     };
+        const config = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ charge: charge, price: total * 100 })
+        };
     
-    //     fetch(CHARGES_URL, config)
-    //     .then(res => res.json())
-    //     .then(console.log)
-    // }
+        fetch(CHARGES_URL, config)
+        .then(res => res.json())
+        .then(console.log)
+    }
     
 
     if (!cart) {
@@ -132,7 +130,7 @@ export default function CartDetails () {
                         </tbody>
                     </table>
                     <div className='items-center text-center mt-2'>
-                        {/* <button onClick={(()=>{
+                        <button onClick={(()=>{
                         checkout({
                             lineItems: [{
                                 price: "price_1MZ0Z9DhAuw7r76Wl0KuxzbN",
@@ -143,12 +141,11 @@ export default function CartDetails () {
                             className='bg-black text-white rounded-full text-sm m-2 py-3 px-64'
                         >
                             Continue
-                        </button> */}
-                        <ElementsConsumer>
-                        <Checkout
+                        </button>
+                        <StripeCheckout
+                            token={onToken}
                             stripeKey={process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}
                         />
-                        </ElementsConsumer>
                     </div>
                 </div>
             </div>
