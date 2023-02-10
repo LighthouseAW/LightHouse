@@ -30,6 +30,8 @@
 
 /public
 
+/public/audio
+
 /.env*local
 
 node_modules
