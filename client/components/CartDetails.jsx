@@ -144,7 +144,7 @@ export default function CartDetails () {
                         </button>
                         <StripeCheckout
                             token={onToken}
-                            stripeKey={process.env.REACT_APP_STRIPE_KEY}
+                            stripeKey={process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}
                         />
                     </div>
                 </div>
