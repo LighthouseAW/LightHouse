@@ -8,14 +8,15 @@ class Api::UsersController < ApplicationController
     end
 
     def show
-        if session[:user_id].nil?
-            @guest = User.new(:email => "Guest")
+        user = User.find_by(id: session[:user_id])
+        if user
+            render json: user
+        else
+            @guest = User.new(email: "Guest")
             @guest.save(validate: false)
             session[:user_id] = @guest.id
-            carts = @guest.carts.create!
+            render json: @guest
         end
-        authorize
-        render json: @current_user
     end
 
     def guest
