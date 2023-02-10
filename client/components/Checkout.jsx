@@ -1,5 +1,5 @@
 import {useStripe, useElements, PaymentElement} from '@stripe/react-stripe-js';
-import {ElementsConsumer, PaymentElement} from '@stripe/react-stripe-js';
+import {ElementsConsumer} from '@stripe/react-stripe-js';
 
 export default function Checkout() {
     const { initPaymentSheet, presentPaymentSheet } = useStripe();
@@ -65,14 +65,12 @@ export default function Checkout() {
 
     return (
         <div>
-             <ElementsConsumer>
                 <button
                     variant="primary"
                     disabled={!loading}
                     title="Checkout"
                     onPress={openPaymentSheet}
                 />
-            </ElementsConsumer>
         </div>
     )
 }
