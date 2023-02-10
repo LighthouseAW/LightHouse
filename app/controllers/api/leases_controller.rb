@@ -1,4 +1,4 @@
-class LeasesController < ApplicationController
+class Api::LeasesController < ApplicationController
 
     skip_before_action :authorize, only: [:show, :update, :destroy, :index]
 

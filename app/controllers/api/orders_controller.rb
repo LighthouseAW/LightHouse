@@ -1,4 +1,4 @@
-class OrdersController < ApplicationController
+class Api::OrdersController < ApplicationController
     before_action :find_order, only: [:show, :update, :destroy]
 
     skip_before_action :authorize, only: [:create, :show, :update, :destroy, :index]
