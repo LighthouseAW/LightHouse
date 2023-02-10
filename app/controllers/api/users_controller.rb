@@ -8,6 +8,7 @@ class Api::UsersController < ApplicationController
     end
 
     def show
+        guest if !session[:user_id]
         authorize
         render json: @current_user
     end
@@ -21,7 +22,6 @@ class Api::UsersController < ApplicationController
     end
 
     def create
-        guest if !session[:user_id]
 
         user = User.create!(user_params)
         user.carts.create!
