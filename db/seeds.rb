@@ -18,7 +18,6 @@ i1 = Instrumental.create(title: "Vile", picture: "", info: "about this track", g
 i2 = Instrumental.create(title: "Ritual", picture: "", info: "about this track", genre: g1)
 i3 = Instrumental.create(title: "Idols", picture: "", info: "about this track", genre: g1)
 
-
 l1 = Lease.create(contract_info: 'mp3 lease, unlimited use', price: 40)
 l2 = Lease.create(contract_info: 'mp3 lease, unlimited use', price: 40)
 l3 = Lease.create(contract_info: 'mp3 lease, unlimited use', price: 40)
