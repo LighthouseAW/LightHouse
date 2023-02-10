@@ -1,10 +1,10 @@
 import {useStripe, useElements, PaymentElement} from '@stripe/react-stripe-js';
+import {ElementsConsumer, PaymentElement} from '@stripe/react-stripe-js';
 
 export default function Checkout() {
     const { initPaymentSheet, presentPaymentSheet } = useStripe();
     const [loading, setLoading] = useState(false);
-    const stripe = useStripe();
-    const elements = useElements();
+    // const Elements = useElements();
 
 
     const fetchPaymentSheetParams = async () => {
@@ -64,13 +64,15 @@ export default function Checkout() {
     }, []);
 
     return (
-        <>
-        <button
-            variant="primary"
-            disabled={!loading}
-            title="Checkout"
-            onPress={openPaymentSheet}
-        />
-        </>
-    );
+        <div>
+             <ElementsConsumer>
+                <button
+                    variant="primary"
+                    disabled={!loading}
+                    title="Checkout"
+                    onPress={openPaymentSheet}
+                />
+            </ElementsConsumer>
+        </div>
+    )
 }

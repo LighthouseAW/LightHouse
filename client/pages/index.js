@@ -4,7 +4,7 @@ import Carousel from '../components/Carousel'
 import Hero from '../components/Hero'
 import React, { useEffect } from 'react'
 import { loadStripe } from "@stripe/stripe-js"
-import { Elements } from '@stripe/react-stripe-js'
+
 
 const inter = Inter({ subsets: ['latin'] })
 

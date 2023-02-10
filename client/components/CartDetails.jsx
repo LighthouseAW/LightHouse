@@ -12,6 +12,8 @@ import ArrowLeft from '../public/icons/arrow-left--dark.svg'
 import CartContext from '../contexts/CartContext';
 import Checkout from "./Checkout"
 import StripeCheckout from 'react-stripe-checkout';
+import {ElementsConsumer, PaymentElement} from '@stripe/react-stripe-js';
+
 
 
 export default function CartDetails () {
@@ -142,9 +144,11 @@ export default function CartDetails () {
                         >
                             Continue
                         </button> */}
+                        <ElementsConsumer>
                         <Checkout
                             stripeKey={process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}
                         />
+                        </ElementsConsumer>
                     </div>
                 </div>
             </div>
