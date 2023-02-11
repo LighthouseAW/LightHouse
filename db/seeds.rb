@@ -1,10 +1,10 @@
-# Cart.destroy_all
-# User.destroy_all
-# Order.destroy_all
-# AudioFile.destroy_all
-# Instrumental.destroy_all
-# Genre.destroy_all
-# Lease.destroy_all
+Cart.destroy_all
+User.destroy_all
+Order.destroy_all
+AudioFile.destroy_all
+Instrumental.destroy_all
+Genre.destroy_all
+Lease.destroy_all
 
 
 

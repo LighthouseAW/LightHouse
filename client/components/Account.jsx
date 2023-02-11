@@ -40,6 +40,11 @@ export default function account({user, handleChange, setClick, form}) {
                     Welcome, {user?.email}
                 </h1>
                 <div className='py-5 mr-10'>
+                    <div>{user?.purchases?.map((purchase)=> {
+                        return (
+                            <div>purchase</div>
+                        )
+                    })}</div>
                 </div>
             </div>  }</>
         )
