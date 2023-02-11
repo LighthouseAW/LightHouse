@@ -36,7 +36,7 @@ export default function Instrumental () {
             })
         }
 
-    const audioUrl = `http://localhost:3000/${instrumental && instrumental.audio_files && instrumental.audio_files[0].file}`
+    const audioUrl = `https://jonnynice.onrender.com/${instrumental && instrumental.audio_files && instrumental.audio_files[0].file}`
 
     const { title } = instrumental
 
