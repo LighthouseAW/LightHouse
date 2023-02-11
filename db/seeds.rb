@@ -15,16 +15,18 @@ i2 = Instrumental.create(title: "Ritual", picture: "", info: "about this track",
 i3 = Instrumental.create(title: "Idols", picture: "", info: "about this track", genre: g1)
 
 l1 = Lease.create(contract_info: 'mp3 lease, unlimited use', price: 40)
-l2 = Lease.create(contract_info: 'mp3 lease, unlimited use', price: 40)
-l3 = Lease.create(contract_info: 'mp3 lease, unlimited use', price: 40)
+
+
 
 i1mp3 = AudioFile.create(instrumental_id: i1.id, lease: l1)
 i1mp3.file.attach(io: File.open('./public/audio/Vile x train x flemps.mp3'), filename: 'Vile x train x flemps.mp3', content_type: 'audio/mp3')
 
-i2mp3 = AudioFile.create(instrumental_id: i2.id, lease: l2)
-i2mp3.file.attach(io: File.open('./public/audio/ritual.mp3'), filename: 'Again.mp3', content_type: 'audio/mp3')
+# i2mp3 = AudioFile.create(instrumental_id: i2.id, lease: l2)
+# i2mp3.file.attach(io: File.open('./public/audio/ritual.mp3'), filename: 'Again.mp3', content_type: 'audio/mp3')
+# l2 = Lease.create(contract_info: 'mp3 lease, unlimited use', price: 40)
 
-i3mp3 = AudioFile.create(instrumental_id: i3.id, lease: l3)
-i3mp3.file.attach(io: File.open('./public/audio/khxncollab.mp3'), filename: 'khxncollab.mp3', content_type: 'audio/mp3')
+# i3mp3 = AudioFile.create(instrumental_id: i3.id, lease: l3)
+# i3mp3.file.attach(io: File.open('./public/audio/khxncollab.mp3'), filename: 'khxncollab.mp3', content_type: 'audio/mp3')
+# l3 = Lease.create(contract_info: 'mp3 lease, unlimited use', price: 40)
 
 puts "seeded ✅:"
