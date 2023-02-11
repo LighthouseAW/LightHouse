@@ -32,7 +32,7 @@ export default function CartDetails () {
 
     const createCartItems = cart?.map((cartItem) => {
         console.log(cartItem)
-        total += cartItem.lease?.price
+        // total += cartItem.lease.price
         return <CartItemCard
             key={cartItem.id}
             cartItem={cartItem}
