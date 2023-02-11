@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resources :orders, only: :create
     end
     resources :leases
+    resources :purchases
 
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
