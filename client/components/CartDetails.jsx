@@ -65,7 +65,32 @@ export default function CartDetails () {
         .then(res => res.json())
         .then(console.log)
     }
-    
+
+    const handlePurchase = () => {
+        fetch("/api/orders/purchase", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                cartId: yourCartId
+            })
+            })
+            .then(response => {
+                if (response.ok) {
+                return response.json();
+                } else {
+                throw new Error("Failed to purchase");
+                }
+            })
+            .then(data => {
+                console.log("Purchase successful:", data);
+                // Do something with the successful purchase data
+            })
+            .catch(error => {
+                console.error("Error while purchasing:", error);
+            });
+        };
 
     if (!cart) {
         return (
@@ -130,17 +155,10 @@ export default function CartDetails () {
                         </tbody>
                     </table>
                     <div className='items-center text-center mt-2'>
-                        <button onClick={(()=>{
-                        checkout({
-                            lineItems: [{
-                                price: "price_1MZ0Z9DhAuw7r76Wl0KuxzbN",
-                                quantity: 1
-                            }]
-                        })
-                            })}
+                        <button onClick={handlePurchase}
                             className='bg-black text-white rounded-full text-sm m-2 py-3 px-64'
                         >
-                            Continue
+                            Success Test
                         </button>
                         <StripeCheckout
                             token={onToken}

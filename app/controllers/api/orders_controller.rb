@@ -26,6 +26,20 @@ class Api::OrdersController < ApplicationController
         head :no_content
     end
 
+    def purchase
+        cart = User.find(session[:user_id]).carts.last
+
+        purchase = Purchase.create!(user_id: session[:user_id])
+
+        cart.orders.each do |order|
+            order.update!(purchase_id: purchase.id)
+        end
+
+        cart.orders.clear
+
+        render json: purchase, status: :created
+    end
+
     private
 
     def find_order

@@ -23,10 +23,10 @@
 # i2mp3.file.attach(io: File.open('./public/audio/Ritual.mp3'), filename: 'Again.mp3', content_type: 'audio/mp3')
 
 
-i3 = Instrumental.create(title: "Idols", picture: "", info: "about this track", genre: Genre.first)
-l3 = Lease.create(contract_info: 'mp3 lease, unlimited use', price: 40)
-i3mp3 = AudioFile.create(instrumental_id: i3.id, lease: l3)
-i3mp3.file.attach(io: File.open('./public/audio/khxncollab.mp3'), filename: 'khxncollab.mp3', content_type: 'audio/mp3')
+# i3 = Instrumental.create(title: "Idols", picture: "", info: "about this track", genre: Genre.first)
+# l3 = Lease.create(contract_info: 'mp3 lease, unlimited use', price: 40)
+# i3mp3 = AudioFile.create(instrumental_id: i3.id, lease: l3)
+# i3mp3.file.attach(io: File.open('./public/audio/khxncollab.mp3'), filename: 'khxncollab.mp3', content_type: 'audio/mp3')
 
 
 puts "seeded ✅:"
