@@ -47,6 +47,6 @@ class Api::OrdersController < ApplicationController
     end
 
     def order_params
-        params.permit(:lease_id, :cart_id, :purchase_id)
+        params.permit(:lease_id, :cart_id)
     end
 end

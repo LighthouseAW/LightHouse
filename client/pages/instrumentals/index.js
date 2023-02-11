@@ -19,22 +19,24 @@ export default function Instrumentals () {
             .then(instrumentals => setInstrumentals(instrumentals))
     }, []);
 
-const handleClick = (id) => {
-    fetch(`/api/carts/${user.cart_id}/orders`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-            lease_id: id,
+    const handleClick = (id) => {
+        fetch(`/api/carts/${user.cart_id}/orders`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                lease_id: id,
+                cart_id: user.cart_id,
+            })
         })
-    })
-        .then(res => res.json())
-        .then(data => {
-            setCart(items => [...items, data])
-        })
-    }
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setCart(items => [...items, data])
+            })
+        }
 
     return (
         <div className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover bg-home">
