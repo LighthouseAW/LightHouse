@@ -28,7 +28,6 @@ export default function Instrumentals () {
             },
             body: JSON.stringify({
                 lease_id: id,
-                cart_id: user.cart_id,
             })
         })
             .then(res => res.json())

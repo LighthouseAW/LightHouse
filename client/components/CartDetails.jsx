@@ -73,7 +73,7 @@ export default function CartDetails () {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                cartId: yourCartId
+                cartId: cart.id
             })
             })
             .then(response => {
