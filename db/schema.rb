@@ -83,7 +83,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_11_173145) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.bigint "cart_id", null: false
+    t.bigint "cart_id"
     t.bigint "lease_id", null: false
     t.bigint "purchase_id"
     t.datetime "created_at", null: false
