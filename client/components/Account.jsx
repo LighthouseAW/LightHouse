@@ -39,12 +39,12 @@ export default function account({user, handleChange, setClick, form}) {
                 <h1 className="grid grid-cols-2 font-bold text-4xl pb-2 pt-80">
                     Welcome, {user?.email}
                 </h1>
-                <div className='py-5 mr-10'>
-                    <div>{user?.purchases?.map((purchase)=> {
+                <div>{user.purchases?.map((purchase)=> {
                         return (
                             <div key={purchase.id}>purchase</div>
                         )
                     })}</div>
+                <div className='py-5 mr-10'>
                 </div>
             </div>  }</>
         )
