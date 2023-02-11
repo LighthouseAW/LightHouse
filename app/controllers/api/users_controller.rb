@@ -15,6 +15,7 @@ class Api::UsersController < ApplicationController
             @guest = User.new(email: "Guest")
             @guest.save(validate: false)
             session[:user_id] = @guest.id
+            carts = @guest.carts.create!
             render json: @guest
         end
     end
