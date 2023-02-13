@@ -14,7 +14,7 @@ export default function Purchases({user}) {
                             <div key={purchase.id}>
                                 <li>{purchase.instrumental}</li>
                                     <ul>{purchase.contract_info}</ul>
-                                <DownloadButton blobUrl={`/api/${purchase.file}`} />
+                                <DownloadButton blobUrl={`https://jonnynice.onrender.com${purchase.file}`} />
                             </div>
                         );
                     })) : null
