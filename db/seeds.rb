@@ -11,7 +11,6 @@ Lease.destroy_all
 
 
 
-
 g1 = Genre.create(name: "Drill")
 
 

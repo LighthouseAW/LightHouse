@@ -10,16 +10,13 @@ import Link from 'next/link';
 import CartItemCard from './CartItemCard'
 import ArrowLeft from '../public/icons/arrow-left--dark.svg'
 import CartContext from '../contexts/CartContext';
-import { checkout } from "./Checkout"
 import StripeCheckout from 'react-stripe-checkout';
-
 
 export default function CartDetails () {
     const [cart, setCart] = useContext(CartContext);
 
     let total_cart_items = 0
     let total = 0
-    let quantity = 0
 
     const updateCartItem = (item) => {
         setCart(cart.map(i => i.id === item.id ? item : i));

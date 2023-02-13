@@ -101,11 +101,23 @@ export default function Navbar() {
                     {color == 'transparent' ? <Image src={Logo} alt="Jonny Logo" width={115} height={16} /> : <Image src={LogoDark} alt="Jonny Logo" width={115} height={16} />}
                 </Link>
             </div>
-            <ul style={{ color: `${textColor}` }} className="flex px-14 text-white ">
-            <li className="px-5"><Link href="/instrumentals">Beats</Link></li>
-                <li className="px-5 -mr-3"><Link href="/cart">Cart</Link></li>
-                {quantity > 0 ? <li className="px-2 text-white items-center bg-black rounded-full"><Link href="/cart">{quantity}</Link></li> : null}
-            </ul>
+           {user?.email == "Guest" || user == null ?
+                <ul style={{ color: `${textColor}` }} className="flex px-14 text-white ">
+                    <li className="px-5"><Link href="/instrumentals">Beats</Link></li>
+                        <li className="px-5 -mr-3"><Link href="/cart">Cart</Link></li>
+                    {quantity > 0 ?
+                        <li className="px-2 text-white items-center bg-black rounded-full">
+                            <Link href="/cart">{quantity}</Link>
+                        </li>
+                    : null}
+                </ul>
+                :
+                <ul style={{ color: `${textColor}` }} className="flex px-5 text-white ">
+                    <li className="px-4"><Link href="/instrumentals">Beats</Link></li>
+                        <li className="px-4 -mr-3"><Link href="/cart">Cart</Link></li>
+                    {quantity > 0 ? <li className="px-2 text-white items-center bg-black rounded-full"><Link href="/cart">{quantity}</Link></li> : null}
+                </ul>
+                }
             <div>
                 <Link href="/login" className="px-12 hover">
                     {color == 'transparent' ? <Image src={User} alt="User Icon" width={20} height={20} /> : <Image src={UserDark} alt="User Icon" width={20} height={20} />}

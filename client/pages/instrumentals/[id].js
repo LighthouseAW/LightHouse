@@ -12,6 +12,7 @@ export default function Instrumental () {
     const [user, _setUser] = useContext(UserContext);
     const router = useRouter()
     const id = router.query.id
+    const [showPopUp, setShowPopUp] = useState(false);
 
     useEffect(() => {
         fetch(`/api/instrumentals/${id}`)
@@ -33,10 +34,14 @@ export default function Instrumental () {
             .then(res => res.json())
             .then(data => {
                 setCart(items => [...items, data])
+                setShowPopUp(true);
+                setTimeout(() => {
+                    setShowPopUp(false);
+                }, 3000);
             })
         }
 
-    const audioUrl = `https://jonnynice.onrender.com/${instrumental && instrumental.audio_files && instrumental.audio_files[0].file}`
+    const audioUrl = `https://jonnynice.onrender.com${instrumental && instrumental.audio_files && instrumental.audio_files[0].file}`
 
     const { title } = instrumental
 
@@ -55,6 +60,11 @@ export default function Instrumental () {
                     <button onClick={() => {handleClick(instrumental.audio_files[0].lease?.id)}}>
                         Add to Cart
                     </button>
+                    {showPopUp && (
+                                <div className="fixed bottom-0 right-0 mb-4 mr-4 p-4 bg-white shadow-lg">
+                                    <p className="font-bold">Added to Cart!</p>
+                                </div>
+                            )}
                 </div>
             </div>
         </div>

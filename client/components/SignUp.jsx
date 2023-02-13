@@ -32,7 +32,7 @@ export default function SignUp({form, handleChange, setClick}) {
 
     return (
         <div className="h-screen ">
-            <h1 className="grid grid-cols-2 font-bold text-4xl pb-2 pt-80">
+            <h1 className="grid grid-cols-2 font-bold text-4xl pb-2 pt-40">
                 Create Account
             </h1>
             <div className='py-5 mr-10'>
