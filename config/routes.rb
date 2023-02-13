@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     get "/me", to: "users#show"
     post "/signup", to: "users#create"
     post '/orders/purchase', to: 'orders#purchase'
+    get "/download/:id", to: "download#show", as: :download
 
   end
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
