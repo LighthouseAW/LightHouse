@@ -29,9 +29,15 @@ class Api::UsersController < ApplicationController
     end
 
     def create
-
         user = User.create!(user_params)
-        user.carts.create!
+        guest_user = User.where(email: "Guest").order(created_at: :desc).first
+        if guest_user
+            guest_user.carts.each do |cart|
+                cart.update!(user_id: user.id)
+            end
+            guest_user.purchases.update_all(user_id: user.id)
+            guest_user.destroy
+        end
         session[:user_id] = user.id
         render json: user, status: :created
     end
@@ -54,6 +60,6 @@ class Api::UsersController < ApplicationController
     end
 
     def user_params
-        params.permit(:email, :password, :password_confirmation)
+        params.permit(:email, :password, :password_confirmation, :user)
     end
 end

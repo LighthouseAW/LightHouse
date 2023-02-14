@@ -24,7 +24,7 @@ export default function Contact() {
 
   if (submitted) {
     return (
-      <div className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover bg-home">
+      <div className="flex items-center justify-center h-screen bg-fixed bg-center bg-cover bg-home">
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/50 z-[2]"/>
           <div className="absolute top-40 left-80 right-80 bottom-40 bg-white/50 z-[2]"/>
             <div className="p-5 text-white z-[2] text-center w-[900px]">
@@ -41,7 +41,7 @@ export default function Contact() {
   }  else {
 
   return (
-    <div className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover bg-home">
+    <div className="flex items-center justify-center h-screen bg-fixed bg-center bg-cover bg-home">
       <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/50 z-[2]"/>
         <div className="absolute top-40 left-80 right-80 bottom-40 bg-white/50 z-[2]"/>
           <div className="p-5 text-white z-[2] text-center w-[900px]">
@@ -84,7 +84,7 @@ export default function Contact() {
         <div>
           <button className='w-[500px] bg-black rounded-full text-white text-base font-medium m-2 py-3 px-10 mb-5 mt-5' ><em className="underline not-italic">Send</em></button>
         </div>
-          <p3 className= "P3"> By submitting your message and personal details you are permitting me to contact you by these means in response to your inquiry. </p3>
+          <p> By submitting your message and personal details you are permitting me to contact you by these means in response to your inquiry. </p>
         </form>
       </div>
     </div>

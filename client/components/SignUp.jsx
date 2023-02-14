@@ -44,7 +44,7 @@ export default function SignUp({form, handleChange, setClick}) {
                         <div className="form-check mr-4 mb-3 text-sm">
                             <input className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-none bg-white checked:bg-black checked:border-black focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckDefault" />
                             <div className="flex">
-                                <label className="form-check-label text-gray-800 inline-block" for="flexCheckDefault">
+                                <label className="form-check-label text-gray-800 inline-block" >
                                 I have read and accept the <em className="font-medium underline not-italic">Terms and Conditions</em> and <em className="font-medium underline not-italic">Privacy Policy</em> associated with the management of my user account.
                                 </label>
                             </div>
@@ -52,7 +52,7 @@ export default function SignUp({form, handleChange, setClick}) {
                         <div className="form-check mr-4 mb-2 text-sm">
                             <input className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-none bg-white checked:bg-black checked:border-black focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckDefault" />
                             <div className="flex">
-                                <label className="form-check-label text-gray-800 inline-block" for="flexCheckDefault">
+                                <label className="form-check-label text-gray-800 inline-block">
                                 {sub} <em className="font-medium underline not-italic">Privacy Policy</em>.
                                 </label>
                             </div>

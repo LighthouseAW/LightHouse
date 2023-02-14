@@ -95,9 +95,9 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
     };
 
     return (
-        <div className="grid grid-cols-2 mt-20 ml-32 pt-20">
+        <div className="grid grid-cols-2 mt-20 ml-32 pt-20 mb-12">
             <div>
-                <h1 className="font-bold text-4xl mt-5">Shopping Cart</h1>
+                <h1 className="font-bold text-4xl mt-14">Shopping Cart</h1>
                 <Link href="/instrumentals" className='flex items-center mt-5 -ml-4 cursor-pointer '>
                     <Image src={ArrowLeft} alt="Arrow Left" width="48" height="48"/>
                     <p className='-ml-2 font-medium'>Back</p>
@@ -107,8 +107,8 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
                 </div>
             </div>
             <div className="bg-stone-100 h-span">
-                <div className="grid grid-row-1 divide-y ml-20 max-w-[600px]">
-                    <h1 className="font-bold text-4xl mb-10 mt-5">Order Summary</h1>
+                <div className="grid grid-row-1 divide-y ml-40 max-w-[600px]">
+                    <h1 className="font-bold text-4xl mb-10 mt-14">Order Summary</h1>
                     <div className='py-5'>
                         <button className='text-base'>+ Apply discount</button>
                         <form></form>
@@ -137,14 +137,19 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
                     </table>
                     <div className='items-center text-center mt-2'>
                         <button onClick={handlePurchase}
-                            className='bg-black text-white rounded-full text-sm m-2 py-3 px-64'
+                            className='bg-black text-white rounded-full text-sm m-2 py-3 px-64 mb-12 mt-4'
                         >
                             Success Test
                         </button>
+                        <div className="mb-8">
                         <StripeCheckout
                             token={onToken}
                             stripeKey={process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}
                         />
+                        </div>
+                        <div className="mb-8">
+                            {user.email == "Guest" ? <><h1>You're currently not signed in.</h1><h1> You'll need to make an <Link href="/login" className="underline">account</Link> to save your cart and purchases. </h1></> : null}
+                        </div>
                     </div>
                 </div>
             </div>
