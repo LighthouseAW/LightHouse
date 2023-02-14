@@ -94,6 +94,9 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
         });
     };
 
+    const signed = "You're currently not signed in."
+    const make = " You'll need to make an "
+
     return (
         <div className="grid grid-cols-2 mt-20 ml-32 pt-20 mb-12">
             <div>
@@ -148,7 +151,7 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
                         />
                         </div>
                         <div className="mb-8">
-                            {user.email == "Guest" ? <><h1>You're currently not signed in.</h1><h1> You'll need to make an <Link href="/login" className="underline">account</Link> to save your cart and purchases. </h1></> : null}
+                            {user.email == "Guest" ? <><h1>{signed}</h1><h1>{make}<Link href="/login" className="underline">account</Link> to save your cart and purchases. </h1></> : null}
                         </div>
                     </div>
                 </div>

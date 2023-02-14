@@ -16,11 +16,14 @@ export default function Purchases({user, setUser}) {
             setPurchases(user.purchased);
         }, [user]);
 
+        const signed = "You're currently not signed in."
+        const make = " You'll need to make an "
+
         return (
             <>
             <div>
                 <div className="mb-8 text-center">
-                    {user.email == "Guest" ? <><h1>You're currently not signed in.</h1><h1> You'll need to make an <Link href="/login" className="underline">account</Link> to save your cart and purchases. </h1></> : null}
+                    {user.email == "Guest" ? <><h1>{signed}</h1><h1>{make}<Link href="/login" className="underline">account</Link> to save your cart and purchases. </h1></> : null}
                 </div>
                 <h1 className="font-bold text-4xl pb-2">
                     Purchases
