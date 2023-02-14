@@ -37,11 +37,11 @@ export default function Instrumental () {
                 setShowPopUp(true);
                 setTimeout(() => {
                     setShowPopUp(false);
-                }, 3000);
+                }, 2000);
             })
         }
 
-    const audioUrl = `https://jonnynice.onrender.com${instrumental && instrumental.audio_files && instrumental.audio_files[0].file}`
+        const audioUrl = `https://jonnynice.onrender.com${instrumental && instrumental.audio_files && instrumental.audio_files[0].file}`
 
     const { title } = instrumental
 
@@ -61,12 +61,15 @@ export default function Instrumental () {
                         Add to Cart
                     </button>
                     {showPopUp && (
-                                <div className="fixed bottom-0 right-0 mb-4 mr-4 p-4 bg-white shadow-lg">
-                                    <p className="font-bold">Added to Cart!</p>
+                                <div className="flex items-center justify-center mb-4 p-4">
+                                <div className="bottom-0 text-align mb-4 w-60 p-4 text-black bg-white rounded-lg shadow-lg">
+                                    <p className="font-bold">{instrumental.title} Added to Cart</p>
                                 </div>
-                            )}
+                            </div>
+                        )}
                 </div>
             </div>
         </div>
     )
 }
+

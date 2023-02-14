@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function DownloadButton({ blobUrl }) {
+export default function DownloadButton({ name, blobUrl }) {
     const [loading, setLoading] = useState(false);
 
     const handleDownload = async () => {
@@ -10,7 +10,7 @@ export default function DownloadButton({ blobUrl }) {
         const blob = await response.blob();
         const link = document.createElement('a');
         link.href = window.URL.createObjectURL(blob);
-        link.download = 'file.mp3';
+        link.download = `${name}.mp3`;
         link.click();
         setLoading(false);
         } catch (error) {

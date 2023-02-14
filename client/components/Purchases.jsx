@@ -1,7 +1,19 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import DownloadButton from "./DownloadButton"
 
-export default function Purchases({user}) {
+export default function Purchases({user, setUser}) {
+    const [purchases, setPurchases] = useState([]);
+
+    useEffect(() => {
+        fetch("/api/me").then((r) => {
+            if (r.ok) {r.json().then((data) => {
+            setUser(data)});
+            }});
+        }, [setUser]);
+
+        useEffect(() => {
+            setPurchases(user.purchased);
+        }, [user]);
 
         return (
             <>
@@ -9,12 +21,12 @@ export default function Purchases({user}) {
                 <h1 className="font-bold text-4xl pb-2">
                     Purchases
                 </h1>
-                <div>{user.purchased.length > 0 ? (user.purchased.map((purchase)=> {
+                <div>{purchases.length > 0 ? (purchases.map((purchase)=> {
                         return (
                             <div key={purchase.id}>
                                 <li>{purchase.instrumental}</li>
                                     <ul>{purchase.contract_info}</ul>
-                                <DownloadButton blobUrl={`https://jonnynice.onrender.com${purchase.file}`} />
+                                <DownloadButton name={purchase.instrumental} blobUrl={`/api/${purchase.file}`} />
                             </div>
                         );
                     })) : null

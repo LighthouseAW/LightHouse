@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 // import Cirrus from '../public/logos/payments/cirrus.svg'
@@ -11,9 +11,12 @@ import CartItemCard from './CartItemCard'
 import ArrowLeft from '../public/icons/arrow-left--dark.svg'
 import CartContext from '../contexts/CartContext';
 import StripeCheckout from 'react-stripe-checkout';
+import { useRouter } from "next/router"
 
-export default function CartDetails () {
+export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }) {
     const [cart, setCart] = useContext(CartContext);
+    const router = useRouter()
+    const [submitted, setSubmitted] = useState(false);
 
     let total_cart_items = 0
     let total = 0
@@ -49,7 +52,7 @@ export default function CartDetails () {
         const charge = {
             token: token.id
         };
-    
+
         const config = {
             method: 'POST',
             headers: {
@@ -57,7 +60,7 @@ export default function CartDetails () {
             },
             body: JSON.stringify({ charge: charge, price: total * 100 })
         };
-    
+
         fetch(CHARGES_URL, config)
         .then(res => res.json())
         .then(console.log)
@@ -69,60 +72,41 @@ export default function CartDetails () {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({
+                body: JSON.stringify({
                 cart_id: cart.id
-            })
-            })
-            .then(response => {
-                if (response.ok) {
-                return response.json();
-                } else {
-                throw new Error("Failed to purchase");
-                }
-            })
-            .then(data => {
-                console.log("Purchase successful:", data);
-                // Do something with the successful purchase data
-            })
-            .catch(error => {
-                console.error("Error while purchasing:", error);
+                })
+        })
+        .then(response => {
+            if (response.ok) {
+            setCart();
+            response.json().then(data => {
+                const updatedUser = { ...user, purchased: [...user.purchased, data] };
+                setUser(updatedUser);
+                handlePurchaseSuccessful();
+                console.log("Purchase successful");
             });
-        };
-
-    if (!cart) {
-        return (
-        <div className="mt-32 w-screen">
-            <div className="ml-32">
-                <h1 className="font-bold text-4xl mt-5">Shopping Cart</h1>
-                <Link href="/instrumentals" className='flex items-center mt-5 -ml-4 cursor-pointer '>
-                    <Image src={ArrowLeft} alt="Arrow Left" width="48" height="48" />
-                    <p className='-ml-2 font-medium'>Keep Shopping</p>
-                </Link>
-            </div>
-            <div className="text-center h-[50vh]">
-                <h1 className='text-4xl font-bold mb-10 pt-32'>Your cart is empty</h1>
-                <Link href='/instrumentals'>
-                    <button className="bg-black text-white rounded-full text-base font-medium m-2 py-3 px-32">Keep Shopping</button>
-                </Link>
-            </div>
-        </div>
-        );
-    }
-
+            } else {
+            throw new Error("Failed to purchase");
+            }
+        })
+        .catch(error => {
+            console.error("Error while purchasing:", error);
+        });
+    };
 
     return (
-        <div className="grid grid-cols-2 mt-20 ml-32">
+        <div className="grid grid-cols-2 mt-20 ml-32 pt-20">
             <div>
                 <h1 className="font-bold text-4xl mt-5">Shopping Cart</h1>
                 <Link href="/instrumentals" className='flex items-center mt-5 -ml-4 cursor-pointer '>
                     <Image src={ArrowLeft} alt="Arrow Left" width="48" height="48"/>
-                    <p className='-ml-2 font-medium'>Keep Shopping</p>
+                    <p className='-ml-2 font-medium'>Back</p>
                 </Link>
                 <div className='mt-5 divide-y'>
                     {createCartItems}
                 </div>
             </div>
-            <div className="bg-stone-100">
+            <div className="bg-stone-100 h-span">
                 <div className="grid grid-row-1 divide-y ml-20 max-w-[600px]">
                     <h1 className="font-bold text-4xl mb-10 mt-5">Order Summary</h1>
                     <div className='py-5'>

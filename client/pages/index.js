@@ -5,7 +5,6 @@ import Hero from '../components/Hero'
 import React, { useEffect } from 'react'
 import { loadStripe } from "@stripe/stripe-js"
 
-
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {

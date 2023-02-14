@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Hero({ heading, message }) {
     return (
@@ -7,6 +8,11 @@ export default function Hero({ heading, message }) {
             <div className="p-5 text-white z-[2] text-center w-[900px]">
                 <h2 className="text-6xl font-bold">{heading}</h2>
                 <p className="py-5 text-xl">{message}</p>
+                <div className=" pt-40 flex justify-center gap-40">
+                <Link className='bg-black text-white rounded-full py-3 px-6' href="/instrumentals">Browse Beats</Link>
+                <Link className='bg-black text-white rounded-full py-3 px-6' href="https://youtube.com/c/jonnynice">Youtube Channel</Link>
+                <Link className='bg-black text-white rounded-full py-3 px-6' href="/contact">Contact Me</Link>
+                </div>
             </div>
         </div>
     );
