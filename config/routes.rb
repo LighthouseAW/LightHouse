@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     end
     resources :leases
     resources :purchases
+    resources :charges, only: [:create]
 
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
