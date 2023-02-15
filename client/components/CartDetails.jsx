@@ -61,8 +61,7 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
             fetch("/api/charges", config)
             .then((res) => res.json())
             .then((response) => {
-                console.log(response)
-                if (response.success) {
+                if (response.status === 204) {
                 console.log("Token retrieved successfully.");
                 handlePurchase();
                 } else {
