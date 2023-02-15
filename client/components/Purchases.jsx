@@ -33,7 +33,7 @@ export default function Purchases({user, setUser}) {
                             <div key={index}>
                                 <li>{purchase.instrumental}</li>
                                     <ul>{purchase.contract_info}</ul>
-                                <DownloadButton name={purchase.instrumental} blobUrl={`/api/${purchase.file}`} />
+                                <DownloadButton name={purchase.instrumental} blobUrl={`https://jonnynice.onrender.com${purchase.file}`} />
                             </div>
                         );
                     })) : null
