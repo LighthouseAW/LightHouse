@@ -12,7 +12,7 @@
                 customer: customer['id'],
             }, {stripe_version: '2022-11-15'})
             paymentIntent = Stripe::PaymentIntent.create({
-                amount: charge,
+                amount: price,
                 currency: 'usd',
                 customer: customer['id'],
                 automatic_payment_methods: {
