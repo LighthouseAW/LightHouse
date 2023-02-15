@@ -89,14 +89,14 @@ export default function Navbar() {
     return (
         <div style= {{ backgroundColor: `${color}` }}className="fixed left-0 top-8 w-full z-10 ease-in duration-300 flex items-center justify-center hover:bg-white h-20 ">
             <div></div>
-            <ul style={{ color: `${textColor}` }} className="flex px-6 text-white">
+            <ul style={{ color: `${textColor}` }} className="flex px-2 text-white">
                 <li className="px-5"><Link href="/placements">Placements</Link></li>
                 <li className="px-5"><Link href="/about">About</Link></li>
-                <li className="px-5"><Link href="/contact">Contact</Link></li>
+                <li className="px-4"><Link href="/contact">Contact</Link></li>
             </ul>
             <div className="px-[250px]">
-                <div class="relative w-20 h-20">
-                    <div style= {{ backgroundColor: `${color}` }} class="absolute top-0 left-0 w-20 h-20 transform rotate-45"></div>
+                <div className="relative w-20 h-20">
+                    <div style= {{ backgroundColor: `${color}` }} className="absolute top-0 left-0 w-20 h-20 transform rotate-45"></div>
                     <Link href="/" className="z-30 relative">
                         {color == 'transparent' ? <Image src={Logo} alt="Jonny Logo" width={115} height={16} /> : <Image src={LogoDark} alt="Jonny Logo" width={115} height={16} />}
                     </Link>
@@ -121,14 +121,14 @@ export default function Navbar() {
                 }
             <div>
                 <Link href="/login" className="px-12 hover">
-                    {color == 'transparent' ? <Image src={User} alt="User Icon" width={20} height={20} /> : <Image src={UserDark} alt="User Icon" width={20} height={20} />}
+                    {color == 'transparent' ? <Image src={User} alt="User Icon" width="auto" height={20} /> : <Image src={UserDark} alt="User Icon" width="auto" height={20} />}
                 </Link>
             </div>
-            <div>
+            {/* <div>
                 <Link href="/" className="px-10">
                     {color == 'transparent' ? <Image src={SearchIcon} alt="Search Icon" width={20} height={20} /> : <Image src={SearchDark} alt="Search Icon" width={30} height={30} />}
                 </Link>
-            </div>
+            </div> */}
             {user?.email == "Guest" || user == null ? null : <div>
                 {color == 'transparent' ?
                 <Link href="/" onClick={handleLogOut} className="px-5 text-white">
