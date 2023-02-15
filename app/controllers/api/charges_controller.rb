@@ -12,12 +12,20 @@ Dotenv.load
             token = params[:token]
 
             Stripe.api_key = "sk_test_51MYwEsDhAuw7r76W3hIw2fQnVVJixwEojclZH7jsv7s0bvV091uNaJo0ejjmgiykMjP3tzBtgxkGV9Vig4rzxjrU00a4mTUS7r"
-            customer = Stripe::Customer.create(source: token)
+            pm = Stripe::PaymentMethod.create({
+                type: 'card',
+                card: {
+                    token: token.id
+                }
+            })
+            customer = Stripe::Customer.create()
+            pm = customer.payment_methods.create(payment_method: pm.id)
 
             charge = Stripe::Charge.create(
                 amount: amount,
                 currency: 'usd',
                 customer: customer.id
+                source: pm.id
             )
             if charge.paid
                 render json: { message: 'Payment processed successfully' }, status: :ok
