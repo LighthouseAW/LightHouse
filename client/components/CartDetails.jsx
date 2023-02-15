@@ -76,15 +76,12 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
     };
 
     const onToken = (token) => {
-        const charge = {
-            token: token.id,
-            };
             const config = {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ charge: charge, price: total * 100 }),
+            body: JSON.stringify({ token: token, price: total * 100 }),
             };
             fetch("/api/charges", config)
             .then((res) => res.json())
@@ -153,6 +150,7 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
                         </button>
                         <div className="mb-8">
                         <StripeCheckout
+                        className='bg-black text-white rounded-full text-sm m-2 py-3 px-64 mb-12 mt-4'
                             token={onToken}
                             stripeKey={process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}
                         />
