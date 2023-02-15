@@ -17,9 +17,9 @@
                 currency: 'usd',
                 customer: customer['id'],
                 payment_method_types: ['card'],
-                automatic_payment_methods: {
-                enabled: true,
-                }
+                # automatic_payment_methods: {
+                # enabled: true,
+                # }
             })
 
             {
