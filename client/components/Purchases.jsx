@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react"
-import DownloadButton from "./DownloadButton"
+import React, { useEffect, useState } from "react";
+import DownloadButton from "./DownloadButton";
 import Link from 'next/link';
+import ContractDownload from "./ContractDownload";
 
 export default function Purchases({user, setUser}) {
     const [purchases, setPurchases] = useState([]);
@@ -33,6 +34,7 @@ export default function Purchases({user, setUser}) {
                             <div key={index}>
                                 <li>{purchase.instrumental}</li>
                                     <ul>{purchase.contract_info}</ul>
+                                    <ContractDownload name={purchase.instrumental} blobUrl={`https://jonnynice.onrender.com${purchase.contract}`} />
                                 <DownloadButton name={purchase.instrumental} blobUrl={`https://jonnynice.onrender.com${purchase.file}`} />
                             </div>
                         );
