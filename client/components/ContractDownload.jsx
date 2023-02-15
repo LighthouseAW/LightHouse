@@ -21,7 +21,7 @@ export default function ContractDownload({ name, blobUrl }) {
 
     return (
         <button onClick={handleDownload} disabled={loading}>
-        {loading ? 'Downloading...' : 'Download'}
+        {loading ? 'Downloading...' : 'Download Contract'}
         </button>
     );
 };

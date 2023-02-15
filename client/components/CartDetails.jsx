@@ -48,24 +48,30 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
     }, [cart]);
 
     const onToken = (token) => {
-
         const charge = {
-            token: token.id
-        };
-
-        const config = {
-            method: 'POST',
+            token: token.id,
+            };
+            const config = {
+            method: "POST",
             headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json",
             },
-            body: JSON.stringify({ charge: charge, price: total * 100 })
+            body: JSON.stringify({ charge: charge, price: total * 100 }),
+            };
+            fetch("/api/charges", config)
+            .then((res) => res.json())
+            .then((response) => {
+                if (response.success) {
+                console.log("Token retrieved successfully.");
+                handlePurchase();
+                } else {
+                console.log("Token retrieval failed.");
+                }
+            })
+            .catch((error) => {
+                console.error("Error while retrieving token:", error);
+            });
         };
-
-        fetch(CHARGES_URL, config)
-        .then(res => res.json())
-        .then(console.log)
-    }
-
     const handlePurchase = () => {
         fetch("/api/orders/purchase", {
             method: "POST",
