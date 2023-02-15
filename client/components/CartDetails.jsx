@@ -31,6 +31,7 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
     }
 
     const createCartItems = cart?.map((cartItem) => {
+        console.log(cartItem)
         total += cartItem.lease.price
         return <CartItemCard
             key={cartItem.id}
