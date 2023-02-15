@@ -18,6 +18,7 @@
                 customer: customer['id'],
                 automatic_payment_methods: {
                 enabled: true,
+                payment_method: "card",
                 }
             })
 
