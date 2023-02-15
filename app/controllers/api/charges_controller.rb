@@ -1,32 +1,31 @@
-        require 'stripe'
-        require 'dotenv'
-        Dotenv.load
+require 'stripe'
+require 'dotenv'
 
-        class Api::ChargesController < ApplicationController
-            skip_before_action :authorize
+Dotenv.load
 
-            def create
-                price = params[:price]
-                Stripe.api_key = "sk_test_51MYwEsDhAuw7r76W3hIw2fQnVVJixwEojclZH7jsv7s0bvV091uNaJo0ejjmgiykMjP3tzBtgxkGV9Vig4rzxjrU00a4mTUS7r"
-                customer = Stripe::Customer.create
-                ephemeralKey = Stripe::EphemeralKey.create({
-                    customer: customer['id'],
-                }, {stripe_version: '2022-11-15'})
-                paymentIntent = Stripe::PaymentIntent.create({
-                    amount: price,
-                    currency: 'usd',
-                    customer: customer['id'],
-                    automatic_payment_methods: {
-                    enabled: true,
-                    payment_method_types: ['card'],
-                    }
-                })
+class Api::ChargesController < ApplicationController
+    skip_before_action :authorize
 
-                {
-                    paymentIntent: paymentIntent['client_secret'],
-                    ephemeralKey: ephemeralKey['secret'],
-                    customer: customer['id'],
-                    publishableKey: 'pk_test_51MYwEsDhAuw7r76Wi0QsPuD8nJRJ4e0xn07ItYgI4CsZGNHneFLuQoXssdoroMlJ6atdCgjZT8c2SZ78Vxic0LRh00lR6iza07'
-                }.to_json
-            end
-        end
+    def create
+        # Retrieve the price from the request parameters
+        price = params[:price]
+
+        # Set the API key for Stripe
+        Stripe.api_key = "sk_test_51MYwEsDhAuw7r76W3hIw2fQnVVJixwEojclZH7jsv7s0bvV091uNaJo0ejjmgiykMjP3tzBtgxkGV9Vig4rzxjrU00a4mTUS7r"
+
+        # Create a charge for the given price
+        charge = Stripe::Charge.create({
+        amount: price,
+        currency: 'usd',
+        source: params[:token],
+        description: 'Example charge',
+        })
+
+        # Return a success response to the client
+        render json: { status: 204 }
+    rescue Stripe::CardError => e
+        # Return an error response to the client if the charge was declined
+        render json: { error: e.message }, status: :unprocessable_entity
+    end
+end
+
