@@ -76,12 +76,15 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
     };
 
     const onToken = (token) => {
+        const charge = {
+            token: token.id,
+            };
             const config = {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ token: token, price: total * 100 }),
+            body: JSON.stringify({ charge: charge, price: total * 100 }),
             };
             fetch("/api/charges", config)
             .then((res) => res.json())
