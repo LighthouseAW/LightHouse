@@ -6,6 +6,7 @@
         skip_before_action :authorize
 
         def create
+            price = params[:price]
             Stripe.api_key = "sk_test_51MYwEsDhAuw7r76W3hIw2fQnVVJixwEojclZH7jsv7s0bvV091uNaJo0ejjmgiykMjP3tzBtgxkGV9Vig4rzxjrU00a4mTUS7r"
             customer = Stripe::Customer.create
             ephemeralKey = Stripe::EphemeralKey.create({
