@@ -47,31 +47,6 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
         }
     }, [cart]);
 
-    const onToken = (token) => {
-        const charge = {
-            token: token.id,
-            };
-            const config = {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ charge: charge, price: total * 100 }),
-            };
-            fetch("/api/charges", config)
-            .then((res) => res.json())
-            .then((response) => {
-                if (response.status === 204) {
-                console.log("Token retrieved successfully.");
-                handlePurchase();
-                } else {
-                console.log("Token retrieval failed.");
-                }
-            })
-            .catch((error) => {
-                console.error("Error while retrieving token:", error);
-            });
-        };
     const handlePurchase = () => {
         fetch("/api/orders/purchase", {
             method: "POST",
@@ -99,6 +74,32 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
             console.error("Error while purchasing:", error);
         });
     };
+
+    const onToken = (token) => {
+        const charge = {
+            token: token.id,
+            };
+            const config = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ charge: charge, price: total * 100 }),
+            };
+            fetch("/api/charges", config)
+            .then((res) => res.json())
+            .then((response) => {
+                if (response.status === 204) {
+                console.log("Token retrieved successfully.");
+                handlePurchase();
+                } else {
+                console.log("Token retrieval failed.");
+                }
+            })
+            .catch((error) => {
+                console.error("Error while retrieving token:", error);
+            });
+        };
 
     const signed = "You're currently not signed in."
     const make = " You'll need to make an "
