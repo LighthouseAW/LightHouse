@@ -16,6 +16,7 @@ g1 = Genre.create(name: "Drill")
 
 i1 = Instrumental.create(title: "Vile", picture: "", info: "about this track", genre: Genre.first)
 l1 = Lease.create(contract_info: 'mp3 lease, unlimited use', price: 40)
+l1.contract.attach(io: File.open('./public/contracts/*mp3 license.pdf'), filename: 'mp3 license agreement', content_type: "application/pdf")
 i1mp3 = AudioFile.create(instrumental_id: i1.id, lease: l1)
 i1mp3.file.attach(io: File.open('./public/audio/Vile x train x flemps.mp3'), filename: 'Vile x train x flemps.mp3', content_type: 'audio/mp3')
 
