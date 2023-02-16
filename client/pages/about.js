@@ -16,7 +16,7 @@ export default function About() {
         <div className="flex items-center justify-center h-screen bg-fixed bg-center bg-cover bg-home">
             <div className="absolute justify-center px-4 top-0 left-0 right-0 bottom-0 bg-black/50  z-[2]"/>
             <div className="z-[2] scroll-container h-4/6 overflow-y-auto">
-            <div className="z-[2]">
+            <div className="pl-10 z-[2]">
                 <div className="p-5 text-white z-[7] text-center items-center w-[900px]">
                     <h2 className="text-6xl font-bold"></h2>
                     <div className="flex justify-center gap-40">
