@@ -141,8 +141,12 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
                                 <td className='pt-5 font-medium text-right'>
                                 <div>
                                     <span>Total: ${total.toFixed(2)}</span>
-                                    {user?.email === "Guest" ? null : <p>{dis}</p>}
-                                    <span>Discounted total: ${discountedTotal.toFixed(2)}</span>
+                                    {user?.email === "Guest" ? (<div>
+                                                                    <p>{dis}</p>
+                                                                    <span>
+                                                                        Discounted total: ${discountedTotal.toFixed(2)}
+                                                                    </span>
+                                                                </div>) : null}
                                 </div>
                                 </td>
                             </tr>

@@ -1,6 +1,7 @@
 import React from 'react';
 import pic from '../public/images/ian.jpg'
 import Image from "next/image";
+import YoutubeEmbed from "../components/YoutubeEmbed"
 
 export default function About() {
 
@@ -20,7 +21,7 @@ export default function About() {
                     </div>
                     <p className="py-5 text-xl">{text}</p>
             </div>
-
+            <YoutubeEmbed embedId="VxESWIw7WuU" />
         </div>
     )
 }
