@@ -158,7 +158,7 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
                             </tr>
                             <tr className='border-b'>
                                 <td className='text-base font-bold pb-10'>Total</td>
-                                <td className='text-base font-bold pb-10 text-right'><span>$ {total}.00</span></td>
+                                <td className='text-base font-bold pb-10 text-right'><span>$ {discountedTotal}.00</span></td>
                             </tr>
                         </tbody>
                     </table>
