@@ -75,14 +75,14 @@ export default function Instrumental () {
                             }}
                         />
                 </div>
-                {/* <h1>{instrumental.audio_files[0].leases.map((lease) => {
+                <h1>{instrumental.audio_files[0].leases.map((lease) => {
                     return (
                         <div key={lease.id} >
                             <h1>{lease.contract_info}</h1>
                             <h2>{lease.price}</h2>
                         </div>
                     )
-                })}</h1> */}
+                })}</h1>
             </div>
         </div>
         </>
