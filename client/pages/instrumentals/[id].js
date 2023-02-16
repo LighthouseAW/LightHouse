@@ -80,24 +80,22 @@ export default function Instrumental () {
                             }}
                         />
                 </div>
-                <div>
-                {instrumental && instrumental.audio_files && instrumental.audio_files.map((audio_file, j) => (
-                    <div key={j}>
-                        {audio_file.lease && (
-                        <div>
+                <div className="flex flex-wrap justify-center gap-4 border-t-2 py-4">
+                    {instrumental?.audio_files?.map((audio_file, j) => (
+                        audio_file?.lease && (
+                        <div key={j} className="p-4 border border-gray-200">
                             <p>Contract Info: {audio_file.lease.contract_info}</p>
                             <p>Price: {audio_file.lease.price}</p>
-                            <button onClick={() => { both(audio_file.lease.id) }}>
+                            <button onClick={() => both(audio_file.lease.id)}>
                             {selectedLeaseId === audio_file.lease.id
                                 ? `${instrumental.title} added to cart!`
                                 : "Add to Cart"
                             }
                             </button>
                         </div>
-                        )}
-                    </div>
+                        )
                     ))}
-                </div>
+                    </div>
             </div>
         </div>
         </>

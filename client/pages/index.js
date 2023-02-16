@@ -16,6 +16,7 @@ export default function Home() {
       <Head>
         <title>Jonny Nice Productions</title>
         <meta name="description" content="Jonny Nice Productions" />
+        <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Hero heading="Jonny Nice" message="Producer, Pianist, Composer" />
