@@ -76,7 +76,7 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
         });
     };
 
-    const discountedTotal = user?.email === "Guest" ? total : total * (1 - discountPercentage);
+    const discountedTotal = user.email === "Guest" ? total : total * (1 - discountPercentage);
 
     const onToken = (token) => {
 
@@ -141,12 +141,12 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
                                 <td className='pt-5 font-medium text-right'>
                                 <div>
                                     <span>Total: ${total.toFixed(2)}</span>
-                                    {user?.email === "Guest" ? (<div>
+                                    {user?.email == "Guest" ? null : (<div>
                                                                     <p>{dis}</p>
                                                                     <span>
                                                                         Discounted total: ${discountedTotal.toFixed(2)}
                                                                     </span>
-                                                                </div>) : null}
+                                                                </div>)}
                                 </div>
                                 </td>
                             </tr>
