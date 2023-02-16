@@ -111,6 +111,7 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
 
     const signed = "You're currently not signed in."
     const make = " You'll need to make an "
+    const dis = "You qualify for a 5% discount!"
 
     return (
         <div className="grid grid-cols-2 mt-20 ml-32 pt-20 mb-12">
@@ -140,7 +141,7 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
                                 <td className='pt-5 font-medium text-right'>
                                 <div>
                                     <span>Total: ${total.toFixed(2)}</span>
-                                    {userEmail === "Guest" && <p>You qualify for a 5% discount!</p>}
+                                    {userEmail === "Guest" && <p>{dis}</p>}
                                     <span>Discounted total: ${discountedTotal.toFixed(2)}</span>
                                 </div>
                                 </td>
