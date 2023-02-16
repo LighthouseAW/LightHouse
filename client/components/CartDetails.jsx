@@ -129,7 +129,7 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
                 <div className="grid grid-row-1 divide-y ml-40 max-w-[600px]">
                     <h1 className="font-bold text-4xl mb-10 mt-14">Order Summary</h1>
                     <div className='py-5'>
-                        <button className='text-base'>+ Apply discount</button>
+                        <button className='text-base'>{user?.email == "Guest" ? "Sign Up for a discount" : null}</button>
                         <form></form>
                     </div>
                     <table>
