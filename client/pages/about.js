@@ -14,7 +14,7 @@ export default function About() {
     return(
         <>
         <div className="flex items-center justify-center h-screen bg-fixed bg-center bg-cover bg-home">
-            <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/50  z-[2]"/>
+            <div className="absolute justify-center px-4 top-0 left-0 right-0 bottom-0 bg-black/50  z-[2]"/>
             <div className="z-[2] scroll-container h-4/6 overflow-y-auto">
             <div className="z-[2]">
                 <div className="p-5 text-white z-[7] text-center items-center w-[900px]">

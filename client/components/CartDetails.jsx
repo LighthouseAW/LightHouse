@@ -20,7 +20,7 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
 
     let total_cart_items = 0
     let total = 0
-    const discountPercentage = 0.05; 
+    const discountPercentage = 0.08; 
 
     const updateCartItem = (item) => {
         setCart(cart.map(i => i.id === item.id ? item : i));
@@ -111,7 +111,7 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
 
     const signed = "You're currently not signed in."
     const make = " You'll need to make an "
-    const dis = "You qualify for a 5% discount!"
+    const dis = "Thanks for signing up. Here's a discount."
 
     return (
         <div className="grid grid-cols-2 mt-20 ml-32 pt-20 mb-12">
