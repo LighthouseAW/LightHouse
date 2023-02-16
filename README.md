@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Run bundle i && npm i --prefix client && npm run dev --prefix client && rails s to start
 
-Things you may want to cover:
+This Rails application features a nextjs client.
 
-* Ruby version
+This application is built as a portfolio and sales website for an independant music producer.
 
-* System dependencies
+This website is currently deployed to https://jonnynice.onrender.com/.
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
