@@ -39,9 +39,14 @@ export default function Instrumental () {
                     setShowPopUp(false);
                 }, 2000);
             })
-        }
+        };
 
-        const audioUrl = `https://jonnynice.onrender.com${instrumental && instrumental.audio_files && instrumental.audio_files[0].file}`
+    function both(lease) {
+        setSelectedLeaseId(lease);
+        handleClick(lease);
+    }
+
+    const audioUrl = `https://jonnynice.onrender.com${instrumental && instrumental.audio_files && instrumental.audio_files[0].file}`
 
     const { title } = instrumental
 
@@ -82,7 +87,7 @@ export default function Instrumental () {
                         <div>
                             <p>Contract Info: {audio_file.lease.contract_info}</p>
                             <p>Price: {audio_file.lease.price}</p>
-                            <button onClick={() => { setSelectedLeaseId(audio_file.lease.id) }}>
+                            <button onClick={() => { both(audio_file.lease.id) }}>
                             {selectedLeaseId === audio_file.lease.id
                                 ? `${instrumental.title} added to cart!`
                                 : "Add to Cart"
@@ -91,7 +96,7 @@ export default function Instrumental () {
                         </div>
                         )}
                     </div>
-                ))}
+                    ))}
                 </div>
             </div>
         </div>
