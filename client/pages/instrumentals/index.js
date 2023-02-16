@@ -72,6 +72,7 @@ export default function Instrumentals () {
                                 }}
                             />
                         </div>
+                        {/* <h1>{instrumental.</h1> */}
                         </div>
                     )
                 })
