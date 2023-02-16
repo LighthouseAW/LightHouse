@@ -52,25 +52,26 @@ export default function Instrumentals () {
                 {instrumentals && instrumentals.map(instrumental => {
                     const audioUrl = `https://jonnynice.onrender.com${instrumental.audio_files[0].file}`;
                     return (
-                        <div key={instrumental.id}>
+                        <div className="p-4">
+                        <div key={instrumental.id} className="border-2 border-slate-800 rounded-lg p-2">
                             <Link href={`/instrumentals/${instrumental.id}`}>
                                 <p className='font-bold'>{instrumental.title}</p>
                             </Link>
                             <h3>Genre: {instrumental.genre.name}</h3>
+                            <button onClick={() => {
+                                handleClick(instrumental.audio_files[0].lease?.id)
+                            }}>{selectedInstrumental === instrumental.audio_files[0].lease?.id ? `${instrumental.title} added to cart!` : "Add to Cart" }</button>
                             <AudioPlayer
                                 src={audioUrl}
                                 onPlay={e => console.log("onPlay")}
+                                style={{
+                                    backgroundColor: 'rgba(30, 41, 59, 0.5)',
+                                    borderRadius: '10px',
+                                    padding: '10px',
+                                    textColor: 'white',
+                                }}
                             />
-                            <button onClick={() => {
-                                handleClick(instrumental.audio_files[0].lease?.id)
-                            }}>Add to Cart</button>
-                            {selectedInstrumental === instrumental.audio_files[0].lease?.id && (
-                                <div className="flex items-center justify-center mb-4 p-4">
-                                    <div className="bottom-0 text-align mb-4 w-60 p-4 text-black bg-white rounded-lg shadow-lg">
-                                        <p className="font-bold">{instrumental.title} Added to Cart</p>
-                                    </div>
-                                </div>
-                            )}
+                        </div>
                         </div>
                     )
                 })

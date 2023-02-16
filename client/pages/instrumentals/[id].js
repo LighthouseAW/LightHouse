@@ -46,30 +46,37 @@ export default function Instrumental () {
     const { title } = instrumental
 
     return (
+        <>
         <div className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover bg-home">
             <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/50 z-[2]"/>
                 <div className="p-5 text-white z-[2] text-center w-[900px]">
+                <div className='absolute items-center z-[4]'>
+                        <Link href="/instrumentals" className='flex items-center cursor-pointer'>
+                            <p className='-ml-2 font-medium text-white'>← All Beats</p>
+                        </Link>
+                    </div>
                 <h2 className="text-6xl font-bold">{title}</h2>
+                <p className="py-5 text-xl"></p>
+                <h3>Genre: {instrumental.genre?.name}</h3>
+                <p className="py-5 text-xl"></p>
+                <button onClick={() => {handleClick(instrumental.audio_files[0].lease?.id)}}>
+                        {showPopUp ? `${instrumental.title} added to cart!` : "Add to Cart" }
+                    </button>
                     <p className="py-5 text-xl"></p>
                     <div key={instrumental.id}>
                         <AudioPlayer
                             src={audioUrl}
                             onPlay={e => console.log("onPlay")}
+                            style={{
+                                backgroundColor: 'rgba(30, 41, 59, 0.5)',
+                                borderRadius: '10px',
+                                padding: '10px',
+                                textColor: 'white',
+                            }}
                         />
-                <h3>Genre: {instrumental.genre?.name}</h3>
-                    <button onClick={() => {handleClick(instrumental.audio_files[0].lease?.id)}}>
-                        Add to Cart
-                    </button>
-                    {showPopUp && (
-                                <div className="flex items-center justify-center mb-4 p-4">
-                                <div className="bottom-0 text-align mb-4 w-60 p-4 text-black bg-white rounded-lg shadow-lg">
-                                    <p className="font-bold">{instrumental.title} Added to Cart</p>
-                                </div>
-                            </div>
-                        )}
                 </div>
             </div>
         </div>
+        </>
     )
 }
-

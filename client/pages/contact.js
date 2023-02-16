@@ -26,7 +26,7 @@ export default function Contact() {
     return (
       <div className="flex items-center justify-center h-screen bg-fixed bg-center bg-cover bg-home">
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/50 z-[2]"/>
-          <div className="absolute top-40 left-80 right-80 bottom-40 bg-white/50 z-[2]"/>
+          <div className="absolute rounded-lg top-40 left-80 right-80 bottom-40 bg-white/30 z-[2]"/>
             <div className="p-5 text-white z-[2] text-center w-[900px]">
               <div>
                 <h2 className="text-6xl font-bold">{ty}</h2>
