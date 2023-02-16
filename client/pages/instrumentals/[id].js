@@ -4,7 +4,7 @@ import 'react-h5-audio-player/lib/styles.css';
 import CartContext from '../../contexts/CartContext';
 import UserContext from '../../contexts/UserContext';
 import { useRouter } from 'next/router';
-
+import Link from 'next/link';
 
 export default function Instrumental () {
     const [instrumental, setInstrumental] = useState([]);

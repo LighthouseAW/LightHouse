@@ -52,8 +52,8 @@ export default function Instrumentals () {
                 {instrumentals && instrumentals.map(instrumental => {
                     const audioUrl = `https://jonnynice.onrender.com${instrumental.audio_files[0].file}`;
                     return (
-                        <div className="p-4">
-                        <div key={instrumental.id} className="border-2 border-slate-800 rounded-lg p-2">
+                        <div key={instrumental.id} className="p-4">
+                        <div className="border-2 border-slate-800 rounded-lg p-2">
                             <Link href={`/instrumentals/${instrumental.id}`}>
                                 <p className='font-bold'>{instrumental.title}</p>
                             </Link>
