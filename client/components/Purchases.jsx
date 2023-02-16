@@ -31,7 +31,7 @@ export default function Purchases({user, setUser}) {
                 </h1>
                 <div>{purchases.length > 0 ? (purchases.map((purchase, index)=> {
                         return (
-                            <div key={index}>
+                            <div key={index} className="z-[5]">
                                 <li>{purchase.instrumental}</li>
                                     <ul>{purchase.contract_info}</ul>
                                     <div>
