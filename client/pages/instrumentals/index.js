@@ -49,6 +49,7 @@ export default function Instrumentals () {
                 <div className="p-5 text-white z-[2] text-center w-[900px]">
                     <h2 className="text-6xl font-bold pt-40">All Beats</h2>
                     {/* <p className="py-5 text-xl">search</p> */}
+                    <div className="scroll-container z-[2] h-4/6 overflow-y-auto">
                 {instrumentals && instrumentals.map(instrumental => {
                     const audioUrl = `https://jonnynice.onrender.com${instrumental.audio_files[0].file}`;
                     return (
@@ -75,7 +76,7 @@ export default function Instrumentals () {
                         </div>
                     )
                 })
-            }
+            }</div>
             </div>
         </div>
     )

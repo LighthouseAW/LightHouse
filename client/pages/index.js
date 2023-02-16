@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import Carousel from '../components/Carousel'
 import Hero from '../components/Hero'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { loadStripe } from "@stripe/stripe-js"
 
 const inter = Inter({ subsets: ['latin'] })
@@ -16,7 +16,7 @@ export default function Home() {
       <Head>
         <title>Jonny Nice Productions</title>
         <meta name="description" content="Jonny Nice Productions" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/flavicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Hero heading="Jonny Nice" message="Producer, Pianist, Composer" />
