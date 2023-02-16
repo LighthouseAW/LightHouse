@@ -17,7 +17,7 @@ Dotenv.load
             charge = Stripe::Charge.create(
                 amount: amount,
                 currency: 'usd',
-                customer: customer.id
+                customer: customer.id,
                 source: token.id
             )
             if charge.paid
