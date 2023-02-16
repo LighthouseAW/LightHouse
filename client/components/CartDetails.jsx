@@ -20,6 +20,7 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
 
     let total_cart_items = 0
     let total = 0
+    const discountPercentage = 0.05; 
 
     const updateCartItem = (item) => {
         setCart(cart.map(i => i.id === item.id ? item : i));
@@ -75,7 +76,13 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
         });
     };
 
+    const discountedTotal = user?.email === "Guest" ? total : total * (1 - discountPercentage);
+
     const onToken = (token) => {
+
+    const discount = user.email !== 'Guest' ? 0.05 : 0;
+    const discountedTotal = total * (1 - discount);
+
         const charge = {
             token: token.id,
             };
@@ -84,7 +91,7 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ charge: charge, price: total * 100 }),
+            body: JSON.stringify({ charge: charge, price: discountedTotal * 100 }),
             };
             fetch("/api/charges", config)
             .then((res) => res.json())
@@ -131,7 +138,11 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
                                     Subtotal <span>({total_cart_items} product{total_cart_items > 1 ? "s" : null})</span>
                                 </td>
                                 <td className='pt-5 font-medium text-right'>
-                                    <span>$ {total}.00</span>
+                                <div>
+                                    <span>Total: ${total.toFixed(2)}</span>
+                                    {userEmail === "Guest" && <p>You qualify for a 5% discount!</p>}
+                                    <span>Discounted total: ${discountedTotal.toFixed(2)}</span>
+                                </div>
                                 </td>
                             </tr>
                         </thead>
@@ -147,20 +158,20 @@ export default function CartDetails ({ setUser, user, handlePurchaseSuccessful }
                         </tbody>
                     </table>
                     <div className='items-center text-center mt-2'>
-                        <button onClick={handlePurchase}
+                        {/* <button onClick={handlePurchase}
                             className='bg-black text-white rounded-full text-sm m-2 py-3 px-64 mb-12 mt-4'
                         >
                             Success Test
-                        </button>
-                        <div className="mb-8">
+                        </button> */}
+                        <div className="mb-8 p-4">
                         <StripeCheckout
-                                className="bg-black text-white rounded-full text-sm m-2 py-3 px-64 mb-12 mt-4"
                             token={onToken}
                             stripeKey={process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}
+                            className="checkout"
                         />
                         </div>
                         <div className="mb-8">
-                            {user.email == "Guest" ? <><h1>{signed}</h1><h1>{make}<Link href="/login" className="underline">account</Link> to save your cart and purchases. </h1></> : null}
+                            {user.email == "Guest" ? <><h1>You're currently not signed in.</h1><h1> You'll need to make an <Link href="/login" className="underline">account</Link> to save your cart and purchases. </h1></> : null}
                         </div>
                     </div>
                 </div>
