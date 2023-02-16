@@ -12,7 +12,7 @@ export default function Instrumental () {
     const [user, _setUser] = useContext(UserContext);
     const router = useRouter()
     const id = router.query.id
-    const [showPopUp, setShowPopUp] = useState(false);
+    const [selectedLeaseId, setSelectedLeaseId] = useState(null);
 
     useEffect(() => {
         fetch(`/api/instrumentals/${id}`)
@@ -78,15 +78,18 @@ export default function Instrumental () {
                 <div>
                 {instrumental && instrumental.audio_files && instrumental.audio_files.map((audio_file, j) => (
                     <div key={j}>
-                    {audio_file.lease &&
+                        {audio_file.lease && (
                         <div>
-                        <p>Contract Info: {audio_file.lease.contract_info}</p>
-                        <p>Price: {audio_file.lease.price}</p>
-                        <button onClick={() => {handleClick(audio_file.lease.id)}}>
-                            {showPopUp ? `${instrumental.title} added to cart!` : "Add to Cart" }
-                        </button>
+                            <p>Contract Info: {audio_file.lease.contract_info}</p>
+                            <p>Price: {audio_file.lease.price}</p>
+                            <button onClick={() => { setSelectedLeaseId(audio_file.lease.id) }}>
+                            {selectedLeaseId === audio_file.lease.id
+                                ? `${instrumental.title} added to cart!`
+                                : "Add to Cart"
+                            }
+                            </button>
                         </div>
-                    }
+                        )}
                     </div>
                 ))}
                 </div>
