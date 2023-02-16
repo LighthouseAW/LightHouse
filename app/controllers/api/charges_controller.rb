@@ -18,7 +18,7 @@ Dotenv.load
                 amount: amount,
                 currency: 'usd',
                 customer: customer.id,
-                source: token.id
+                source: token
             )
             if charge.paid
                 render json: { message: 'Payment processed successfully' }, status: :ok
