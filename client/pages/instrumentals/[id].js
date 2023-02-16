@@ -75,9 +75,9 @@ export default function Instrumental () {
                             }}
                         />
                 </div>
-                <h1>{instrumental.audio_files.map((audio_file) => {
+                <h1>{instrumental.audio_files.map((audio_file, index) => {
                     return (
-                        <div>
+                        <div key={index} >
                             <h1>{audio_file.lease.contract_info}</h1>
                             <h2>{audio_file.lease.price}</h2>
                         </div>
