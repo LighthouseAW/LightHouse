@@ -12,12 +12,10 @@ Dotenv.load
             token = params[:charge][:token]
 
             Stripe.api_key = "sk_test_51MYwEsDhAuw7r76W3hIw2fQnVVJixwEojclZH7jsv7s0bvV091uNaJo0ejjmgiykMjP3tzBtgxkGV9Vig4rzxjrU00a4mTUS7r"
-            customer = Stripe::Customer.create(source: token.id)
 
             charge = Stripe::Charge.create(
                 amount: amount,
                 currency: 'usd',
-                customer: customer.id,
                 source: token
             )
             if charge.paid
