@@ -59,9 +59,9 @@ export default function Instrumental () {
                 <p className="py-5 text-xl"></p>
                 <h3>Genre: {instrumental.genre?.name}</h3>
                 <p className="py-5 text-xl"></p>
-                <button onClick={() => {handleClick(instrumental.audio_files[0].lease?.id)}}>
+                    {/* <button onClick={() => {handleClick(instrumental.audio_files[0].lease?.id)}}>
                         {showPopUp ? `${instrumental.title} added to cart!` : "Add to Cart" }
-                    </button>
+                    </button> */}
                     <p className="py-5 text-xl"></p>
                     <div key={instrumental.id}>
                         <AudioPlayer
@@ -82,6 +82,9 @@ export default function Instrumental () {
                         <div>
                         <p>Contract Info: {audio_file.lease.contract_info}</p>
                         <p>Price: {audio_file.lease.price}</p>
+                        <button onClick={() => {handleClick(audio_file.lease.id)}}>
+                            {showPopUp ? `${instrumental.title} added to cart!` : "Add to Cart" }
+                        </button>
                         </div>
                     }
                     </div>
