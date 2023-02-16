@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import insta from "../public/logos/instagram.svg"
 import youtube from "../public/logos/youtube.svg"
-
+import Link from "next/link";
 
 export default function Footer() {
     return (
