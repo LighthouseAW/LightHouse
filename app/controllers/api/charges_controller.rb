@@ -19,7 +19,7 @@ Dotenv.load
                 source: token
             )
             if charge.paid
-                render json: { message: 'Payment processed successfully' }, status: :ok
+                render json: { message: 'Payment processed successfully', status: 'succeeded' }, status: :ok
             else
                 render json: { error: 'Payment processing failed' }, status: :unprocessable_entity
             end
