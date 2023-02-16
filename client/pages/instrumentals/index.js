@@ -43,18 +43,18 @@ export default function Instrumentals () {
             })
         }
 
-    return (
-        <div className="flex items-center justify-center h-screen bg-fixed bg-center bg-cover bg-home">
-            <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/50 z-[2]"/>
-            <div className="p-5 text-white z-[2] text-center w-[900px] flex flex-col">
-                <h2 className="text-6xl font-bold pt-40">All Beats</h2>
-                {/* <p className="py-5 text-xl">search</p> */}
-                <div className="scroll-container z-[2] flex-grow overflow-y-auto">
-                {instrumentals && instrumentals.map(instrumental => {
-                    const audioUrl = `https://jonnynice.onrender.com${instrumental.audio_files[0].file}`;
-                    return (
+        return (
+            <div className="flex items-center justify-center h-screen bg-fixed bg-center bg-cover bg-home">
+                <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/50 z-[2]"/>
+                <div className="p-5 text-white z-[2] text-center w-[900px] flex flex-col">
+                    <h2 className="text-6xl font-bold pt-40">All Beats</h2>
+                    {/* <p className="py-5 text-xl">search</p> */}
+                    <div className="scroll-container z-[2] flex-grow overflow-y-auto">
+                    {instrumentals && instrumentals.map(instrumental => {
+                        const audioUrl = `https://jonnynice.onrender.com${instrumental.audio_files[0].file}`;
+                        return (
                         <div key={instrumental.id} className="p-4">
-                        <div className="border-2 border-slate-800 rounded-lg p-2">
+                            <div className="border-2 border-slate-800 rounded-lg p-2">
                             <Link href={`/instrumentals/${instrumental.id}`}>
                                 <p className='font-bold'>{instrumental.title}</p>
                             </Link>
@@ -66,18 +66,18 @@ export default function Instrumentals () {
                                 src={audioUrl}
                                 onPlay={e => console.log("onPlay")}
                                 style={{
-                                    backgroundColor: 'rgba(30, 41, 59, 0.5)',
-                                    borderRadius: '10px',
-                                    padding: '10px',
-                                    textColor: 'white',
+                                backgroundColor: 'rgba(30, 41, 59, 0.5)',
+                                borderRadius: '10px',
+                                padding: '10px',
+                                textColor: 'white',
                                 }}
                             />
+                            </div>
                         </div>
-                        </div>
-                    )
-                })
-            }</div>
+                        )
+                    })}
+                </div>
             </div>
         </div>
-    )
+    );
 }
