@@ -6,9 +6,9 @@ bundle install
 # bundle exec rake assets:precompile
 # bundle exec rake assets:clean
 
-npm i --prefix lighthouse-fe && npm run build --prefix client
+npm i --prefix src && npm run build --prefix client
 
-cp -a lighthouse-fe/out/. public/
+cp -a src/out/. public/
 
 
 bundle exec rake db:migrate
