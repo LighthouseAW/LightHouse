@@ -25,6 +25,14 @@ export default function Projects() {
             .then(project => setProject(project))
     }, []);
 
+    const featTitle = "We see art opening hearts across the Arab World"
+    const featDesc= "We believe that art and media can communicate truth on a deep level"
+    const featSoc = "Social Media is reaching millions across the Arab World and our mission is to connect them with the Gospel of Jesus Christ"
+    const featFilms = "Films like 'Son of her Tears' have been shown in Arab World theaters and film festivals"
+
+    const giftText = "Your gifts help make the Gospel available to the Arab World"
+    const giftText2 = "We are so thankful for the support that you give"
+
     return (
         <HomeLayout>
             <div className='h-screen bg-projects bg-cover bg-no-repeat pt-24 relative'>
@@ -35,10 +43,10 @@ export default function Projects() {
                     <div className="flex mb-0 mt-14 p-4 items-center justify-center">
                         <div className='w-1/2 px-4'>
                             <div className='bg-blue-300/50 rounded-lg shadow-md p-4 relative z-20'>
-                                <div className='font-semibold text-5xl mb-2 text-white'>We see art opening hearts across the Arab World</div>
-                                <p className="text-white text-2xl">We believe that art and media can communicate truth on a deep level</p>
-                                <p className="text-white">Social Media is reaching millions across the Arab World and our mission is to connect them with the Gospel of Jesus Christ</p>
-                                <p className="text-white">Films like 'Son of her Tears' have been shown in Arab World theaters and film festivals</p>
+                                <div className='font-semibold text-5xl mb-2 text-white'>{featTitle}</div>
+                                <p className="text-white text-2xl">{featDesc}</p>
+                                <p className="text-white">{featSoc}</p>
+                                <p className="text-white">{featFilms}</p>
                                     {/* <ProjectFeature project={project} /> */}
                                     <Image alt="picture" src="/images/LighthouseReal1.png" width="100" height="100" />
                             </div>
@@ -48,10 +56,10 @@ export default function Projects() {
                             <div className="pt-20">
                             <div className='flex flex-col items-center justify-center m-auto'>
                                 <p className='text-black mt-14 text-center text-4xl font-bold mb-14 z-10 px-6'>
-                                    Your gifts help make the Gospel available to the Arab World
+                                    {giftText}
                                 </p>
                                 <p className='text-black text-center text-2xl font-bold mb-12 z-20'>
-                                    We are so thankful for the support that you give
+                                    {giftText2}
                                 </p>
                             <button className={`bg-orange-500 text-xl text-stone-100 rounded-full py-3 text-center justify-center p-6 z-20 mb-12 `} href="/give">Give Now</button>
                         </div>
