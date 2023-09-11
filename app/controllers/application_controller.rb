@@ -5,15 +5,13 @@ class ApplicationController < ActionController::API
   before_action :guest
   before_action :authorize
 
-
   private
 
   def guest
     return if session[:user_id]
-    @guest = User.new(:email => "Guest")
+    @guest = User.new(:username => "Guest")
     @guest.save(validate: false)
     session[:user_id] = @guest.id
-    carts = @guest.carts.create!
   end
 
 

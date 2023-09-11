@@ -12,34 +12,18 @@ class Api::UsersController < ApplicationController
         if user
             render json: user
         else
-            @guest = User.new(email: "Guest")
+            @guest = User.new(username: "Guest")
             @guest.save(validate: false)
             session[:user_id] = @guest.id
-            carts = @guest.carts.create!
             render json: @guest
         end
     end
 
     def guest
         return if session[:user_id]
-        @guest = User.new(:email => "Guest")
+        @guest = User.new(:username => "Guest")
         @guest.save(validate: false)
         session[:user_id] = @guest.id
-        carts = @guest.carts.create!
-    end
-
-    def create
-        user = User.create!(user_params)
-        guest_user = User.where(email: "Guest").order(created_at: :desc).first
-        if guest_user
-            guest_user.carts.each do |cart|
-                cart.update!(user_id: user.id)
-            end
-            guest_user.purchases.update_all(user_id: user.id)
-            guest_user.destroy
-        end
-        session[:user_id] = user.id
-        render json: user, status: :created
     end
 
 
@@ -60,6 +44,6 @@ class Api::UsersController < ApplicationController
     end
 
     def user_params
-        params.permit(:email, :password, :password_confirmation, :user)
+        params.permit(:username, :password, :password_confirmation, :user)
     end
 end

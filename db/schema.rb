@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_11_173145) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_17_213331) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,66 +42,68 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_11_173145) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "audio_files", force: :cascade do |t|
-    t.bigint "instrumental_id", null: false
-    t.bigint "lease_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["instrumental_id"], name: "index_audio_files_on_instrumental_id"
-    t.index ["lease_id"], name: "index_audio_files_on_lease_id"
-  end
-
-  create_table "carts", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.float "total"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_carts_on_user_id"
-  end
-
-  create_table "genres", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "instrumentals", force: :cascade do |t|
+  create_table "blog_photos", force: :cascade do |t|
     t.string "title"
-    t.string "picture"
-    t.string "info"
-    t.bigint "genre_id", null: false
+    t.bigint "blogpost_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["genre_id"], name: "index_instrumentals_on_genre_id"
+    t.index ["blogpost_id"], name: "index_blog_photos_on_blogpost_id"
   end
 
-  create_table "leases", force: :cascade do |t|
-    t.string "contract_info"
-    t.integer "price"
+  create_table "blogposts", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.text "subtitle"
+    t.text "blurb"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "orders", force: :cascade do |t|
-    t.bigint "cart_id"
-    t.bigint "lease_id", null: false
-    t.bigint "purchase_id"
+  create_table "employees", force: :cascade do |t|
+    t.string "name"
+    t.string "role"
+    t.text "blurb"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["cart_id"], name: "index_orders_on_cart_id"
-    t.index ["lease_id"], name: "index_orders_on_lease_id"
-    t.index ["purchase_id"], name: "index_orders_on_purchase_id"
   end
 
-  create_table "purchases", force: :cascade do |t|
-    t.bigint "user_id", null: false
+  create_table "forms", force: :cascade do |t|
+    t.string "title"
+    t.integer "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_purchases_on_user_id"
+  end
+
+  create_table "prayer_requests", force: :cascade do |t|
+    t.string "name"
+    t.text "request"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "project_photos", force: :cascade do |t|
+    t.string "title"
+    t.bigint "project_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_project_photos_on_project_id"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "name"
+    t.text "subtitle"
+    t.text "blurb"
+    t.text "mission_statement"
+    t.text "about"
+    t.string "website"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "video"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email"
+    t.string "username"
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -109,12 +111,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_11_173145) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "audio_files", "instrumentals"
-  add_foreign_key "audio_files", "leases"
-  add_foreign_key "carts", "users"
-  add_foreign_key "instrumentals", "genres"
-  add_foreign_key "orders", "carts"
-  add_foreign_key "orders", "leases"
-  add_foreign_key "orders", "purchases"
-  add_foreign_key "purchases", "users"
+  add_foreign_key "blog_photos", "blogposts"
+  add_foreign_key "project_photos", "projects"
 end
