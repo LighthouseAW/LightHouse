@@ -83,5 +83,5 @@ production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
   database: lighthouse
-  username: jonnyniceproject
-  password: <%= ENV["JONNYNICEPROJECT_DATABASE_PASSWORD"] %>
+  username: ianholsteen
+  password: <%= ENV["LIGHTHOUSE_DATABASE_PASSWORD"] %>
