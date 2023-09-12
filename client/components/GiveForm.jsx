@@ -190,38 +190,51 @@ export default function GiveForm() {
         return data;
     }
 
-    const apiUrl = 'https://app-sandbox.kindful.com/api/v1/imports';
+    // const apiUrl = 'https://app-sandbox.kindful.com/api/v1/imports';
+
+    // async function submitDonation() {
+    //     if (isValidDonation()) {
+    //         const requestBody = createDonationData();
+
+    //         const requestOptions = {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Authorization': `Token token="${process.env.NEXT_PUBLIC_TOKEN}"`,
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify(requestBody),
+    //         };
+
+    //         console.log(requestOptions.headers);
+    //         console.log(requestOptions.body)
+    
+    //         try {
+    //             const response = await fetch(apiUrl, requestOptions);
+    //             if (!response.ok) {
+    //                 throw new Error(`Request failed with status ${response.status}`);
+    //             }
+    
+    //             const data = await response.json();
+    //             console.log('Response data:', data);
+    //             // Handle the response data from Kindful here
+    //             // You might want to redirect to a thank-you page or process the response
+    //         } catch (error) {
+    //             // Handle any errors here
+    //             console.error('Fetch Error:', error);
+    //         }
+    //     } else {
+    //         // Display an error message if needed
+    //         // document.getElementById('donate-message').style.display = "block";
+    //     }
+    // }
+
+    function updateAmount(newAmount) {
+        setAmount(newAmount);
+    }
 
     async function submitDonation() {
         if (isValidDonation()) {
-            const requestBody = createDonationData();
-
-            const requestOptions = {
-                method: 'POST',
-                headers: {
-                    'Authorization': `Token token="${process.env.NEXT_PUBLIC_TOKEN}"`,
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(requestBody),
-            };
-
-            console.log(requestOptions.headers);
-            console.log(requestOptions.body)
-    
-            try {
-                const response = await fetch(apiUrl, requestOptions);
-                if (!response.ok) {
-                    throw new Error(`Request failed with status ${response.status}`);
-                }
-    
-                const data = await response.json();
-                console.log('Response data:', data);
-                // Handle the response data from Kindful here
-                // You might want to redirect to a thank-you page or process the response
-            } catch (error) {
-                // Handle any errors here
-                console.error('Fetch Error:', error);
-            }
+            buildUrl();
         } else {
             // Display an error message if needed
             // document.getElementById('donate-message').style.display = "block";
@@ -232,34 +245,39 @@ export default function GiveForm() {
         return parseFloat(amount.toString().replace('$', '').replace(/,/g, ''));
     }
 
-    // function submitDonation() {
-    //     if (isValidDonation()) {
-    //         // Create an HTTP request and set the API key in the headers
-    //         const requestOptions = {
-    //             method: 'GET', // You might need to adjust the HTTP method
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //                 'Authorization': `Token token=${apiKey}`
-    //             },
-    //         };
-
-    //         // Make the HTTP request to Kindful with the API key in the headers
-    //         fetch(getDonateUrl(), requestOptions)
-    //             .then(response => {
-    //                 // Handle the response data from Kindful here
-    //                 // You might want to redirect to Kindful's donation page or process the response
-    //             })
-    //             .catch(error => {
-    //                 // Handle any errors here
-    //             });
-    //     } else {
-    //         // Display an error message if needed
-    //         // document.getElementById('donate-message').style.display = "block";
-    //     }
-    // }
-
     function isValidDonation() {
         return getAmount() > 0;
+    }
+
+    function calculateRegistration() {
+        var donation_amount = parseInt($('input[name="amount"]:checked').val());
+        return isNaN(donation_amount) ? 0 : donation_amount;
+    }
+
+    function buildUrl() {
+        var items = 0;
+        var donation_amount = calculateRegistration();
+        var campaign_id = "0000"; // Substitute with your Kindful campaign ID
+
+        var url = `https://testorg.kindful.com/widget?campaign_id=${campaign_id}`;
+        url += "&schedule=0";
+        url += "&success_action=GET";
+        url += "&success_url=http%3A//testorg.org/";
+        url += "&cart[desc]=Test Donation";
+
+        if (donation_amount > 0) {
+            url += `&cart[items][${items}][amount]=${donation_amount}`;
+            url += "&cart[items][" + items + "][desc]=Online Donation";
+            url += "&cart[items][" + items + "][product_id]=online_donation";
+            url += "&cart[items][" + items + "][quantity]=1";
+            items++;
+        }
+
+        if (items > 0) {
+            window.location.href = url;
+        } else {
+            alert('Please select a donation amount');
+        }
     }
 
     return (
