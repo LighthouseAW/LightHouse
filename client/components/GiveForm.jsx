@@ -298,17 +298,8 @@ export default function GiveForm() {
             <label>
                 <input
                 type="radio"
-                name="amount"
+                name="50"
                 onClick={() => updateAmount(50)}
-                className="form-radio text-blue-500"
-                />{" "}
-                $25
-            </label>
-            <label>
-                <input
-                type="radio"
-                name="amount"
-                onClick={() => updateAmount(100)}
                 className="form-radio text-blue-500"
                 />{" "}
                 $50
@@ -316,11 +307,20 @@ export default function GiveForm() {
             <label>
                 <input
                 type="radio"
-                name="amount"
+                name="100"
+                onClick={() => updateAmount(100)}
+                className="form-radio text-blue-500"
+                />{" "}
+                $100
+            </label>
+            <label>
+                <input
+                type="radio"
+                name="250"
                 onClick={() => updateAmount(250)}
                 className="form-radio text-blue-500"
                 />{" "}
-                $75
+                $250
             </label>
             {/* <label>
                 <input
