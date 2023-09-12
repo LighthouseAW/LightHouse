@@ -8,8 +8,10 @@
 
 # Create Employee
 User.destroy_all
-Project.destroy_all
 Project_photos.destroy_all
+
+Project.destroy_all
+
 
 user = User.create(username: 'Neil', password: 'nsteen88')
 
