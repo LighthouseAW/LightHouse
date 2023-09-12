@@ -8,7 +8,7 @@
 
 # Create Employee
 User.destroy_all
-Project_photo.destroy_all
+ProjectPhoto.destroy_all
 
 Project.destroy_all
 
