@@ -250,7 +250,15 @@ export default function GiveForm() {
     }
 
     function calculateRegistration() {
-        var donation_amount = parseInt($('input[name="amount"]:checked').val());
+        var donationRadios = document.querySelectorAll('input[name="amount"]');
+        var donation_amount = 0;
+
+        donationRadios.forEach(function (radio) {
+            if (radio.checked) {
+                donation_amount = parseInt(radio.value);
+            }
+        });
+
         return isNaN(donation_amount) ? 0 : donation_amount;
     }
 
