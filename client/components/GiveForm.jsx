@@ -190,7 +190,7 @@ export default function GiveForm() {
         return data;
     }
 
-    const apiUrl = 'https://cors-anywhere.herokuapp.com/https://app-sandbox.kindful.com/api/v1/imports';
+    const apiUrl = 'https://app-sandbox.kindful.com/api/v1/imports';
 
     async function submitDonation() {
         if (isValidDonation()) {
