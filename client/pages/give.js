@@ -1,6 +1,7 @@
 import HomeLayout from '../components/HomeLayout';
 import GiveForm from "../components/GiveForm";
 import Link from "next/link"
+import DonatingSection from "../components/DonatingSection"
 
 export default function Give() {
     return (
@@ -13,7 +14,7 @@ export default function Give() {
                                 <GiveForm />
                             </div>
                             <div className="w-1/2 p-8 pt-64 text-black z-20" >
-                                <p>Words about donating</p>
+                                <DonatingSection />
                             </div>
                         </div>
                         <div className="absolute bg-white w-full h-60"></div>

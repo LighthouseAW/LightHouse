@@ -12,7 +12,7 @@ module.exports = {
         'about': "url('../public/images/LightHouseArt2.png')",
         'projects': "url('../public/images/LighthouseArt3.png')",
         'mission': "url('../public/images/LightHouseArt1.png')",
-        'rug': "url('../public/images/Rug2.png')"
+        'rug': "url('../public/images/Rug3.png')"
       },
       colors: {
         color: 'white',
