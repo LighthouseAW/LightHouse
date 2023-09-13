@@ -41,7 +41,7 @@ export default function Hero({ heading, message }) {
                             videoWidth={800}
                             videoHeight={450}
                         />
-                        <button className={`bg-orange-500 text-2xl text-white rounded-full py-3 text-center justify-center ${isMobile ? 'px-1 pt-6 ' : 'px-6'}`} href="/give">Give Now</button>
+                        <button className={`bg-orange-500 text-2xl text-white rounded-full py-3 text-center justify-center ${isMobile ? 'px-1 pt-6 ' : 'px-6'}`} href="/give">Give</button>
                     </div>
                 </div>
             </div>
