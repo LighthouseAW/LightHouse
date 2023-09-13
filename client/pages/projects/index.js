@@ -70,17 +70,17 @@ export default function Projects() {
             <div className="bg-white py-20">
                 <div className='z-20 relative'>
                     <div className="flex items-center">
-                        <div className=" absolute bottom-1 left-1/2 transform -translate-x-1/2 translate-y-20 flex flex-col items-center w-5/6 bg-blue-300 justify-center m-auto">
-                            <p className='text-[#F17F29] mt-8 text-center text-4xl font-bold mb-10'>
+                        <div className=" absolute bottom-1 left-1/2 transform -translate-x-1/2 translate-y-20 flex flex-col items-center w-5/6 bg-blue-300/50 justify-center m-auto">
+                            <p className='text-black mt-8 text-center text-4xl font-bold mb-10'>
                                 We are Changemakers & Storytellers
                             </p>
                             <div className="flex items-center justify-center space-x-6">
-                                <p className='text-[#F17F29] text-center text-2xl font-bold mb-4'>
+                                <p className='text-black text-center text-2xl font-bold mb-4'>
                                     Passionate about using media to share about Jesus
                                 </p>
                             <Link href="/mission" className="bg-[#F17F29] rounded-full p-4 mb-4">Our Mission →</Link>
                         </div>
-                            <p className='text-[#F17F29] mt-2 text-center text-4xl font-bold mb-6'>
+                            <p className='text-black mt-2 text-center text-4xl font-bold mb-6'>
                                 See all of our Outreach Projects ↓
                             </p>
                     </div>
