@@ -6,6 +6,7 @@ import Hero from '../components/Hero'
 import HomeLayout from '../components/HomeLayout';
 import Link from 'next/link'
 import Carousel from '../components/Carousel'
+import Contact from "../components/Contact"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,31 +18,28 @@ export default function Home() {
       <Hero heading="Lighthouse Arab World" message="Art Opens Hearts" />
       <div className=' relative bg-rug p-40 bg-no-repeat bg-cover bg-center '>
         <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
-        <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 translate-y-0 z-20 w-5/6 bg-blue-200 justify-center m-auto h-[400px] flex">
-          <div className="w-1/4 flex flex-col items-center justify-center bg-blue-300">
-            <p className="text-black text-center text-3xl font-bold">
-              Gospel through Media
-            </p>
+        <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 translate-y-0 z-20 w-5/6 justify-center m-auto h-[400px] flex">
+        <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
+          <div className="w-1/4 flex flex-col items-center pt-6 bg-car1 bg-cover bg-center">
+            <p className="text-black text-center text-3xl font-bold z-20">Gospel through Media</p>
           </div>
-          <div className="w-1/4 flex flex-col items-center justify-center bg-blue-400">
-            <p className="text-black text-center text-3xl font-bold">
-              Train and Replicate
-            </p>
+          <div className="w-1/4 flex flex-col items-center pt-6 bg-car2 bg-cover bg-center">
+            <p className="text-black text-center text-3xl font-bold z-20">Train and Replicate</p>
           </div>
-          <div className="w-1/4 flex flex-col items-center justify-center bg-blue-500">
-            <p className="text-black text-center text-3xl font-bold">
-              Meeting the need
-            </p>
+          <div className="w-1/4 flex flex-col items-center pt-6 bg-car3 bg-cover bg-center">
+            <p className="text-black text-center text-3xl font-bold z-20">Meeting the need</p>
           </div>
-          <div className="w-1/4 flex flex-col items-center justify-center bg-blue-600">
-            <p className="text-black text-center text-3xl font-bold">
-              Art opens hearts
-            </p>
+          <div className="w-1/4 flex flex-col items-center pt-6 bg-car4 bg-cover bg-center">
+            <p className="text-black text-center text-3xl font-bold z-20">Art opens hearts</p>
           </div>
         </div>
       </div>
       <Carousel />
-      <div className='bg-white p-4 flex flex-row pt-60'>
+      <div>
+        <Contact />
+      </div>
+     
+      {/* <div className='bg-white p-4 flex flex-row pt-60'>
                 <div className='flex flex-col items-center m-auto w-2/6 bg-blue-300/50'>
                     <p className='text-[#F17F29] mt-20 text-center text-4xl font-bold mb-20'>
                         Igniting the Church of the Middle East
@@ -53,8 +51,7 @@ export default function Home() {
                 </div>
                     <div className='flex flex-col items-center m-auto w-2/6'>
                 </div>
-                {/* <Carousel /> */}
-            </div>
+            </div> */}
     </HomeLayout>
   )
 }
