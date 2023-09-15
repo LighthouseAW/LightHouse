@@ -6,8 +6,9 @@ export default function Donation() {
         function calculateRegistration() {
             var amount = parseInt($('input[name="donate-amount"]:checked').val());
             var donationAmount = isNaN(amount) ? 0 : amount;
+            console.log('Donation Amount:', donationAmount);
             return donationAmount;
-        }
+          }
 
         function buildUrl() {
             var donationAmount = calculateRegistration();
