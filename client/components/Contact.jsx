@@ -43,7 +43,7 @@ export default function Contact() {
   if (submitted) {
     return (
         <div className="flex items-center justify-center h-screen bg-fixed bg-center bg-cover bg-white">
-            <div className="absolute rounded-lg top-40 left-80 right-80 bottom-40 bg-white/30 z-[2]"/>
+            {/* <div className="absolute rounded-lg top-40 left-80 right-80 bottom-40 bg-white/30 z-[2]"/> */}
               <div className={`p-5 text-white z-[2] text-center ${ isMobile ? "" : "w-[900px]"}`}>
                 <div>
                   <h2 className="text-6xl font-bold">{ty}</h2>
@@ -59,7 +59,7 @@ export default function Contact() {
 
   return (
     <div className="flex items-center justify-center h-screen bg-fixed bg-center bg-cover bg-white">
-        <div className="absolute rounded-lg top-40 left-80 right-80 bottom-40 z-[2]"/>
+        {/* <div className="absolute rounded-lg top-40 left-80 right-80 bottom-40 z-[2]"/> */}
           <div className={`p-5 text-black z-[2] text-center ${ isMobile ? "" : "w-[900px]"}`}>
             <form
                 ref={form} onSubmit={sendEmail}

@@ -36,7 +36,7 @@ export default function Give() {
                             </div>
                         </div>
                         <div className="absolute bg-white w-full h-[700px]"></div>
-                        <div className="absolute bottom-0 bg-white w-full h-96"></div>
+                        {/* <div className="absolute bottom-0 bg-white w-full h-96"></div> */}
                         </div>
                     </div>
                     <div className="bg-color py-20 ">
