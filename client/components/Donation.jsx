@@ -27,7 +27,7 @@ export default function Donation() {
             url += '&cart[items][0][quantity]=1';
             }
 
-            console.log(url);
+            console.log(url, donationAmount);
 
             window.location.href = url;
         }
