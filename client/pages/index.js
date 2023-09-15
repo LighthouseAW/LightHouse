@@ -35,7 +35,6 @@ export default function Home() {
       <div>
         <Contact />
       </div>
-     
       {/* <div className='bg-white p-4 flex flex-row pt-60'>
                 <div className='flex flex-col items-center m-auto w-2/6 bg-blue-300/50'>
                     <p className='text-[#F17F29] mt-20 text-center text-4xl font-bold mb-20'>
