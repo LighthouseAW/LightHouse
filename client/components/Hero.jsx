@@ -25,7 +25,7 @@ export default function Hero({ heading, message }) {
     return (
         <div className='h-screen bg-home bg-cover bg-no-repeat flex items-center justify-center'>
             <div className="absolute top-0 left-0 right-0 bottom-0"/>
-            <div className="text-black z-[20] relative text-center">
+            <div className="text-black z-[2] text-center">
                 <h2 className={`z-20 relative text-6xl font-bold`}>{heading}</h2>
                 <p className={`z-20 text-black relative py-5 text-3xl`}>{message}</p>
                 <div className='flex justify-center gap-40'>

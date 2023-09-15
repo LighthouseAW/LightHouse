@@ -11,7 +11,7 @@ export default function Home() {
   const [user, setUser] = useContext(UserContext)
   return (
     <HomeLayout>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div> */}
       <Hero heading="Lighthouse Arab World" message="Art Opens Hearts" />
       <div className=' relative bg-rug p-40 bg-no-repeat bg-cover bg-center '>
         <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
