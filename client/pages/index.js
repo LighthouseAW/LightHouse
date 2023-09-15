@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import UserContext from "../context/UserContext";
 import React, {useContext, useState} from "react"
 import Hero from '../components/Hero'
@@ -7,8 +6,6 @@ import HomeLayout from '../components/HomeLayout';
 import Link from 'next/link'
 import Carousel from '../components/Carousel'
 import Contact from "../components/Contact"
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [user, setUser] = useContext(UserContext)
