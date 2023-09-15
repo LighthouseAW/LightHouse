@@ -2,6 +2,7 @@ import HomeLayout from '../components/HomeLayout';
 import GiveForm from "../components/GiveForm";
 import Link from "next/link"
 import DonatingSection from "../components/DonatingSection"
+import Donation from "../components/Donation"
 
 export default function Give() {
     return (
@@ -11,7 +12,7 @@ export default function Give() {
                 <div className="flex items-center justify-center pt-32 text-white relative z-20">
                         <div className="flex w-full">
                             <div className="w-1/2 p-8 z-20 relative">
-                                <GiveForm />
+                                <Donation />
                             </div>
                             <div className="w-1/2 p-8 pt-64 text-black z-20" >
                                 <DonatingSection />
