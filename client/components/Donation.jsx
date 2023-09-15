@@ -13,10 +13,10 @@ export default function Donation() {
             var donationAmount = calculateRegistration();
             var campaign_id = 'YOUR_CAMPAIGN_ID_HERE'; // Replace with your campaign ID
 
-            var url = 'https://testorg.kindful.com/widget?campaign_id=' + campaign_id;
+            var url = 'https://lighthouseaw.kindful.com/widget?campaign_id=' + campaign_id;
             url += '&schedule=0';
             url += '&success_action=GET';
-            url += '&success_url=http%3A//testorg.org/';
+            url += '&success_url=http%3A//lighthouseaw.org/';
             url += '&cart[desc]=Test Donation';
 
             if (donationAmount > 0) {
