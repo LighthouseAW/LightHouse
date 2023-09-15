@@ -12,7 +12,8 @@ export default function Give() {
                 <div className="flex items-center justify-center pt-32 text-white relative z-20">
                         <div className="flex w-full">
                             <div className="w-1/2 p-8 z-20 relative">
-                                <Donation />
+                            <div className='kindful-embed-wrapper' id='kindful-donate-form-c685c50a-25c6-48be-bf8e-1a34b337a64c'></div>
+                                <script src='https://lighthousearabworld.kindful.com/embeds/c685c50a-25c6-48be-bf8e-1a34b337a64c/init.js?type=form' data-embed-id='c685c50a-25c6-48be-bf8e-1a34b337a64c' data-lookup-type='jquery-selector' data-lookup-value='#kindful-donate-form-c685c50a-25c6-48be-bf8e-1a34b337a64c'></script>
                             </div>
                             <div className="w-1/2 p-8 pt-64 text-black z-20" >
                                 <DonatingSection />
