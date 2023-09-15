@@ -35,7 +35,7 @@ export default function Give() {
                                 <DonatingSection />
                             </div>
                         </div>
-                        <div className="absolute bg-white w-full h-60"></div>
+                        <div className="absolute bg-white w-full h-[700px]"></div>
                         <div className="absolute bottom-0 bg-white w-full h-96"></div>
                         </div>
                     </div>
