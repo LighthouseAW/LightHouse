@@ -2,7 +2,6 @@ import HomeLayout from '../components/HomeLayout';
 import GiveForm from "../components/GiveForm";
 import Link from "next/link";
 import DonatingSection from "../components/DonatingSection";
-import Donation from "../components/Donation";
 import { useEffect } from "react";
 
 export default function Give() {
