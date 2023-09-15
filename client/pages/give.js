@@ -1,5 +1,4 @@
 import HomeLayout from '../components/HomeLayout';
-import GiveForm from "../components/GiveForm";
 import Link from "next/link";
 import DonatingSection from "../components/DonatingSection";
 import { useEffect } from "react";
