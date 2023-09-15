@@ -12,7 +12,7 @@ export default function Donation() {
 
         function buildUrl() {
             var donationAmount = calculateRegistration();
-            var campaign_id = '123'; // Replace with your campaign ID
+            var campaign_id = '428382'; // Replace with your campaign ID
 
             var url = 'https://lighthouseaw.kindful.com/widget?campaign_id=' + campaign_id;
             url += '&schedule=0';
