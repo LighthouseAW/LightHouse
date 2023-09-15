@@ -14,10 +14,10 @@ export default function Donation() {
             var donationAmount = calculateRegistration();
             var campaign_id = '428382'; // Replace with your campaign ID
 
-            var url = 'https://lighthouseaw.kindful.com/widget?campaign_id=' + campaign_id;
+            var url = 'https://lighthousearabworld.kindful.com/widget?campaign_id=' + campaign_id;
             url += '&schedule=0';
             url += '&success_action=GET';
-            url += '&success_url=http%3A//lighthouseaw.org/';
+            url += '&success_url=http%3A//lighthousearabworld.org/';
             url += '&cart[desc]=Test Donation';
 
             if (donationAmount > 0) {
