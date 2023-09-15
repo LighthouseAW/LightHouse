@@ -1,10 +1,26 @@
 import HomeLayout from '../components/HomeLayout';
 import GiveForm from "../components/GiveForm";
-import Link from "next/link"
-import DonatingSection from "../components/DonatingSection"
-import Donation from "../components/Donation"
+import Link from "next/link";
+import DonatingSection from "../components/DonatingSection";
+import Donation from "../components/Donation";
+import { useEffect } from "react";
 
 export default function Give() {
+
+    useEffect(() => {
+        const script = document.createElement("script");
+        script.src = "https://lighthousearabworld.kindful.com/embeds/c685c50a-25c6-48be-bf8e-1a34b337a64c/init.js?type=form";
+        script.dataset.embedId = "c685c50a-25c6-48be-bf8e-1a34b337a64c";
+        script.dataset.lookupType = "jquery-selector";
+        script.dataset.lookupValue = "#kindful-donate-form-c685c50a-25c6-48be-bf8e-1a34b337a64c";
+        document.head.appendChild(script);
+
+        return () => {
+          // Clean up the script when the component unmounts
+            document.head.removeChild(script);
+        };
+    }, []);
+
     return (
         <HomeLayout>
             <div className='h-screen bg-about bg-cover bg-no-repeat'>
