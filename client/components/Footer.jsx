@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import Image from "next/image";
-import insta from "../public/logos/instagram.svg"
+import fb from "../public/logos/fb.svg"
 import youtube from "../public/logos/youtube.svg"
 import Link from "next/link";
 import UserContext from "../context/UserContext"
@@ -52,14 +52,14 @@ export default function Footer() {
                 <div className="flex">
                     <div className="w-96 mr-80">
                 <p className="font-light text-sm mb-5">{footText}</p>
-                    <Link href="/login"><button className="bg-neutral-600 rounded-full text-sm py-3 px-10">Register</button></Link>
+                    <Link href="/privacyPolicy"><button className="underline">Privacy Policy</button></Link>
                 </div>
                     <div className="w-32"></div>
                         <h3 className="font-bold text-base ml-auto">Follow
                             <div className="flex space-x-5 pr-20 pt-4">
-                        <Link href="" ><Image src={insta} width="11.25" height="18" alt="Instagram" /></Link>
+                        <Link href="https://www.facebook.com/lighthouseaw" ><Image src={fb} width="11.25" height="18" alt="Facebook" /></Link>
                             {/* <Image src={twitter} width="18" height="18" alt="Twitter" /> */}
-                        <Link href="" ><Image src={youtube} width="11.25" height="18" alt="YouTube" /></Link>
+                        <Link href="https://www.youtube.com/@LighthouseAW" ><Image src={youtube} width="11.25" height="18" alt="YouTube" /></Link>
                             </div>
                             <div className="pt-6">
                                 <Link href="/login" >

@@ -9,13 +9,17 @@
 # Create Employee
 User.destroy_all
 ProjectPhoto.destroy_all
-
 Project.destroy_all
-
+Employee.destroy_all
 
 user = User.create(username: 'Neil', password: 'nsteen88')
 
 # Create Projects
+
+emp1 = Employee.create(name: "Neil Holsteen", role: "", blurb: "President of Lighthouse Arab World. Neil joined Lighthouse Arab World in 2019 after a successful career in the corporate world. He lives with his wife Lisa in Littleton, CO and has two married children." )
+emp2 = Employee.create(name: "Imed Dabbour, PhD.", role: "", blurb: "CEO of Lighthouse Arab World. Originally from Tunisia, Imed now lives in Beirut, Lebanon with his Ellen and has two college age children." )
+emp3 = Employee.create(name: "Dave Halverson", role: "", blurb: "Dave has served as the chairman of the board of Lighthouse Arab World since 2013. He is the Associate Pastor of Outreach Ministries at San Gabriel Community Church, in San Gabriel, CA. Dave and his wife Kristen have four adult children and six grandchildren. " )
+emp4 = Employee.create(name: "Phil Wood", role: "", blurb: "Phil has worked as an executive in the oil and gas industry for 38 years. He and his wife Carol live in Centennial, CO and have three married children and nine grandchildren." )
 
 pBelight = Project.create(name: 'Belight',
     subtitle: 'Belight is a streaming platform connected to the world\'s social media platforms.', 
