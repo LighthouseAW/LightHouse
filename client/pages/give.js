@@ -43,13 +43,13 @@ export default function Give() {
                 </div>
             </div>
             <div className="bg-color py-20 ">
-                <div className='z-20 relative'>
+                <div className='z-10 relative'>
                     <div className="flex items-center">
                         <div className="absolute bg-white h-80" ></div>
                     </div>
                 </div>
             </div>
-            <div className='grid pb-20 items-center px-20'>
+            <div className='grid pt-40 pb-20 items-center px-20'>
                 <DonatingSection />
             </div>
         </HomeLayout>
