@@ -34,9 +34,9 @@ export default function Give() {
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                 <div className="flex items-center justify-center text-white relative z-20">
                     <div className="flex w-full">
-                        <div className="w-3/5">
+                        {/* <div className="w-3/5"> */}
                             <div className='kindful-embed-wrapper pt-24' id='kindful-donate-form-c685c50a-25c6-48be-bf8e-1a34b337a64c'></div>
-                        </div>
+                        {/* </div> */}
                         <div className="w-2/5  pt-28 text-black z-20">
                             <GiftInfo />
                         </div>
@@ -58,7 +58,7 @@ export default function Give() {
                     </div>
                 </div>
             </div>
-            <div className=' pb-20 pt-20 items-center px-20'>
+            <div className='pb-20 pt-10 items-center px-20'>
                 <div className="flex w-full">
                         <div className="w-3/5 z-20 relative">
                         </div>
