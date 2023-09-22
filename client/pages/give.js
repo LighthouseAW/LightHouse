@@ -7,6 +7,8 @@ import GiftInfo from "../components/GiftInfo"
 export default function Give() {
     const [scriptLoaded, setScriptLoaded] = useState(false);
 
+    const title = "MAKING GOD'S LOVE VISIBLE TO EVERYONE IN THE MIDDLE EAST AND NORTH AFRICA"
+
     useEffect(() => {
         if (!scriptLoaded) {
             const script = document.createElement("script");
@@ -28,7 +30,7 @@ export default function Give() {
     return (
         <HomeLayout>
             <div className='h-screen bg-about bg-cover bg-no-repeat '>
-                <div className="static px-48 pt-36 z-20 text-white text-3xl"><h2>MAKING GOD'S LOVE VISIBLE TO EVERYONE IN THE MIDDLE EAST AND NORTH AFRICA</h2></div>
+                <div className="static px-48 pt-36 z-20 text-white text-3xl"><h2>{title}</h2></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                 <div className="flex items-center justify-center text-white relative z-20">
                     <div className="flex w-full">
