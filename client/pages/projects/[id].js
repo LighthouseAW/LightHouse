@@ -25,19 +25,20 @@ export default function Project() {
         <HomeLayout>
             <div className='h-screen bg-slate-300 bg-cover bg-no-repeat'>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color">
-                    
                 </div>
-                    
-                    <div className="flex flex-col items-center justify-center pt-80 text-white">
+                <Link href="/projects" className="absolute top-32 left-16 z-30 underline text-black px-4 py-2 rounded-md ">← Go Back</Link>
+                    <div className="flex flex-col text-center text-xl items-center justify-center z-20 relative pt-40 text-black p-4 space-y-4">
                         <h1 className="text-6xl">{project.name}</h1>
-                        <div>{project.subtitle}</div>
-                        <div>{project.blurb}</div>
-                        <div>{project.video}</div>
-                        <div>{project.mission_statement}</div>
+                        <div classname="">{project.subtitle}</div>
                         <VideoPlayer link={project.video} />
+                        {project.website && project.website !== "" && (
+                            <Link href={project.website} className="rounded-lg p-2 underline">Website →</Link>
+                        )}
+                        <div classname=" text-center text-xl p-4">{project.mission_statement}</div>
                     </div>
                 </div>
             <div className='bg-color grid pb-20 items-center justify-center'>
+            <Link href="/projects" className="z-30 underline text-black px-4 py-2 rounded-md "></Link>
             </div>
         </HomeLayout>
     )
