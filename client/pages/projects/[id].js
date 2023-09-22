@@ -23,7 +23,7 @@ export default function Project() {
 
     return (
         <HomeLayout>
-            <div className='h-screen bg-about bg-cover bg-no-repeat'>
+            <div className='h-screen bg-slate-300 bg-cover bg-no-repeat'>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color">
                     
                 </div>

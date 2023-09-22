@@ -17,7 +17,7 @@ user = User.create(username: 'Neil', password: 'nsteen88')
 # Create Projects
 
 emp1 = Employee.create(name: "Neil Holsteen", role: "", blurb: "President of Lighthouse Arab World. Neil joined Lighthouse Arab World in 2019 after a successful career in the corporate world. He lives with his wife Lisa in Littleton, CO and has two married children." )
-emp2 = Employee.create(name: "Imed Dabbour, PhD.", role: "", blurb: "CEO of Lighthouse Arab World. Originally from Tunisia, Imed now lives in Beirut, Lebanon with his Ellen and has two college age children." )
+emp2 = Employee.create(name: "Dr. Emad D.", role: "", blurb: "Dr D lives with his family in Lebanon and travels the world interviewing guests about their lives and perspectives. He also is a key strategic leader in the vision for the future of Lighthouse Arab World." )
 emp3 = Employee.create(name: "Dave Halverson", role: "", blurb: "Dave has served as the chairman of the board of Lighthouse Arab World since 2013. He is the Associate Pastor of Outreach Ministries at San Gabriel Community Church, in San Gabriel, CA. Dave and his wife Kristen have four adult children and six grandchildren. " )
 emp4 = Employee.create(name: "Phil Wood", role: "", blurb: "Phil has worked as an executive in the oil and gas industry for 38 years. He and his wife Carol live in Centennial, CO and have three married children and nine grandchildren." )
 

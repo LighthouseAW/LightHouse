@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
     const pp14L = 'contact form'
     const pp1402 = ' with your request.'
     const pp141 = '2. Email your request to '
-    const pp1411 = 'contact@lighthouseaw.org.'
+    const pp1411 = 'info@lighthouseaw.org.'
     const pp142 = '3. Send postal mail to the following address:'
     const pp15 = 'Lighthouse Media NA Inc'
     const pp151 = 'PO Box 1140'

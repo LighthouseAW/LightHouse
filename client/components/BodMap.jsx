@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function BodMap({ employees }) {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 p-6 pt-40">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 p-32 pt-40">
             {employees.map((employee, index) => {
                 return (
                 <div key={index} className="bg-blue-200 rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300 flex flex-col justify-center items-center z-20">

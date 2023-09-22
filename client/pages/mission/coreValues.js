@@ -25,13 +25,10 @@ export default function Mission() {
 
     return (
         <HomeLayout>
-            <div className='h-screen bg-mission bg-cover bg-no-repeat flex flex-col items-center '>
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
-                {/* <div className="pt-20">
-                    <MissionNav />
-                </div> */}
-                <div className="flex flex-col items-center justify-center w-5/6 pt-80 text-white relative z-20">
-                    {/* <p className={` text-6xl font-bold`}>About Us</p> */}
+            <div className='flex-grow bg-slate-300 bg-cover bg-no-repeat flex flex-col items-center relative'>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
+                <div className="flex-grow w-5/6 pt-40 pb-20 text-white z-20 relative">
+                    <div className="bg-white/50 rounded-lg p-4">
                     <h2 className={`text-black text-6xl font-bold mb-14`}>{title}</h2>
                     <h2 className={`text-black text-4xl font-bold`}>{vt1}</h2>
                     <p className={`text-black py-5 text-2xl mb-2`}>{v1}</p>
@@ -51,14 +48,16 @@ export default function Mission() {
                     <p className={`text-black py-5 text-2xl mb-2`}>{v8}</p>
                     <h2 className={`text-black text-4xl font-bold`}>{vt9}</h2>
                     <p className={`text-black py-5 text-2xl mb-2`}>{v9}</p>
+                    </div>
+                    </div>
                 </div>
-            </div>
-            <div className='flex flex-grow bg-color items-center pb-80 justify-center'>
+            {/* <div className='flex flex-grow bg-color items-center pb-80 justify-center'>
         </div>
         <div className='flex flex-grow bg-color items-center pb-80 justify-center'>
         </div>
         <div className='flex flex-grow bg-color items-center pb-80 justify-center'>
-        </div>
+        </div> */}
+        <div className="flex"></div>
         </HomeLayout>
     )
 }

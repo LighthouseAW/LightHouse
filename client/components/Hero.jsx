@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import ModalVideo from "./ModalVideo";
+import { useActiveLink } from '../context/ActiveLinkContext';
 
 export default function Hero({ heading, message }) {
     const [isMobile, setIsMobile] = useState(false);
     const youtubeVideoId = "a5PtUpO8kss";
     const embedUrl = `https://www.youtube.com/embed/${youtubeVideoId}`;
+    const { selectedLink, setSelectedLink } = useActiveLink();
+    const { selectedSubLink, setSelectedSubLink } = useActiveLink();
 
     useEffect(() => {
         const checkIsMobile = () => {
@@ -31,7 +34,7 @@ export default function Hero({ heading, message }) {
                 <div className='flex justify-center gap-40'>
                     {/* <button className={`bg-white text-xl text-black rounded-full py-3 text-center justify-center ${isMobile ? 'px-1 pt-6 ' : 'px-6'}`} href="/give">Give Now</button> */}
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white"></div>
-                    <div className="relative z-20">
+                    <div className="z-20">
                         <ModalVideo
                             // thumb={VideoThumb}
                             thumbWidth={384}
@@ -41,7 +44,12 @@ export default function Hero({ heading, message }) {
                             videoWidth={800}
                             videoHeight={450}
                         />
-                        <button className={`bg-orange-500 text-2xl text-white rounded-full py-3 text-center justify-center ${isMobile ? 'px-1 pt-6 ' : 'px-6'}`} href="/give">Give</button>
+                        <Link
+                            className={`bg-[#f18802] text-2xl text-white rounded-full py-3 text-center justify-center ${isMobile ? 'px-1 pt-6 ' : 'px-6'}`} 
+                            href="/give"
+                            onClick={() => {
+                            setSelectedLink("Home");
+                            setSelectedSubLink("");}}>Give</Link>
                     </div>
                 </div>
             </div>

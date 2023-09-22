@@ -12,14 +12,18 @@ module.exports = {
         'about': "url('../public/images/LightHouseArt2.png')",
         'projects': "url('../public/images/LighthouseArt3.png')",
         'mission': "url('../public/images/LightHouseArt1.png')",
+        'staffPic': "url('../public/images/staff.jpeg')",
+        'rug': "url('../public/images/Rug3.png')",
+        'band': "url('../public/images/croper.jpeg')",
+        'beaLight': "url('../public/images/beaLight.jpeg')",
+        'projectsBreak': "url('../public/images/projectsBreak.jpeg')",
+        'projBreak2': "url('../public/images/projBreak2.jpeg')",
+        'SOFCall': "url('../public/images/SOFCall.jpeg')",
+        'aboutBreak2': "url('../public/images/aboutBreak22.jpeg')",
         'car1': "url('../public/carousel/Carousel1.jpeg')",
         'car2': "url('../public/carousel/Carousel4.jpeg')",
         'car3': "url('../public/carousel/Carousel2.jpeg')",
-        'car4': "url('../public/carousel/Carousel5.jpeg')",
-        'staffPic': "url('../public/images/staff.jpeg')",
-        'rug': "url('../public/images/Rug3.png')",
-        'rug': "url('../public/images/Rug3.png')",
-        'rug': "url('../public/images/Rug3.png')"
+        'car4': "url('../public/carousel/Carousel5.jpeg')"
       },
       colors: {
         color: 'white',

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Image from "next/image"
 
 export default function Timeline() {
   // State to keep track of the active tab
@@ -14,7 +15,15 @@ export default function Timeline() {
         'Lighthouse conducts their first full scale training program for media, art and mission called Lighthouse School of Creative Arts. Through the years this school has trained and deployed over 50 media missionaries in the region.',
     ];
 
-    // Function to handle tab click
+    const tabImages = [
+        '/images/20132.jpeg',
+        '/images/2019.jpeg',
+        '/images/20192.jpeg',
+        '/images/20201.jpeg',
+        '/images/20202.jpeg',
+        '/images/2021.jpeg',
+    ];
+
     const handleTabClick = (tabIndex) => {
         setActiveTab(tabIndex);
     };
@@ -26,7 +35,7 @@ export default function Timeline() {
                 <div className="flex">
                 <div
                     className={`cursor-pointer px-6 py-3 border border-gray-300 rounded-l text-lg ${
-                    activeTab === 1 ? 'bg-blue-100 text-black' : ''
+                    activeTab === 1 ? 'bg-slate-200 text-black' : ''
                     }`}
                     onClick={() => handleTabClick(1)}
                 >
@@ -34,7 +43,7 @@ export default function Timeline() {
                 </div>
                 <div
                     className={`cursor-pointer px-6 py-3 border border-gray-300 text-lg ${
-                    activeTab === 2 ? 'bg-blue-100 text-black' : ''
+                    activeTab === 2 ? 'bg-slate-200 text-black' : ''
                     }`}
                     onClick={() => handleTabClick(2)}
                 >
@@ -42,7 +51,7 @@ export default function Timeline() {
                 </div>
                 <div
                     className={`cursor-pointer px-6 py-3 border border-gray-300 rounded-r text-lg ${
-                    activeTab === 3 ? 'bg-blue-100 text-black' : ''
+                    activeTab === 3 ? 'bg-slate-200 text-black' : ''
                     }`}
                     onClick={() => handleTabClick(3)}
                 >
@@ -50,7 +59,7 @@ export default function Timeline() {
                 </div>
                 <div
                     className={`cursor-pointer px-6 py-3 border border-gray-300 rounded-r text-lg ${
-                    activeTab === 4 ? 'bg-blue-100 text-black' : ''
+                    activeTab === 4 ? 'bg-slate-200 text-black' : ''
                     }`}
                     onClick={() => handleTabClick(4)}
                 >
@@ -58,7 +67,7 @@ export default function Timeline() {
                 </div>
                 <div
                     className={`cursor-pointer px-6 py-4 border border-gray-300 rounded-r text-lg ${
-                    activeTab === 5 ? 'bg-blue-100 text-black' : ''
+                    activeTab === 5 ? 'bg-slate-200 text-black' : ''
                     }`}
                     onClick={() => handleTabClick(5)}
                 >
@@ -66,7 +75,7 @@ export default function Timeline() {
                 </div>
                 <div
                     className={`cursor-pointer px-6 py-4 border border-gray-300 rounded-r text-lg ${
-                    activeTab === 6 ? 'bg-blue-100 text-black' : ''
+                    activeTab === 6 ? 'bg-slate-200 text-black' : ''
                     }`}
                     onClick={() => handleTabClick(6)}
                 >
@@ -75,8 +84,19 @@ export default function Timeline() {
                 </div>
 
                 {/* Content */}
-                <div className="mt-6 p-6 border border-gray-300 rounded text-lg">
-                {tabContents[activeTab - 1]}
+                <div className="mt-6 p-6 border border-gray-300 rounded text-lg flex items-center justify-between">
+                <div className="w-1/2">
+                    <p>{tabContents[activeTab - 1]}</p>
+                </div>
+
+                    <Image
+                    src={tabImages[activeTab - 1]}
+                    alt={`Image for Year ${activeTab + 2012}`}
+                    width={250}
+                    height={250}
+                    className="rounded-md"
+                    />
+
                 </div>
             </div>
     </div>

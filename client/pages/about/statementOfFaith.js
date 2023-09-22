@@ -1,4 +1,5 @@
 import HomeLayout from '../../components/HomeLayout';
+import Image from "next/image";
 import Link from "next/link";
 import AboutNav from '../../components/NavBars/AboutNav'
 
@@ -19,32 +20,55 @@ export default function StatementOfFaith() {
 
     return (
         <HomeLayout>
-            <div className='flex-grow bg-about bg-cover bg-no-repeat flex flex-col items-center relative'>
+            <div className='flex-grow bg-slate-300 bg-cover bg-no-repeat flex flex-col items-center relative'>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                 <div className="flex-grow w-5/6 pt-40 pb-20 text-white z-20 relative">
                     <div className="bg-white/50 rounded-lg p-4">
-                    <h2 className={`text-black text-6xl font-bold mb-14`}>{title}</h2>
-                    <h2 className={`text-black text-2xl mb-6`}>{sf1}</h2>
-                    <h2 className={`text-black text-2xl mb-6`}>{sf2}</h2>
-                    <h2 className={`text-black text-2xl mb-6`}>{sf3}</h2>
-                    <h2 className={`text-black text-2xl mb-6`}>{sf4}</h2>
-                    <h2 className={`text-black text-2xl mb-6`}>{sf5}</h2>
-                    <h2 className={`text-black text-2xl mb-6`}>{sf6}</h2>
-                    <h2 className={`text-black text-2xl mb-6`}>{sf7}</h2>
-                    <h2 className={`text-black text-2xl mb-6`}>{sf8}</h2>
-                    <h2 className={`text-black text-2xl mb-6`}>{sf9}</h2>
-                    <h2 className={`text-black text-2xl mb-6`}>{sf10}</h2>
-                    <h2 className={`text-black text-2xl mb-6`}>{sf11}</h2>
+                    <div className="flex justify-between items-center">
+                        <h2 className={`text-black text-6xl font-bold mb-14`}>{title}</h2>
+                        <div className="relative">
+                        <Image alt="picture" src="/images/SOF.jpeg" className="rounded-lg" width="250" height="250"/>
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color rounded-lg"></div>
+                        </div>
+                    </div>
+                    <h2 className={`text-black text-xl mb-6`}>{sf1}</h2>
+                    <h2 className={`text-black text-xl mb-6`}>{sf2}</h2>
+                    <h2 className={`text-black text-xl mb-6`}>{sf3}</h2>
+                    <h2 className={`text-black text-xl mb-6`}>{sf4}</h2>
+                    <h2 className={`text-black text-xl mb-6`}>{sf5}</h2>
+                    <h2 className={`text-black text-xl mb-6`}>{sf6}</h2>
+                    <h2 className={`text-black text-xl mb-6`}>{sf7}</h2>
+                    <h2 className={`text-black text-xl mb-6`}>{sf8}</h2>
+                    <h2 className={`text-black text-xl mb-6`}>{sf9}</h2>
+                    <h2 className={`text-black text-xl mb-6`}>{sf10}</h2>
+                    <h2 className={`text-black text-xl mb-6`}>{sf11}</h2>
                     </div>
                     </div>
                 </div>
-            {/* <div className='flex flex-grow bg-color items-center pb-80 justify-center'>
+                <div className="bg-color pb-12">
+                <div className='z-20 relative'>
+                    <div className="flex items-center">
+                        <div className=" flex flex-col items-center w-5/6 bg-SOFCall bg-cover bg-no-repeat justify-center m-auto">
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
+                            <p className='text-white mt-8 text-center text-5xl font-bold pb-10 z-20 relative'>
+                                We believe art can show the love of Jesus to everyone
+                            </p>
+                            <div className="flex items-center justify-center space-x-6">
+                            <Link
+                                href="/give"
+                                className="text-black underline text-center text-2xl font-bold mb-8 z-20 relative"
+                                onClick={() => {
+                                    setSelectedLink("Home");
+                                    setSelectedSubLink("");}}
+                                >Get Involved →</Link>
+                        </div>
+                            <p className='text-black mt-2 text-center text-4xl font-bold mb-6 z-20 relative'>
+                                
+                            </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div className='flex flex-grow bg-color items-center pb-80 justify-center'>
-        </div>
-        <div className='flex flex-grow bg-color items-center pb-80 justify-center'>
-        </div> */}
-        <div className="flex"></div>
         </HomeLayout>
     )
 }

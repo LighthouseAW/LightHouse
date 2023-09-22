@@ -18,12 +18,12 @@ export default function WhereWeServe() {
 
     return (
         <HomeLayout>
-            <div className='h-screen bg-about bg-cover bg-no-repeat'>
+            <div className='h-screen bg-slate-300 bg-cover bg-no-repeat'>
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                 {/* <div className="pt-20">
                     <ProjectsNav />
                 </div> */}
-                <div className="flex flex-col items-center justify-center pt-80 text-white">
+                <div className="flex flex-col items-center justify-center pt-32 text-white">
                     <Groups groups={groups} />
                 </div>
             </div>

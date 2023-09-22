@@ -4,7 +4,7 @@ import Contacto from '../components/Contact';
 export default function Contact() {
     return (
         <HomeLayout>
-            <div className='h-screen bg-about bg-cover bg-no-repeat'>
+            <div className='h-screen bg-slate-300 bg-cover bg-no-repeat'>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white"></div>
                     <div className="flex flex-col items-center justify-center pt-20 text-white"></div>
                         <Contacto />

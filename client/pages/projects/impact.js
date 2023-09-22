@@ -4,7 +4,7 @@ import ProjectsNav from '../../components/NavBars/ProjectsNav'
 export default function Impact() {
     return (
         <HomeLayout>
-            <div className='h-screen bg-about bg-cover bg-no-repeat'>
+            <div className='h-screen bg-slate-300 bg-cover bg-no-repeat'>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white"></div>
                     {/* <div className="pt-20">
                         <ProjectsNav />
