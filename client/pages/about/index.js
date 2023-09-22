@@ -27,8 +27,9 @@ export default function About() {
                         <div className="w-1/2 relative z-20 flex items-center justify-center pt-20 pb-20">
                             <div>
                                 <div className="relative">
-                            <Image alt="picture" src="/images/about.jpeg" width="750" height="750" />
-                            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
+                            <Image alt="picture" src="/images/about.jpeg" width="750" height="750" className="" />
+                            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color "></div>
+                            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-200/40 "></div>
                             </div>
                         </div>
                         {/* <div className="absolute inset-0 bg-gradient-to-b  from-transparent to-color h-[750px] w-[800px]"></div> */}

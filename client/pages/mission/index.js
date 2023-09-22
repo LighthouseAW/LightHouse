@@ -23,6 +23,7 @@ export default function Mission() {
                             <div className="relative">
                                 <Image alt="picture" src="/images/beaLight.jpeg" width="750" height="750" />
                                 <div className="absolute inset-0 z-1 bg-gradient-to-b from-transparent to-color"></div>
+                                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-200/40 "></div>
                             </div>
                             </div>
                         {/* <div className="absolute inset-0 bg-gradient-to-b  from-transparent to-color h-[750px] w-[800px]"></div> */}

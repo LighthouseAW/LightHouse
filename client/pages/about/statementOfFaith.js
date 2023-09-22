@@ -24,11 +24,12 @@ export default function StatementOfFaith() {
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                 <div className="flex-grow w-5/6 pt-40 pb-20 text-white z-20 relative">
                     <div className="bg-white/50 rounded-lg p-4">
-                    <div className="flex justify-between items-center">
-                        <h2 className={`text-black text-6xl font-bold mb-14`}>{title}</h2>
+                    <div className="flex justify-between items-center pb-4">
+                        <h2 className={`text-black text-6xl font-bold mb-16`}>{title}</h2>
                         <div className="relative">
-                        <Image alt="picture" src="/images/SOF.jpeg" className="rounded-lg" width="250" height="250"/>
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color rounded-lg"></div>
+                        <Image alt="picture" src="/images/SOF.jpeg" className="" width="300" height="300"/>
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white "></div>
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-300/40 "></div>
                         </div>
                     </div>
                     <h2 className={`text-black text-xl mb-6`}>{sf1}</h2>
@@ -45,7 +46,7 @@ export default function StatementOfFaith() {
                     </div>
                     </div>
                 </div>
-                <div className="bg-color pb-12">
+            <div className="bg-color pb-12">
                 <div className='z-20 relative'>
                     <div className="flex items-center">
                         <div className=" flex flex-col items-center w-5/6 bg-SOFCall bg-cover bg-no-repeat justify-center m-auto">
@@ -63,7 +64,6 @@ export default function StatementOfFaith() {
                                 >Get Involved →</Link>
                         </div>
                             <p className='text-black mt-2 text-center text-4xl font-bold mb-6 z-20 relative'>
-                                
                             </p>
                     </div>
                 </div>

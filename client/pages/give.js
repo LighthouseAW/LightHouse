@@ -7,8 +7,6 @@ import GiftInfo from "../components/GiftInfo"
 export default function Give() {
     const [scriptLoaded, setScriptLoaded] = useState(false);
 
-    const giveTitle = "MAKING GOD'S LOVE VISIBLE TO EVERYONE IN THE MIDDLE EAST AND NORTH AFRICA"
-
     useEffect(() => {
         if (!scriptLoaded) {
             const script = document.createElement("script");
@@ -30,33 +28,39 @@ export default function Give() {
     return (
         <HomeLayout>
             <div className='h-screen bg-about bg-cover bg-no-repeat '>
-                <div className="static px-48 pt-36 z-20 text-white text-3xl"><h2>{giveTitle}</h2></div>
+                <div className="static px-48 pt-36 z-20 text-white text-3xl"><h2>MAKING GOD'S LOVE VISIBLE TO EVERYONE IN THE MIDDLE EAST AND NORTH AFRICA</h2></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                 <div className="flex items-center justify-center text-white relative z-20">
                     <div className="flex w-full">
-                        <div className="w-3/5 z-20 relative">
+                        <div className="w-3/5">
                             <div className='kindful-embed-wrapper pt-24' id='kindful-donate-form-c685c50a-25c6-48be-bf8e-1a34b337a64c'></div>
                         </div>
-                        <div className="w-2/5  pt-36 text-black z-20">
+                        <div className="w-2/5  pt-28 text-black z-20">
                             <GiftInfo />
                         </div>
                     </div>
-                    <div className="absolute bg-white w-full h-[700px]"></div>
+                    {/* <div className="absolute bg-white w-full h-[700px]"></div> */}
                     {/* <div className="absolute bottom-96 bg-white w-full h-96"></div> */}
                 </div>
             </div>
-            <div className="bg-color py-20 ">
+            <div className='relative bg-rug h-96 bg-no-repeat bg-cover bg-center '>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-color/75 to-transparent"></div>
+                    <div className='h-96'>
+                    </div>
+                </div>
+            <div className="bg-color py-10 ">
                 <div className='z-20 relative'>
                     <div className="flex items-center">
                         <div className="absolute bg-white h-80" ></div>
                     </div>
                 </div>
             </div>
-            <div className=' pb-20 pt-40 items-center px-20'>
+            <div className=' pb-20 pt-20 items-center px-20'>
                 <div className="flex w-full">
                         <div className="w-3/5 z-20 relative">
                         </div>
-                        <div className="w-2/5  text-black z-20">
+                        <div className="w-2/5 text-black z-20">
                         <DonatingSection />
                         </div>
                     </div>

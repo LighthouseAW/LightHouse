@@ -29,8 +29,6 @@ export default function DonatingSection() {
         }
     };
 
-    const title = "Your Gift makes the following possible:"
-
     const donQ1 = "• Reaching people with the Gospel in the Middle East and North Africa where they rarely know anyone else Christian and are desperately in need of the hope and love of Jesus"
 
     const donQ2 = "• Training of Christian Arabs in media and in mission"
@@ -39,12 +37,12 @@ export default function DonatingSection() {
 
     const donQ4 = "• Equipping the small Christian church in the region to persevere in the midst of difficulty and oppression"
 
-    const donQ5 = "• Equipping Arab Christians with the skills and training to disciple seekers and new believers in the regionan I make a donation from my Donor Advised Fund?"
+    const donQ5 = "• Equipping Arab Christians with the skills and training to disciple seekers and new believers in the region"
 
 
     return (
-        <div className="w-5/8 p-8 text-black z-20">
-            <h3 className="text-3xl pb-4" >{title}</h3>
+        <div className="w-5/8 bg-white/50 rounded-lg p-8 mr-12 text-black z-20">
+            <h3 className="text-3xl pb-4" >Your Gift makes the following possible:</h3>
             <div className="sentence py-4">
                 <p>
                 {donQ1}

@@ -1,5 +1,7 @@
 import HomeLayout from '../../components/HomeLayout';
 import MissionNav from '../../components/NavBars/MissionNav'
+import Image from "next/image"
+import Link from "next/link"
 
 export default function Mission() {
 
@@ -29,25 +31,32 @@ export default function Mission() {
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                 <div className="flex-grow w-5/6 pt-40 pb-20 text-white z-20 relative">
                     <div className="bg-white/50 rounded-lg p-4">
-                    <h2 className={`text-black text-6xl font-bold mb-14`}>{title}</h2>
-                    <h2 className={`text-black text-4xl font-bold`}>{vt1}</h2>
-                    <p className={`text-black py-5 text-2xl mb-2`}>{v1}</p>
-                    <h2 className={`text-black text-4xl font-bold`}>{vt2}</h2>
-                    <p className={`text-black py-5 text-2xl mb-2`}>{v2}</p>
-                    <h2 className={`text-black text-4xl font-bold`}>{vt3}</h2>
-                    <p className={`text-black py-5 text-2xl mb-2`}>{v3}</p>
-                    <h2 className={`text-black text-4xl font-bold`}>{vt4}</h2>
-                    <p className={`text-black py-5 text-2xl mb-2`}>{v4}</p>
-                    <h2 className={`text-black text-4xl font-bold`}>{vt5}</h2>
-                    <p className={`text-black py-5 text-2xl mb-2`}>{v5}</p>
-                    <h2 className={`text-black text-4xl font-bold`}>{vt6}</h2>
-                    <p className={`text-black py-5 text-2xl mb-2`}>{v6}</p>
-                    <h2 className={`text-black text-4xl font-bold`}>{vt7}</h2>
-                    <p className={`text-black py-5 text-2xl mb-2`}>{v7}</p>
-                    <h2 className={`text-black text-4xl font-bold`}>{vt8}</h2>
-                    <p className={`text-black py-5 text-2xl mb-2`}>{v8}</p>
-                    <h2 className={`text-black text-4xl font-bold`}>{vt9}</h2>
-                    <p className={`text-black py-5 text-2xl mb-2`}>{v9}</p>
+                    <div className="flex justify-between items-center">
+                        <h2 className={`text-black text-6xl font-bold mb-14`}>{title}</h2>
+                        <div className="relative">
+                        <Image alt="picture" src="/images/CoreValues.jpeg" className="" width="250" height="250"/>
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white "></div>
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-300/40 "></div>
+                        </div>
+                    </div>
+                    <h2 className={`text-black text-2xl font-bold`}>{vt1}</h2>
+                    <p className={`text-black py-5 text-xl mb-2`}>{v1}</p>
+                    <h2 className={`text-black text-2xl font-bold`}>{vt2}</h2>
+                    <p className={`text-black py-5 text-xl mb-2`}>{v2}</p>
+                    <h2 className={`text-black text-2xl font-bold`}>{vt3}</h2>
+                    <p className={`text-black py-5 text-xl mb-2`}>{v3}</p>
+                    <h2 className={`text-black text-2xl font-bold`}>{vt4}</h2>
+                    <p className={`text-black py-5 text-xl mb-2`}>{v4}</p>
+                    <h2 className={`text-black text-2xl font-bold`}>{vt5}</h2>
+                    <p className={`text-black py-5 text-xl mb-2`}>{v5}</p>
+                    <h2 className={`text-black text-2xl font-bold`}>{vt6}</h2>
+                    <p className={`text-black py-5 text-xl mb-2`}>{v6}</p>
+                    <h2 className={`text-black text-2xl font-bold`}>{vt7}</h2>
+                    <p className={`text-black py-5 text-xl mb-2`}>{v7}</p>
+                    <h2 className={`text-black text-2xl font-bold`}>{vt8}</h2>
+                    <p className={`text-black py-5 text-xl mb-2`}>{v8}</p>
+                    <h2 className={`text-black text-2xl font-bold`}>{vt9}</h2>
+                    <p className={`text-black py-5 text-xl mb-2`}>{v9}</p>
                     </div>
                     </div>
                 </div>
@@ -57,7 +66,29 @@ export default function Mission() {
         </div>
         <div className='flex flex-grow bg-color items-center pb-80 justify-center'>
         </div> */}
-        <div className="flex"></div>
-        </HomeLayout>
+        <div className="bg-color pb-12">
+                <div className='z-20 relative'>
+                    <div className="flex items-center">
+                        <div className=" flex flex-col items-center w-5/6 bg-SOFCall bg-cover bg-no-repeat justify-center m-auto">
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
+                            <p className='text-white mt-8 text-center text-5xl font-bold pb-10 z-20 relative'>
+                                We believe art can show the love of Jesus to everyone
+                            </p>
+                            <div className="flex items-center justify-center space-x-6">
+                            <Link
+                                href="/projects"
+                                className="text-black underline text-center text-2xl font-bold mb-8 z-20 relative"
+                                onClick={() => {
+                                    setSelectedLink("Home");
+                                    setSelectedSubLink("");}}
+                                >See How We Reach People →</Link>
+                        </div>
+                            <p className='text-black mt-2 text-center text-4xl font-bold mb-6 z-20 relative'>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </HomeLayout>
     )
 }
