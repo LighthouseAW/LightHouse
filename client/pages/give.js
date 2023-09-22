@@ -34,10 +34,10 @@ export default function Give() {
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                 <div className="flex items-center justify-center text-white relative z-20">
                     <div className="flex w-full">
-                        <div className="w-1/2 z-20 relative">
+                        <div className="w-3/5 z-20 relative">
                             <div className='kindful-embed-wrapper pt-24' id='kindful-donate-form-c685c50a-25c6-48be-bf8e-1a34b337a64c'></div>
                         </div>
-                        <div className="w-1/2 px    -8 pt-36 text-black z-20">
+                        <div className="w-2/5  pt-36 text-black z-20">
                             <GiftInfo />
                         </div>
                     </div>
@@ -52,8 +52,14 @@ export default function Give() {
                     </div>
                 </div>
             </div>
-            <div className='grid pb-20 pt-40 items-center px-20'>
-                <DonatingSection />
+            <div className=' pb-20 pt-40 items-center px-20'>
+                <div className="flex w-full">
+                        <div className="w-3/5 z-20 relative">
+                        </div>
+                        <div className="w-2/5  text-black z-20">
+                        <DonatingSection />
+                        </div>
+                    </div>
             </div>
         </HomeLayout>
     )
