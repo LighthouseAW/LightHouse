@@ -31,6 +31,16 @@ export default function Contact() {
           <div>
             <h2 className="text-6xl text-black font-bold pb-5">Contact Us</h2>
           </div>
+          <div className="flex justify-center space-x-2 text-center">
+            <input
+              id="subscribe"
+              type="checkbox"
+              name="subscribe"
+              value="true"
+              className="px-4"
+            />
+            <p>Subscribe to our Newsletter</p>
+          </div>
           <div>
             <input
               id="name"
@@ -64,16 +74,7 @@ export default function Contact() {
 
           <ValidationError prefix="Message" field="message" errors={state.errors} />
           </div>
-          <div className="flex justify-center space-x-2 text-center">
-            <input
-              id="subscribe"
-              type="checkbox"
-              name="subscribe"
-              value="true"
-              className="px-4"
-            />
-            <p>Subscribe to our Newsletter</p>
-          </div>
+
           <button
             type="submit"
             disabled={state.submitting}
