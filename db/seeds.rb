@@ -54,10 +54,10 @@ pLighthouseCin = Project.create(name: 'Lighthouse Cinema',
     video: "https://player.vimeo.com/video/680225547")
 
 pBeHelp = Project.create(name: 'BeHelp',
-    subtitle: 'Bringing people together to see how art changes hearts', 
+    subtitle: 'Lighthouse Arab World ministers to the poor, the needy and the outcast in the name of Jesus Christ.', 
     blurb: "Breaking down walls of hate and building bridges through Cinema and Documentaries", 
     mission_statement: "Just as Jesus ministered to and cared for those in need, Lighthouse Arab World ministers to the poor, the needy, and the outcast in the name of Christ.", 
-    about: "Our team chooses to live out what we teach to Christians and the majority people throughout the region. We do this opportunisticaly through our churches and partners.",
+    about: "The Arab World is known for natural and man-made disasters, violence, blood shed and especially persecution of Christians. Our of our areas of focus and guiding principles is to opportunistically provide food, shelter, medicine, mental health care and spiritual encouragement for those most impacted by these events and circumstances.",
     website: "",
     video: "https://player.vimeo.com/video/690530124")
 

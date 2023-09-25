@@ -12,30 +12,48 @@ const roboto = Roboto({ weight: '400', subsets: ['latin'] })
 
 export default function Home() {
   const [user, setUser] = useContext(UserContext)
+
+  const breakTitle11 = "Gospel through Media"
+  const breakTitle12 = "We primarily use social media, internet technology, and films to communicate the gospel to Arabic speakers throughout the world."
+
+  const breakTitle21 = "Train and Replicate"
+  const breakTitle22 = "We believe in training and mentoring Arab Christians to use art, such as media, to communicate the gospel to their communities, cities and nations."
+
+  const breakTitle31 = "Meeting the need"
+  const breakTitle32 = "The Middle East and North Africa are prone to natural and man made disasters. Our ministry invests people, time and money where God calls us to engage."
+
+  const breakTitle41 = "Art opens hearts"
+  const breakTitle42 = "We believe that art opens doors to evangelism and discipleship that are typically closed to traditional methods, especially in the Arab World."
+
   return (
     <HomeLayout>
       {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div> */}
-      <Hero heading="Lighthouse Arab World" message="Art Opens Hearts" />
-      <div className='relative bg-rug p-40 bg-no-repeat bg-cover bg-center '>
-        <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
-        <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 translate-y-0 z-20 w-5/6 justify-center m-auto h-[400px] flex">
-        <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
-          <div className="w-1/4 flex flex-col items-center pt-6 bg-car1 bg-cover bg-center">
-            <p className="text-black text-center text-2xl z-20">Gospel through Media</p>
-          </div>
-          <div className="w-1/4 flex flex-col items-center pt-6 bg-car2 bg-cover bg-center">
-            <p className="text-black text-center text-2xl z-20">Train and Replicate</p>
-          </div>
-          <div className="w-1/4 flex flex-col items-center pt-6 bg-car3 bg-cover bg-center">
-            <p className="text-black text-center text-2xl z-20">Meeting the need</p>
-          </div>
-          <div className="w-1/4 flex flex-col items-center pt-6 bg-car4 bg-cover bg-center">
-            <p className="text-black text-center text-2xl z-20">Art opens hearts</p>
+        <Hero heading="Lighthouse Arab World" message="Art Opens Hearts" />
+        <div className='relative bg-rug p-40 bg-no-repeat bg-cover bg-center '>
+          <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
+          <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 translate-y-0 z-20 w-5/6 justify-center m-auto h-[400px] flex">
+          <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
+          <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black/50'></div>
+            <div className="w-1/4 flex flex-col items-center justify-between pt-6 bg-car1 bg-cover bg-center">
+              <p className="text-black text-center text-2xl z-20">{breakTitle11}</p>
+              <p className="text-white text-center  z-20 px-4 pb-6">{breakTitle12}</p>
+            </div>
+            <div className="w-1/4 flex flex-col items-center justify-between pt-6 bg-car2 bg-cover bg-center">
+              <p className="text-black text-center text-2xl z-20">{breakTitle21}</p>
+              <p className="text-white text-center  z-20 px-4 pb-6">{breakTitle22}</p>
+            </div>
+            <div className="w-1/4 flex flex-col items-center justify-between pt-6 bg-car3 bg-cover bg-center">
+              <p className="text-black text-center text-2xl z-20">{breakTitle31}</p>
+              <p className="text-white text-center  z-20 px-4 pb-6">{breakTitle32}</p>
+            </div>
+            <div className="w-1/4 flex flex-col items-center justify-between pt-6 bg-car4 bg-cover bg-center">
+              <p className="text-black text-center text-2xl z-20">{breakTitle41}</p>
+              <p className="text-white text-center  z-20 px-4 pb-6">{breakTitle42}</p>
+            </div>
           </div>
         </div>
-      </div>
-      <Carousel />
-      <div>
+        <Carousel />
+        <div>
         <Contact />
       </div>
 

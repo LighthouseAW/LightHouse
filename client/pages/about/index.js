@@ -14,8 +14,8 @@ export default function About() {
 
     return (
         <HomeLayout>
-            <div className='h-full bg-slate-300 bg-cover bg-no-repeat flex items-center justify-center '>
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
+            <div className='h-full bg-white bg-cover bg-no-repeat flex items-center justify-center '>
+                <div className="absolute inset-0 bg-gradient-to-b from-slate-300 to-transparent"></div>
                 {/* <div className="pt-20">
                     <MissionNav />
                 </div> */}
@@ -41,8 +41,10 @@ export default function About() {
                     <div className="flex items-center">
                         <div className=" flex flex-col items-center w-5/6 bg-staffPic bg-cover bg-no-repeat justify-center m-auto">
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
-                            <p className='text-white mt-8 text-center text-5xl font-bold pb-10 z-20 relative'>
-                                We believe art can show the love of Jesus to everyone
+                        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-transparent gradient-to-r"></div>
+                        {/* <div className="absolute inset-0 right-3/4 w-2/12 ml-[119px] bg-gradient-to-b from-black/50 to-transparent"></div> */}
+                            <p className='text-white mt-8 text-center text-5xl font-bold pb-10 px-4 z-20 relative'>
+                                We believe the light of God’s love penetrates the darkness
                             </p>
                             <div className="flex items-center justify-center space-x-6">
                             <Link

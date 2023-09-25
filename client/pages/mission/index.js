@@ -9,10 +9,12 @@ export default function Mission() {
     const { selectedLink, setSelectedLink } = useActiveLink();
     const { selectedSubLink, setSelectedSubLink } = useActiveLink();
 
+    const breakWords = "We believe the light of God’s love penetrates the darkness"
+
     return (
         <HomeLayout>
-            <div className='h-full bg-slate-300 bg-cover bg-no-repeat flex items-center justify-center '>
-                <div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent to-color"></div>
+            <div className='h-full bg-white bg-cover bg-no-repeat flex items-center justify-center '>
+                <div className="absolute inset-0 z-20 bg-gradient-to-b from-slate-300 to-transparent"></div>
                     <div className="flex items-center space-x-6 justify-center pt-24 w-5/6 relative z-20">
                         <div className="w-1/2  relative z-20">
                             <p className={`z-20 text-black text-6xl font-bold`}>Our Mission</p>
@@ -36,7 +38,7 @@ export default function Mission() {
                         <div className="  flex flex-col items-center w-5/6 bg-band bg-cover bg-no-repeat justify-center m-auto">
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                             <p className='text-[#f18802] mt-8 text-center text-6xl font-bold pb-10 z-20 relative'>
-                                We believe art can show the love of Jesus to everyone
+                                {breakWords}
                             </p>
                             <div className="flex items-center justify-center space-x-6">
                             <Link

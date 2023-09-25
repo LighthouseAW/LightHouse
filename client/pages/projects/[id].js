@@ -19,7 +19,6 @@ export default function Project() {
                 console.log(project)
             })
     }, [id]);
-    
 
     return (
         <HomeLayout>

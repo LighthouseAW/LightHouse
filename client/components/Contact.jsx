@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 
 export default function Contact() {
-  const [state, handleSubmit] = useForm("moqokwdd");
+  const [state, handleSubmit] = useForm("mjvqaeqb");
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -21,7 +21,11 @@ export default function Contact() {
   }, []);
 
   if (state.succeeded) {
-      return <p>Thanks for joining!</p>;
+      return (
+        <div className="flex items-center justify-center h-screen bg-fixed bg-center bg-cover ">
+          <h2 className="text-6xl text-black font-bold pb-5">We'll be in Touch!!</h2>
+        </div>
+      );
   }
 
   return (
@@ -30,16 +34,6 @@ export default function Contact() {
         <form onSubmit={handleSubmit}>
           <div>
             <h2 className="text-6xl text-black font-bold pb-5">Contact Us</h2>
-          </div>
-          <div className="flex justify-center space-x-2 text-center">
-            <input
-              id="subscribe"
-              type="checkbox"
-              name="subscribe"
-              value="true"
-              className="px-4"
-            />
-            <p>Subscribe to our Newsletter</p>
           </div>
           <div>
             <input
@@ -74,7 +68,16 @@ export default function Contact() {
 
           <ValidationError prefix="Message" field="message" errors={state.errors} />
           </div>
-
+          <div className="flex justify-center space-x-2 text-center">
+            <input
+              id="subscribe"
+              type="checkbox"
+              name="subscribe"
+              value="true"
+              className="px-4"
+            />
+            <p>Subscribe to our Newsletter</p>
+          </div>
           <button
             type="submit"
             disabled={state.submitting}
