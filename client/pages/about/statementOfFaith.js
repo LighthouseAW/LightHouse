@@ -20,8 +20,8 @@ export default function StatementOfFaith() {
 
     return (
         <HomeLayout>
-            <div className='flex-grow bg-slate-300 bg-cover bg-no-repeat flex flex-col items-center relative'>
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
+            <div className='flex-grow bg-white bg-cover bg-no-repeat flex flex-col items-center relative'>
+                <div className="absolute inset-0 bg-gradient-to-b from-slate-300 to-transparent"></div>
                 <div className="flex-grow w-5/6 pt-40 pb-20 text-white z-20 relative">
                     <div className="bg-white/50 rounded-lg p-4">
                     <div className="flex justify-between items-center pb-4">

@@ -38,8 +38,8 @@ export default function Projects() {
 
     return (
         <HomeLayout>
-            <div className='h-full bg-slate-300 bg-cover bg-no-repeat flex items-center justify-center '>
-                <div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent to-color"></div>
+            <div className='h-full bg-white bg-cover bg-no-repeat flex items-center justify-center '>
+                <div className="absolute inset-0 z-20 bg-gradient-to-b from-slate-300 to-transparent"></div>
                     <div className="flex items-center space-x-6 justify-center pt-24 w-5/6 relative z-20">
                         <div className="w-1/2  relative z-20">
                         <p className={`z-20 text-black text-6xl font-bold pb-4`}>{title1}</p>

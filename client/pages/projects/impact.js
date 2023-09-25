@@ -6,8 +6,8 @@ import Image from "next/image"
 export default function Impact() {
     return (
         <HomeLayout>
-            <div className='h-screen bg-slate-300 bg-cover bg-no-repeat '>
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white"></div>
+            <div className='h-screen bg-white bg-cover bg-no-repeat '>
+                <div className="absolute inset-0 bg-gradient-to-b from-slate-300 to-transparent"></div>
                     {/* <div className="pt-20">
                         <ProjectsNav />
                     </div> */}
@@ -15,7 +15,7 @@ export default function Impact() {
                         <div className="w-1/2 p-12 ">
                         <h1 className="text-2xl font-semibold text-center mb-4 z-20 relative">Ministry Statistics</h1>
                         <div className="relative">
-                                <Image alt="picture" src="/images/howReach.jpeg" width="700" height="700" />
+                                <Image alt="picture" src="/images/impact.jpeg" width="700" height="700" />
                                 <div className="absolute inset-0 z-1 bg-gradient-to-b from-transparent to-color"></div>
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-100/50 "></div>
                             </div>
