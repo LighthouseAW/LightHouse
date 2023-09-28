@@ -16,15 +16,15 @@ user = User.create(username: 'Neil', password: 'nsteen88')
 
 # Create Projects
 
-emp1 = Employee.create(name: "Neil Holsteen", role: "", blurb: "President of Lighthouse Arab World. Neil joined Lighthouse Arab World in 2019 after a successful career in the corporate world. He lives with his wife Lisa in Littleton, CO and has two married children." )
+emp1 = Employee.create(name: "Neil Holsteen", role: "", blurb: "President of Lighthouse Arab World. Neil joined Lighthouse Arab World in 2019 after a successful career in the corporate world. He lives with his wife Lisa in Colorado and has two married children." )
 emp2 = Employee.create(name: "Dr. Emad D.", role: "", blurb: "Dr D lives with his family in Lebanon and travels the world interviewing guests about their lives and perspectives. He also is a key strategic leader in the vision for the future of Lighthouse Arab World." )
-emp3 = Employee.create(name: "Dave Halverson", role: "", blurb: "Dave has served as the chairman of the board of Lighthouse Arab World since 2013. He is the Associate Pastor of Outreach Ministries at San Gabriel Community Church, in San Gabriel, CA. Dave and his wife Kristen have four adult children and six grandchildren. " )
-emp4 = Employee.create(name: "Phil Wood", role: "", blurb: "Phil has worked as an executive in the oil and gas industry for 38 years. He and his wife Carol live in Centennial, CO and have three married children and nine grandchildren." )
+emp3 = Employee.create(name: "Dave Halverson", role: "", blurb: "Dave has served as the chairman of the board of Lighthouse Arab World since 2013. He is the Associate Pastor of Outreach Ministries at San Gabriel Community Church, in California. Dave and his wife Kristen have four adult children and six grandchildren. " )
+emp4 = Employee.create(name: "Phil Wood", role: "", blurb: "Phil has worked as an executive in the oil and gas industry for 38 years. He and his wife Carol live in Colorado and have three married children and nine grandchildren." )
 
 pBelight = Project.create(name: 'Belight',
     subtitle: 'Belight is a streaming platform connected to the world\'s social media platforms.', 
     blurb: "Bringing the hope of Jesus to the Arab World through a unique and powerful online streaming platform. Come and engage!", 
-    mission_statement: "Our mission is to bring high quality evangelistic content to the arab-speaking world. We believe now is the time for something different!", 
+    mission_statement: "Our mission is to bring high quality evangelistic content to the Arabic speaking world. We believe now is the time for something different!", 
     about: "Belight is designed to share the hope of the gospel of Jesus Christ in unique and innovative ways, through videos, live events, evangelistic programs, teaching and worship videos. But why build an Arabic streaming platform? Aren't YouTube, Facebook, Instagram and even TikTok enough? We see this as an opportunity to not only consolidate high quality Arabic Christian content into a single location, but to uniquely communicate with an audience that live in a difficult context. While the historic Christian church has functioned with some freedom in Egypt, Jordan, and Lebanon, it is heavily persecuted in most other countries in the Middle East and North Africa. We are building a platform and experience that they can trust, where they can be free to ask questions, engage in discipleship, and grow in their faith. ",
     website: "https://belight.tv/",
     video: "https://player.vimeo.com/video/690513901")

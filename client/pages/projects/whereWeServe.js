@@ -17,7 +17,7 @@ export default function WhereWeServe() {
 
     const title1 = 'Where We Serve'
     const title2 = 'We see art opening hearts across the Arab World'
-    const title3 = 'Social Media is reaching millions across the Arab World and our mission is to connect them with the Gospel of Jesus Christ'
+    const title3 = 'Lighthouse Arab World was born in the hearts and minds of a small group of people in North Africa who believed, and continue to believe that it is possible to break down walls of hate towards Christ and Christians. The countries that comprise the Middle East and North Africa are some of the least reached in the world, and for people groups that are categorized as reached, the church is very small and often underground.'
 
     return (
         <HomeLayout>
@@ -26,7 +26,7 @@ export default function WhereWeServe() {
                     <div className="w-5/6 justify-center flex pt-32 ">
                         <div className="w-1/2 pt-12 z-20 relative">
                             <p className={`z-20 text-black text-6xl font-bold pb-4`}>{title1}</p>
-                            <p className={`z-20 text-black text-4xl font-bold`}>{title2}</p>
+                            {/* <p className={`z-20 text-black text-4xl font-bold`}>{title2}</p> */}
                             <p className={`z-20 text-black py-5 text-2xl`}>{title3}</p>
                         </div>
                         <div className=" w-1/2 flex flex-col items-center justify-center text-white">

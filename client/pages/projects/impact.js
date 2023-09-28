@@ -43,7 +43,7 @@ export default function Impact() {
                         description="Arab Christians training in media and mission"
                         />
                         <StatisticsComponent
-                        title="Secular Outreach"
+                        title="Pre-Evangelism"
                         value="Millions"
                         description="Connected though secular channels"
                         />
