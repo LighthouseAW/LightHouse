@@ -5,6 +5,8 @@ import AboutNav from '../../components/NavBars/AboutNav'
 
 export default function StatementOfFaith() {
 
+    const breakText = "We believe the light of God’s love penetrates the darkness"
+
     const title = "Statement of Faith"
     const sf1 = "• We believe that the Bible is God’s inspired word and without error. (2 Timothy 3:16,17)"
     const sf2 = "• We believe that God is triune: Father, Son and Holy Spirit, three persons in one. (1 John 5:7)"
@@ -52,7 +54,7 @@ export default function StatementOfFaith() {
                         <div className=" flex flex-col items-center w-5/6 bg-SOFCall bg-cover bg-no-repeat justify-center m-auto">
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                             <p className='text-white mt-8 text-center text-5xl font-bold pb-10 z-20 relative'>
-                                We believe art can show the love of Jesus to everyone
+                                {breakText}
                             </p>
                             <div className="flex items-center justify-center space-x-6">
                             <Link

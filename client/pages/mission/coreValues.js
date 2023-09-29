@@ -5,6 +5,8 @@ import Link from "next/link"
 
 export default function Mission() {
 
+    const breakText = "We believe the light of God’s love penetrates the darkness"
+
     const title = "Our Values"
     const vt1 = "1. We believe that God loves all"
     const v1 = "God loves and desires that people from all nations be reconciled to himself, including the people of the Arab World. "
@@ -72,7 +74,7 @@ export default function Mission() {
                         <div className=" flex flex-col items-center w-5/6 bg-SOFCall bg-cover bg-no-repeat justify-center m-auto">
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                             <p className='text-white mt-8 text-center text-5xl font-bold pb-10 z-20 relative'>
-                                We believe art can show the love of Jesus to everyone
+                                {breakText}
                             </p>
                             <div className="flex items-center justify-center space-x-6">
                             <Link

@@ -25,6 +25,8 @@ export default function Home() {
   const breakTitle41 = "Art opens hearts"
   const breakTitle42 = "We believe that art opens doors to evangelism and discipleship that are typically closed to traditional methods, especially in the Arab World."
 
+  const breakText = "We believe the light of God’s love penetrates the darkness"
+
   return (
     <HomeLayout>
       {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div> */}
@@ -70,6 +72,29 @@ export default function Home() {
                     <div className='flex flex-col items-center m-auto w-2/6'>
                 </div>
             </div> */}
+            <div className="bg-color pb-12">
+                <div className='z-20 relative'>
+                    <div className="flex items-center">
+                        <div className=" flex flex-col items-center w-5/6 bg-SOFCall bg-cover bg-no-repeat justify-center m-auto">
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
+                            <p className='text-white mt-8 text-center text-5xl font-bold pb-10 z-20 relative'>
+                                {breakText}
+                            </p>
+                            <div className="flex items-center justify-center space-x-6">
+                            <Link
+                                href="/give"
+                                className="text-black underline text-center text-2xl font-bold mb-8 z-20 relative"
+                                onClick={() => {
+                                    setSelectedLink("Home");
+                                    setSelectedSubLink("");}}
+                                >Get Involved →</Link>
+                        </div>
+                            <p className='text-black mt-2 text-center text-4xl font-bold mb-6 z-20 relative'>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </HomeLayout>
   )
 }

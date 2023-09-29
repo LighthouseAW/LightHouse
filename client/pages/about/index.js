@@ -12,6 +12,8 @@ export default function About() {
     const { selectedLink, setSelectedLink } = useActiveLink();
     const { selectedSubLink, setSelectedSubLink } = useActiveLink();
 
+    const textBreak = "We believe the light of God’s love penetrates the darkness"
+
     return (
         <HomeLayout>
             <div className='h-full bg-white bg-cover bg-no-repeat flex items-center justify-center '>
@@ -86,7 +88,7 @@ export default function About() {
                         <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 translate-y-20 flex flex-col items-center w-5/6 bg-aboutBreak2 bg-cover bg-no-repeat justify-center m-auto">
                         <div className='absolute inset-0 bg-gradient-to-b from-transparent to-white'></div>
                             <p className='text-white mt-8 text-center text-4xl font-bold mb-10 z-20 relative'>
-                                We believe art can show the love of Jesus to everyone
+                                {textBreak}
                             </p>
                             <div className="flex items-center justify-center space-x-6">
                             <Link href="/projects"
