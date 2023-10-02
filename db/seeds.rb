@@ -127,5 +127,7 @@ pLighthouseCin_photo.photo.attach(io: File.open(Rails.root.join('public', 'image
 pBeHelp_photo = pBeHelp.project_photos.create(title: 'BeHelp Photo')
 pBeHelp_photo.photo.attach(io: File.open(Rails.root.join('public', 'images', 'BeHelp.jpeg')), filename: 'BeHelp.jpeg')
 
+pWAM_photo = pWAM.project_photos.create(title: 'WAM Photo')
+pWAM_photo.photo.attach(io: File.open(Rails.root.join('public', 'images', 'WAM.jpeg')), filename: 'WAM.jpeg')
 
 puts "seeded"

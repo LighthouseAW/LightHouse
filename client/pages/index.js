@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <HomeLayout>
       {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div> */}
-        <Hero heading="Lighthouse Arab World" message="Art Opens Hearts" />
+        <Hero heading="Lighthouse Arab World" message="Reaching the heart of the Arab World with the Gospel of Jesus" />
         <div className='relative bg-rug p-40 mt-48 bg-no-repeat bg-cover bg-center '>
           {/* <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
           <div className='absolute inset-0 bg-gradient-to-r from-white/30 to-transparent'></div>
