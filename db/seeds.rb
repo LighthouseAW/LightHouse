@@ -61,6 +61,14 @@ pBeHelp = Project.create(name: 'BeHelp',
     website: "",
     video: "https://player.vimeo.com/video/690530124")
 
+pWAM = Project.create(name: 'Why Art Matters',
+    subtitle: 'Art is God’s fingerprint and Satan’s stolen treasure. ',
+    blurb: "Why Art Matters is a semi-annual conference hosted by Lighthouse Arab World and several of its partners to gather Arab Christian Artists to share about how they are using art to communicate the message of the gospel in this difficult region. This includes media and other visual arts, fine arts, music, and poetry. The artists come primarily from the Arab World, but also Europe and North American if their art is directed towards Arabic speakers.", 
+    mission_statement: "", 
+    about: "",
+    website: "",
+    video: "https://www.youtube.com/watch?v=6bYRXqFrbTE")
+
 # projects = [
 #     { name: 'Belight',
 #         subtitle: 'Belight is a streaming platform connected to the world\'s social media platforms.', 
