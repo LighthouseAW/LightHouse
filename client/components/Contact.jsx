@@ -31,7 +31,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="flex items-center justify-center h-screen bg-fixed bg-center bg-cover ">
+    <div className="flex items-center justify-center py-20 bg-fixed bg-center bg-cover ">
       <div className={`p-5 text-black z-[2] text-center ${ isMobile ? "" : "w-[900px]"}`}>
         <form onSubmit={handleSubmit}>
           <div>
