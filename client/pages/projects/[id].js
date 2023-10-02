@@ -34,6 +34,7 @@ export default function Project() {
                             <Link href={project.website} className="rounded-lg p-2 underline">Website →</Link>
                         )}
                         <div classname=" text-center text-xl p-4">{project.mission_statement}</div>
+                        <div classname=" text-center text-xl p-4">{project.blurb}</div>
                     </div>
                 </div>
             <div className='bg-color grid pb-20 items-center justify-center'>
