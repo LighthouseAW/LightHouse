@@ -33,7 +33,7 @@ export default function Give() {
             <div className='h-screen bg-about bg-cover bg-no-repeat '>
                 <div className="static px-48 pt-36 z-20 text-white text-3xl"><h2>{title}</h2></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
-                <div className="flex items-center justify-center text-white relative z-20">
+                <div className="flex-col text-white relative z-20">
                     <div className="flex w-full">
                             <div className='kindful-embed-wrapper pt-24' id='kindful-donate-form-c685c50a-25c6-48be-bf8e-1a34b337a64c'></div>
                         <div className="w-2/5  pt-28 text-black z-20">
