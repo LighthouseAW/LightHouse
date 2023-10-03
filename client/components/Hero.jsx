@@ -34,7 +34,7 @@ export default function Hero({ heading, message }) {
                 <div className='flex justify-center gap-40'>
                     {/* <button className={`bg-white text-xl text-black rounded-full py-3 text-center justify-center ${isMobile ? 'px-1 pt-6 ' : 'px-6'}`} href="/give">Give Now</button> */}
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white"></div>
-                    <div className="z-20">
+                    <div className="relative z-30">
                         <ModalVideo
                             // thumb={VideoThumb}
                             thumbWidth={384}
@@ -43,6 +43,7 @@ export default function Hero({ heading, message }) {
                             video={youtubeVideoId}
                             videoWidth={800}
                             videoHeight={450}
+                            className="relative z-30"
                         />
                         <Link
                             className={`bg-[#f18802] text-2xl text-white rounded-full py-3 text-center justify-center ${isMobile ? 'px-1 pt-6 ' : 'px-6'}`} 

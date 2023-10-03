@@ -56,7 +56,7 @@ export default function Navbar() {
                                     setSelectedSubLink("Staff");
                                 }}
                                 className={`hover:bg-orange-300 block w-full h-full flex justify-center text-center items-center ${selectedSubLink === "Staff" ? "underline" : ""}`}
-                                >Board of Directors</Link>
+                                >Team</Link>
                             </p>
                             </div>
                         </div>

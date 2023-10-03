@@ -1,11 +1,8 @@
 import HomeLayout from '../../components/HomeLayout';
 import Image from "next/image";
 import Link from "next/link";
-import AboutNav from '../../components/NavBars/AboutNav'
 
 export default function StatementOfFaith() {
-
-    const breakText = "We believe the light of God’s love penetrates the darkness"
 
     const title = "Statement of Faith"
     const sf1 = "• We believe that the Bible is God’s inspired word and without error. (2 Timothy 3:16,17)"
@@ -29,9 +26,16 @@ export default function StatementOfFaith() {
                     <div className="flex justify-between items-center pb-4">
                         <h2 className={`text-black text-6xl font-bold mb-16`}>{title}</h2>
                         <div className="relative">
-                        <Image alt="picture" src="/images/SOF.jpeg" className="" width="300" height="300"/>
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white "></div>
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-300/40 "></div>
+                        <Image alt="picture" src="/images/SOF.jpeg" width="400" height="400" className="z-20 relative p-2"/>
+                            <svg className="z-10 absolute top-0 right-0 mt-8 mr-44  hidden lg:block" width="263" height="250" fill="none" viewBox="0 0 404 384" aria-hidden="true">
+                                <defs>
+                                    <pattern id="de316486-4a29-4312-bdfc-fbce2132a2c1" x="0" y="0" width="26" height="26" patternUnits="userSpaceOnUse">
+                                        <rect x="0" y="0" width="2" height="2" className="text-mustard" fill="black"></rect>
+                                            </pattern>
+                                        </defs>
+                                    <rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect>
+                                <rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect>
+                            </svg>
                         </div>
                     </div>
                     <h2 className={`text-black text-xl mb-6`}>{sf1}</h2>
@@ -54,7 +58,7 @@ export default function StatementOfFaith() {
                         <div className=" flex flex-col items-center w-5/6 bg-SOFCall bg-cover bg-no-repeat justify-center m-auto">
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                             <p className='text-white mt-8 text-center text-5xl font-bold pb-10 z-20 relative'>
-                                {breakText}
+                                We believe art can show the love of Jesus to everyone
                             </p>
                             <div className="flex items-center justify-center space-x-6">
                             <Link

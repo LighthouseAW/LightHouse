@@ -6,7 +6,7 @@ export default function BodMap({ employees }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 p-32 pt-40">
             {employees.map((employee, index) => {
                 return (
-                <div key={index} className="bg-blue-200 rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300 flex flex-col justify-center items-center z-20">
+                <div key={index} className="bg-slate-200 rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300 flex flex-col justify-center items-center z-20">
                     <Link href={`/staff`} className="font-semibold text-black text-lg mb-2 text-center">{employee.name} →</Link>
                         <div className="image-container">
                             {/* <img src={photoUrl} alt="Project Photo" layout="responsive" width={300} height={300} /> */}

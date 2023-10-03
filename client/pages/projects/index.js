@@ -42,16 +42,15 @@ export default function Projects() {
                 <div className="absolute inset-0 z-20 bg-gradient-to-b from-slate-300 to-transparent"></div>
                     <div className="flex items-center space-x-6 justify-center pt-24 w-5/6 relative z-20">
                         <div className="w-1/2  relative z-20">
-                        <p className={`z-20 text-black text-6xl font-bold pb-4`}>{title1}</p>
+                            <p className={`z-20 text-black text-6xl font-bold pb-4`}>{title1}</p>
                             <p className={`z-20 text-black text-4xl font-bold`}>{title2}</p>
                             <p className={`z-20 text-black py-5 text-2xl`}>{title3}</p>
                         </div>
                         <div className="w-1/2 relative z-20 flex items-center justify-center pt-20 pb-20">
                             <div>
                             <div className="relative">
-                                <Image alt="picture" src="/images/howReach.jpeg" width="450" height="450" />
-                                <div className="absolute inset-0 z-1 bg-gradient-to-b from-transparent to-color"></div>
-                                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-200/40 "></div>
+                                <Image alt="picture" src="/images/howReach.jpeg" width="450" height="450" className="relative z-20" />
+                                <svg className="z-10 absolute top-0 right-0 -mt-11 -mr-24 hidden lg:block" width="504" height="384" fill="none" viewBox="0 0 404 384" aria-hidden="true"><defs><pattern id="de316486-4a29-4312-bdfc-fbce2132a2c1" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="2" height="2" className="text-mustard" fill="black"></rect></pattern></defs><rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect><rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect></svg>
                             </div>
                             </div>
                         {/* <div className="absolute inset-0 bg-gradient-to-b  from-transparent to-color h-[750px] w-[800px]"></div> */}

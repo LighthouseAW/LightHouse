@@ -32,11 +32,11 @@ export default function Home() {
       {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div> */}
         <Hero heading="Lighthouse Arab World" message="Reaching the heart of the Arab World with the Gospel of Jesus" />
         <div className='relative bg-rug p-40 mt-48 bg-no-repeat bg-cover bg-center '>
-          {/* <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
-          <div className='absolute inset-0 bg-gradient-to-r from-white/30 to-transparent'></div>
+          <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
+          {/* <div className='absolute inset-0 bg-gradient-to-r from-white/30 to-transparent'></div>
           <div className='absolute inset-0 bg-gradient-to-l from-white/30 to-transparent'></div> */}
         </div>
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-64 z-20 w-5/6 justify-center m-auto h-[400px] flex">
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-64 z-10 w-5/6 justify-center m-auto h-[400px] flex">
           <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
           <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black/50'></div>
             <div className="w-1/4 flex flex-col items-center justify-between pt-6 bg-car1 bg-cover bg-center">

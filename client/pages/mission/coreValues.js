@@ -1,11 +1,8 @@
 import HomeLayout from '../../components/HomeLayout';
-import MissionNav from '../../components/NavBars/MissionNav'
 import Image from "next/image"
 import Link from "next/link"
 
 export default function Mission() {
-
-    const breakText = "We believe the light of God’s love penetrates the darkness"
 
     const title = "Our Values"
     const vt1 = "1. We believe that God loves all"
@@ -29,52 +26,53 @@ export default function Mission() {
 
     return (
         <HomeLayout>
-            <div className='flex-grow bg-slate-300 bg-cover bg-no-repeat flex flex-col items-center relative'>
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
+            <div className='flex-grow bg-white bg-cover bg-no-repeat flex flex-col items-center relative'>
+                <div className="absolute inset-0 bg-gradient-to-b from-slate-300 to-tranparent"></div>
                 <div className="flex-grow w-5/6 pt-40 pb-20 text-white z-20 relative">
-                    <div className="bg-white/50 rounded-lg p-4">
+                    <div className="bg-white/30 rounded-lg p-4">
                     <div className="flex justify-between items-center">
                         <h2 className={`text-black text-6xl font-bold mb-14`}>{title}</h2>
                         <div className="relative">
-                        <Image alt="picture" src="/images/CoreValues.jpeg" className="" width="250" height="250"/>
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white "></div>
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-300/40 "></div>
+                            <Image alt="picture" src="/images/CoreValues.jpeg" className="relative z-20" width="325" height="325"/>
+                            <svg className="z-10 absolute top-0 right-0 mt-4 mr-28  hidden lg:block" width="263" height="250" fill="none" viewBox="0 0 404 384" aria-hidden="true">
+                                <defs>
+                                    <pattern id="de316486-4a29-4312-bdfc-fbce2132a2c1" x="0" y="0" width="26" height="26" patternUnits="userSpaceOnUse">
+                                        <rect x="0" y="0" width="2" height="2" className="text-mustard" fill="black"></rect>
+                                            </pattern>
+                                        </defs>
+                                    <rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect>
+                                <rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect>
+                            </svg>
                         </div>
                     </div>
-                    <h2 className={`text-black text-2xl font-bold`}>{vt1}</h2>
+                    <h2 className={`text-black text-4xl font-bold`}>{vt1}</h2>
                     <p className={`text-black py-5 text-xl mb-2`}>{v1}</p>
-                    <h2 className={`text-black text-2xl font-bold`}>{vt2}</h2>
+                    <h2 className={`text-black text-4xl font-bold`}>{vt2}</h2>
                     <p className={`text-black py-5 text-xl mb-2`}>{v2}</p>
-                    <h2 className={`text-black text-2xl font-bold`}>{vt3}</h2>
+                    <h2 className={`text-black text-4xl font-bold`}>{vt3}</h2>
                     <p className={`text-black py-5 text-xl mb-2`}>{v3}</p>
-                    <h2 className={`text-black text-2xl font-bold`}>{vt4}</h2>
+                    <h2 className={`text-black text-4xl font-bold`}>{vt4}</h2>
                     <p className={`text-black py-5 text-xl mb-2`}>{v4}</p>
-                    <h2 className={`text-black text-2xl font-bold`}>{vt5}</h2>
+                    <h2 className={`text-black text-4xl font-bold`}>{vt5}</h2>
                     <p className={`text-black py-5 text-xl mb-2`}>{v5}</p>
-                    <h2 className={`text-black text-2xl font-bold`}>{vt6}</h2>
+                    <h2 className={`text-black text-4xl font-bold`}>{vt6}</h2>
                     <p className={`text-black py-5 text-xl mb-2`}>{v6}</p>
-                    <h2 className={`text-black text-2xl font-bold`}>{vt7}</h2>
+                    <h2 className={`text-black text-4xl font-bold`}>{vt7}</h2>
                     <p className={`text-black py-5 text-xl mb-2`}>{v7}</p>
-                    <h2 className={`text-black text-2xl font-bold`}>{vt8}</h2>
+                    <h2 className={`text-black text-4xl font-bold`}>{vt8}</h2>
                     <p className={`text-black py-5 text-xl mb-2`}>{v8}</p>
-                    <h2 className={`text-black text-2xl font-bold`}>{vt9}</h2>
+                    <h2 className={`text-black text-4xl font-bold`}>{vt9}</h2>
                     <p className={`text-black py-5 text-xl mb-2`}>{v9}</p>
                     </div>
                     </div>
                 </div>
-            {/* <div className='flex flex-grow bg-color items-center pb-80 justify-center'>
-        </div>
-        <div className='flex flex-grow bg-color items-center pb-80 justify-center'>
-        </div>
-        <div className='flex flex-grow bg-color items-center pb-80 justify-center'>
-        </div> */}
         <div className="bg-color pb-12">
                 <div className='z-20 relative'>
                     <div className="flex items-center">
                         <div className=" flex flex-col items-center w-5/6 bg-SOFCall bg-cover bg-no-repeat justify-center m-auto">
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                             <p className='text-white mt-8 text-center text-5xl font-bold pb-10 z-20 relative'>
-                                {breakText}
+                                We believe art can show the love of Jesus to everyone
                             </p>
                             <div className="flex items-center justify-center space-x-6">
                             <Link
