@@ -35,7 +35,7 @@ export default function About() {
                                 <div>
                                     <div className="relative ">
                                     <svg className="z-10 absolute top-0 right-0 -mt-11 -mr-24 hidden lg:block" width="504" height="384" fill="none" viewBox="0 0 404 384" aria-hidden="true"><defs><pattern id="de316486-4a29-4312-bdfc-fbce2132a2c1" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="2" height="2" className="text-mustard" fill="black"></rect></pattern></defs><rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect><rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect></svg>
-                                    <Image alt="picture" src="/images/about.jpeg" width="650" height="650" className="z-20 relative" />
+                                    <Image alt="picture" src="/images/newAbout.jpeg" width="650" height="650" className="z-20 relative" />
                                 </div>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@ export default function About() {
                     </div>
                 </div>
             <div className='flex items-center justify-center bg-color '>
-            <div className="px-44 relative z-20 pb-36">
+            <div className="px-44 relative z-20 pb-12">
                         <p className={`z-20 pb-4 text-black text-4xl text-right font-bold pl-96 `}>{sec2Title}</p>
                         <div className='flex space-x-16'>
                         <div className="w-1/2 relative z-20 flex items-center justify-center pb-20">
@@ -61,7 +61,7 @@ export default function About() {
                     </div>
                 </div>
                 <div className='flex items-center justify-center bg-color '>
-                <div className="px-44 relative z-20 pb-36">
+                <div className="px-44 relative z-20 pb-32">
                         <p className={`z-20 pb-4 text-black text-4xl font-bold`}>{sec3Title}</p>
                         <div className='flex  space-x-16'>
                             <div className="w-1/2 flex  relative z-20">

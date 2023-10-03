@@ -38,9 +38,9 @@ export default function Give() {
                             <div className='kindful-embed-wrapper pt-24' id='kindful-donate-form-c685c50a-25c6-48be-bf8e-1a34b337a64c'></div>
                         <div className="w-2/5  pt-28 text-black z-20">
                             <GiftInfo />
-                            <DonatingSection />
                         </div>
                     </div>
+                    <DonatingSection />
                     {/* <div className="absolute bg-white w-full h-[700px]"></div> */}
 
                     {/* <div className="absolute bottom-96 bg-white w-full h-96"></div> */}
