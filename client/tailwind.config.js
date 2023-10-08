@@ -13,7 +13,7 @@ module.exports = {
         'projects': "url('../public/images/LighthouseArt3.png')",
         'mission': "url('../public/images/LightHouseArt1.png')",
         'staffPic': "url('../public/images/staff.jpeg')",
-        'rug': "url('../public/images/newBreak6.png')",
+        'rug': "url('../public/images/newBreak8.png')",
         'band': "url('../public/images/croper.jpeg')",
         'beaLight': "url('../public/images/beaLight.jpeg')",
         'projectsBreak': "url('../public/images/projectsBreak.jpeg')",
