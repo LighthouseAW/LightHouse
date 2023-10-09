@@ -55,7 +55,7 @@ export default function Give() {
                 {/* <div className="absolute inset-0 bg-gradient-to-b from-color/75 to-transparent"></div> */}
 
                 </div>
-            <div className='pt-48 items-center px-20'>
+            <div className='pt-56 items-center px-20'>
                 {/* <div className="flex w-full">
                         <div className="w-3/5 z-20 relative">
                         </div>
