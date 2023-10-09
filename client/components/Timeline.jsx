@@ -1,11 +1,10 @@
-import { useState } from 'react';
-import Image from "next/image"
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Timeline() {
-  // State to keep track of the active tab
     const [activeTab, setActiveTab] = useState(1);
+    const [selectedTabs, setSelectedTabs] = useState([]);
 
-    // Content for each tab
     const tabContents = [
         'Talk show format program distributed by other Christian satellite TV channels Production of St Augustine Son of Her Tears, full length feature film about the early life of the North African theologian St Augustine',
         'Lighthouse Arab World holds the first Why Art Matters conference, an event focused on inspiring a movement of using art to share the gospel and encourage Christians in a difficult region. Why Art Matters has been held yearly since then, growing to over 300 attendees in 2022.',
@@ -24,81 +23,58 @@ export default function Timeline() {
         '/images/2021.jpeg',
     ];
 
+    const tabLabels = [
+        '2013 - 2019',
+        'June 2019',
+        'December 2019',
+        'August 2020',
+        'November 2020',
+        'June 2021',
+    ];
+
     const handleTabClick = (tabIndex) => {
+        setSelectedTabs([...Array(tabIndex).keys()].map((i) => i + 1));
         setActiveTab(tabIndex);
     };
 
+    useEffect(() => {
+        handleTabClick(1);
+    }, [])
+
     return (
         <div className="flex justify-center items-center mt-40">
-            <div className="w-5/6">
-                {/* Tabs */}
-                <div className="flex">
+        <div className="w-5/6">
+            {/* Tabs */}
+            <div className="flex items-center justify-center">
+            {tabLabels.map((label, index) => (
                 <div
-                    className={`cursor-pointer px-6 py-3 border border-gray-300 rounded-l text-lg ${
-                    activeTab === 1 ? 'bg-slate-200 text-black' : ''
-                    }`}
-                    onClick={() => handleTabClick(1)}
+                key={index}
+                className={`cursor-pointer px-4 py-2 text-lg border-b-2 ${
+                    selectedTabs.includes(index + 1) ? 'bg-orange-200 text-black' : ''
+                }`}
+                onClick={() => handleTabClick(index + 1)}
                 >
-                    2013 - 2019
+                {label}
                 </div>
-                <div
-                    className={`cursor-pointer px-6 py-3 border border-gray-300 text-lg ${
-                    activeTab === 2 ? 'bg-slate-200 text-black' : ''
-                    }`}
-                    onClick={() => handleTabClick(2)}
-                >
-                    June 2019
-                </div>
-                <div
-                    className={`cursor-pointer px-6 py-3 border border-gray-300 rounded-r text-lg ${
-                    activeTab === 3 ? 'bg-slate-200 text-black' : ''
-                    }`}
-                    onClick={() => handleTabClick(3)}
-                >
-                    December 2019
-                </div>
-                <div
-                    className={`cursor-pointer px-6 py-3 border border-gray-300 rounded-r text-lg ${
-                    activeTab === 4 ? 'bg-slate-200 text-black' : ''
-                    }`}
-                    onClick={() => handleTabClick(4)}
-                >
-                    August 2020
-                </div>
-                <div
-                    className={`cursor-pointer px-6 py-4 border border-gray-300 rounded-r text-lg ${
-                    activeTab === 5 ? 'bg-slate-200 text-black' : ''
-                    }`}
-                    onClick={() => handleTabClick(5)}
-                >
-                    November 2020
-                </div>
-                <div
-                    className={`cursor-pointer px-6 py-4 border border-gray-300 rounded-r text-lg ${
-                    activeTab === 6 ? 'bg-slate-200 text-black' : ''
-                    }`}
-                    onClick={() => handleTabClick(6)}
-                >
-                    June 2021
-                </div>
-                </div>
-
-                {/* Content */}
-                <div className="mt-6 p-6 border border-gray-300 rounded text-lg flex items-center justify-between">
-                <div className="w-1/2">
-                    <p>{tabContents[activeTab - 1]}</p>
-                </div>
-
-                    <Image
-                    src={tabImages[activeTab - 1]}
-                    alt={`Image for Year ${activeTab + 2012}`}
-                    width={250}
-                    height={250}
-                    className="rounded-md"
-                    />
-
-                </div>
+            ))}
             </div>
-    </div>
+
+            {/* Content */}
+            <div className="mt-6 p-6 border border-gray-300 rounded text-lg flex items-center justify-between">
+            <div className="w-1/2">
+                <p className="text-xl font-bold">{tabLabels[activeTab-1]}</p>
+                <p>{tabContents[activeTab - 1]}</p>
+            </div>
+
+            <Image
+                src={tabImages[activeTab - 1]}
+                alt={`Image for Year ${activeTab + 2012}`}
+                width={250}
+                height={250}
+                className="rounded-md"
+            />
+            </div>
+        </div>
+        </div>
     );
 }
