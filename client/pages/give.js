@@ -48,7 +48,7 @@ export default function Give() {
                     {/* <div className="absolute bottom-96 bg-white w-full h-96"></div> */}
                 </div>
             </div>
-            <div className='relative bg-rug h-96 mt-80 bg-no-repeat bg-cover bg-center '>
+            <div className='relative bg-rug h-96 bg-no-repeat bg-cover bg-center '>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                 {/* <div className="absolute inset-0 bg-gradient-to-b from-color/75 to-transparent"></div> */}
 
