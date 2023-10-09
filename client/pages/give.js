@@ -41,7 +41,9 @@ export default function Give() {
                             <GiftInfo />
                         </div>
                     </div>
+                    <div className= "px-48">
                     <DonatingSection />
+                    </div>
                     </div>
                     {/* <div className="absolute bg-white w-full h-[700px]"></div> */}
 
@@ -61,8 +63,9 @@ export default function Give() {
                         <DonatingSection />
                         </div>
                     </div> */}
-                    <Contact />
+                    {/* <Contact /> */}
             </div>
+            <Contact />
         </HomeLayout>
     )
 }
