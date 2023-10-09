@@ -104,7 +104,7 @@ export default function About() {
             </div>
             <div className="bg-color">
             </div>
-            <div className="bg-color py-2 ">
+            <div className="bg-color py-2 flex items-center justify-center">
                 <Timeline />
             </div>
         </HomeLayout>

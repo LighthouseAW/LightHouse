@@ -26,12 +26,12 @@ export default function Project() {
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color">
                 </div>
                 <Link href="/projects" className="absolute top-32 left-16 z-30 underline text-black px-4 py-2 rounded-md ">← Go Back</Link>
-                    <div className="flex flex-col text-center text-xl items-center justify-center z-20 relative pt-40 text-black p-4 space-y-4">
+                    <div className="flex flex-col text-center text-xl items-center justify-center z-20 relative pt-40 text-black p-4 space-y-4 px-32">
                         <h1 className="text-6xl">{project.name}</h1>
                         <div classname="">{project.subtitle}</div>
                         <VideoPlayer link={project.video} />
                         {project.website && project.website !== "" && (
-                            <Link href={project.website} className="rounded-lg p-2 underline">Website →</Link>
+                            <Link href={project.website} target='_blank' className="rounded-lg p-2 underline">Website →</Link>
                         )}
                         <div classname=" text-center text-xl p-4">{project.mission_statement}</div>
                         <div classname=" text-center text-xl p-4">{project.blurb}</div>

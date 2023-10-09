@@ -48,7 +48,7 @@ export default function Impact() {
                         description="Connected though secular channels"
                         />
                         <StatisticsComponent
-                        title="BeLightFM"
+                        title="BelightFM"
                         value="500k"
                         description="Listening to Belight FM daily in lebanon and surrounding countries"
                         />

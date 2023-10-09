@@ -1,4 +1,5 @@
 import HomeLayout from '../../components/HomeLayout';
+import MissionNav from '../../components/NavBars/MissionNav'
 import Image from "next/image"
 import Link from "next/link"
 
@@ -45,27 +46,33 @@ export default function Mission() {
                             </svg>
                         </div>
                     </div>
-                    <h2 className={`text-black text-4xl font-bold`}>{vt1}</h2>
-                    <p className={`text-black py-5 text-xl mb-2`}>{v1}</p>
-                    <h2 className={`text-black text-4xl font-bold`}>{vt2}</h2>
-                    <p className={`text-black py-5 text-xl mb-2`}>{v2}</p>
-                    <h2 className={`text-black text-4xl font-bold`}>{vt3}</h2>
-                    <p className={`text-black py-5 text-xl mb-2`}>{v3}</p>
-                    <h2 className={`text-black text-4xl font-bold`}>{vt4}</h2>
-                    <p className={`text-black py-5 text-xl mb-2`}>{v4}</p>
-                    <h2 className={`text-black text-4xl font-bold`}>{vt5}</h2>
-                    <p className={`text-black py-5 text-xl mb-2`}>{v5}</p>
-                    <h2 className={`text-black text-4xl font-bold`}>{vt6}</h2>
-                    <p className={`text-black py-5 text-xl mb-2`}>{v6}</p>
-                    <h2 className={`text-black text-4xl font-bold`}>{vt7}</h2>
-                    <p className={`text-black py-5 text-xl mb-2`}>{v7}</p>
-                    <h2 className={`text-black text-4xl font-bold`}>{vt8}</h2>
-                    <p className={`text-black py-5 text-xl mb-2`}>{v8}</p>
-                    <h2 className={`text-black text-4xl font-bold`}>{vt9}</h2>
-                    <p className={`text-black py-5 text-xl mb-2`}>{v9}</p>
+                    <h2 className={`text-black text-3xl font-bold`}>{vt1}</h2>
+                    <p className={`text-black py-5 text-l mb-2`}>{v1}</p>
+                    <h2 className={`text-black text-3xl font-bold`}>{vt2}</h2>
+                    <p className={`text-black py-5 text-l mb-2`}>{v2}</p>
+                    <h2 className={`text-black text-3xl font-bold`}>{vt3}</h2>
+                    <p className={`text-black py-5 text-l mb-2`}>{v3}</p>
+                    <h2 className={`text-black text-3xl font-bold`}>{vt4}</h2>
+                    <p className={`text-black py-5 text-l mb-2`}>{v4}</p>
+                    <h2 className={`text-black text-3xl font-bold`}>{vt5}</h2>
+                    <p className={`text-black py-5 text-l mb-2`}>{v5}</p>
+                    <h2 className={`text-black text-3xl font-bold`}>{vt6}</h2>
+                    <p className={`text-black py-5 text-l mb-2`}>{v6}</p>
+                    <h2 className={`text-black text-3xl font-bold`}>{vt7}</h2>
+                    <p className={`text-black py-5 text-l mb-2`}>{v7}</p>
+                    <h2 className={`text-black text-3xl font-bold`}>{vt8}</h2>
+                    <p className={`text-black py-5 text-l mb-2`}>{v8}</p>
+                    <h2 className={`text-black text-3xl font-bold`}>{vt9}</h2>
+                    <p className={`text-black py-5 text-l mb-2`}>{v9}</p>
                     </div>
                     </div>
                 </div>
+            {/* <div className='flex flex-grow bg-color items-center pb-80 justify-center'>
+        </div>
+        <div className='flex flex-grow bg-color items-center pb-80 justify-center'>
+        </div>
+        <div className='flex flex-grow bg-color items-center pb-80 justify-center'>
+        </div> */}
         <div className="bg-color pb-12">
                 <div className='z-20 relative'>
                     <div className="flex items-center">

@@ -33,7 +33,7 @@ export default function WhereWeServe() {
                         <div className="w-1/2 pt-12 z-20 relative">
                             <p className={`z-20 text-black text-6xl font-bold pb-8`}>{title1}</p>
                             <p className={`z-20 text-black text-xl font-bold pb-2`}>{title2}</p>
-                            <p className={`z-20 text-black py-1 flex text-xl`}>{dotSpace}<p className='pl-2'>{title3}</p></p>
+                            <p className={`z-20 text-black py-1 flex text-xl`}><p className='pl-2'>{title3}</p></p>
                             <p className={`z-20 text-black py-1 flex text-xl`}>{dotSpace}<p className='pl-2'>{title4}</p></p>
                             <p className={`z-20 text-black py-1 flex text-xl`}>{dotSpace}<p className='pl-2'>{title5}</p></p>
                             <p className={`z-20 text-black py-1 flex text-xl`}>{dotSpace}<p className='pl-2'>{title6}</p></p>
