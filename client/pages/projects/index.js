@@ -25,9 +25,9 @@ export default function Projects() {
             .then(project => setProject(project))
     }, []);
 
-    const title1 = 'How we reach people'
+    const title1 = 'Ministry and strategy must change to reach Arab Muslims'
     const title2 = 'We see art opening hearts across the Arab World'
-    const title3 = 'Social Media is reaching millions across the Arab World and our mission is to connect them with the Gospel of Jesus Christ'
+    const title3 = 'There has been missionary efforts in the Middle East and North Africa for 150 years. While God has worked in miraculous and transformative ways, we believe that missions in the region must change and focus on new and unique methods that break through historic barriers.'
 
     const break1 = 'We believe that art and media can communicate truth on a deep level'
     const break2 = "Films like 'Son of her Tears' have been shown in Arab World theaters and film festivals"
@@ -43,7 +43,7 @@ export default function Projects() {
                     <div className="flex items-center space-x-6 justify-center pt-24 w-5/6 relative z-20">
                         <div className="w-1/2  relative z-20">
                             <p className={`z-20 text-black text-6xl font-bold pb-4`}>{title1}</p>
-                            <p className={`z-20 text-black text-4xl font-bold`}>{title2}</p>
+                            {/* <p className={`z-20 text-black text-4xl font-bold`}>{title2}</p> */}
                             <p className={`z-20 text-black py-5 text-2xl`}>{title3}</p>
                         </div>
                         <div className="w-1/2 relative z-20 flex items-center justify-center pt-20 pb-20">

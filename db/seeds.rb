@@ -20,6 +20,9 @@ emp1 = Employee.create(name: "Neil Holsteen", role: "", blurb: "President of Lig
 emp2 = Employee.create(name: "Dr. Emad D.", role: "", blurb: "Dr D lives with his family in Lebanon and travels the world interviewing guests about their lives and perspectives. He also is a key strategic leader in the vision for the future of Lighthouse Arab World." )
 emp3 = Employee.create(name: "Dave Halverson", role: "", blurb: "Dave has served as the chairman of the board of Lighthouse Arab World since 2013. He is the Associate Pastor of Outreach Ministries at San Gabriel Community Church, in California. Dave and his wife Kristen have four adult children and six grandchildren. " )
 emp4 = Employee.create(name: "Phil Wood", role: "", blurb: "Phil has worked as an executive in the oil and gas industry for 38 years. He and his wife Carol live in Colorado and have three married children and nine grandchildren." )
+emp5 = Employee.create(name: "Douglas Barnett", role: "", blurb: "Dr. Douglas Barnett spent 30 years working as a development economist in Africa, including ten years in Tunisia where he came to know Dr D. While working, he carried out ministry in the countries he lived in. Today, he is part time instructor for CalBaptist University, works part time in property management, an urban garden project, and serves on the board of a couple of missions, including LHAW and cybermissions.org." )
+emp6 = Employee.create(name: "Ken Supernault", role: "", blurb: "Ken has served on the board of Lighthouse Arab World Ministers for 2 years. He is a self employed contractor and has been in business for 35 years. He and his wife Tina have 5 children and soon to be 8 grandchildren." )
+
 
 pBelight = Project.create(name: 'Belight',
     subtitle: 'Belight is a streaming platform connected to the world\'s social media platforms.', 
@@ -64,7 +67,7 @@ pBeHelp = Project.create(name: 'BeHelp',
 pWAM = Project.create(name: 'Why Art Matters',
     subtitle: 'Art is God’s fingerprint and Satan’s stolen treasure. ',
     blurb: "Why Art Matters is a semi-annual conference hosted by Lighthouse Arab World and several of its partners to gather Arab Christian Artists to share about how they are using art to communicate the message of the gospel in this difficult region. This includes media and other visual arts, fine arts, music, and poetry. The artists come primarily from the Arab World, but also Europe and North American if their art is directed towards Arabic speakers.", 
-    mission_statement: "", 
+    mission_statement: "",
     about: "",
     website: "",
     video: "https://www.youtube.com/watch?v=6bYRXqFrbTE")
@@ -129,5 +132,6 @@ pBeHelp_photo.photo.attach(io: File.open(Rails.root.join('public', 'images', 'Be
 
 pWAM_photo = pWAM.project_photos.create(title: 'WAM Photo')
 pWAM_photo.photo.attach(io: File.open(Rails.root.join('public', 'images', 'WAM.jpeg')), filename: 'WAM.jpeg')
+
 
 puts "seeded"

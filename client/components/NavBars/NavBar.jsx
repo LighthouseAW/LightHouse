@@ -92,9 +92,6 @@ export default function Navbar() {
                                         }}
                                         >Core Values</Link>
                                     </p>
-                                    {/* <p className="h-12 m-0">
-                                        <Link href="/about" className="hover:bg-orange-300 rounded-b-md block w-full h-full flex justify-center items-center">Word 3</Link>
-                                    </p> */}
                                 </div>
                             </div>
                         </div>
