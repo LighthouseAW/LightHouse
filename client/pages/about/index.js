@@ -19,7 +19,7 @@ export default function About() {
     const sec2 = " We want our audience to see faces and voices that they recognize, that speak to them on a deep level. Our content is primarily in Arabic, written and produced by those with a passion to reach the Arab mind and Arab heart. Many on our team come from a Muslim background, creating a passion to reach their families and communities, and disciple those on the same journey they went on to discover Jesus and a life devoted to the one true God. We use all aspects of media, but especially social media and even over the air television to connect with our Arabic audience and show them that being a Christian and participating in culture is possible."
 
     const sec3Title = "Where we are"
-    const sec3 = "Our organization is headquartered in Beirut Lebanon yet we also have team members in Egypt, Tunisia, Morocco and the United States. Our goal is to create the highest quality content possible to eliminate unnecessary barriers to the message of Jesus Christ and the Bible. "
+    const sec3 = "Our organization is headquartered in Beirut, Lebanon; yet we also have team members in Egypt, Tunisia, Morocco and the United States. Our goal is to create the highest quality content possible to eliminate unnecessary barriers to the message of Jesus Christ and the Bible. "
 
     return (
         <HomeLayout>
