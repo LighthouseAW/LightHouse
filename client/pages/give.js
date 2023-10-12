@@ -36,8 +36,8 @@ export default function Give() {
                 <div className="flex-col text-white relative z-20">
                     <div className="flex-col">
                     <div className="flex w-full">
-                            <div className='kindful-embed-wrapper pt-24' id='kindful-donate-form-c685c50a-25c6-48be-bf8e-1a34b337a64c'></div>
-                        <div className="w-1/2 pt-28 text-black z-20">
+                    <div className='kindful-embed-wrapper pt-24 absolute left-20 top-0' id='kindful-donate-form-c685c50a-25c6-48be-bf8e-1a34b337a64c'></div>
+                            <div className = "w-3/5"></div>                        <div className="w-1/2 pt-28 text-black z-20">
                             <GiftInfo />
                         </div>
                     </div>
