@@ -70,7 +70,7 @@ pWAM = Project.create(name: 'Why Art Matters',
     mission_statement: "",
     about: "",
     website: "",
-    video: "https://www.youtube.com/watch?v=6bYRXqFrbTE")``
+    video: "https://www.youtube.com/watch?v=6bYRXqFrbTE")
 
 # projects = [
 #     { name: 'Belight',
