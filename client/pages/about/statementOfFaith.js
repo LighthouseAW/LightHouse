@@ -6,6 +6,7 @@ import AboutNav from '../../components/NavBars/AboutNav'
 export default function StatementOfFaith() {
 
     const title = "Statement of Faith"
+    const subTitle = "Lighthouse Arab World is in the process of revising its Statement of Faith."
     // const sf1 = "• We believe that the Bible is God’s inspired word and without error. (2 Timothy 3:16,17)"
     // const sf2 = "• We believe that God is triune: Father, Son and Holy Spirit, three persons in one. (1 John 5:7)"
     // const sf3 = "• We believe We were created in God’s image but through our own voluntary disobedience fell. (Rom. 5:12) While We were yet sinners Christ died for us providing forgiveness for those who will believe on Him and confess him as Lord. (Rom 10:9,10) We have no righteousness in ourselves but must come to God through faith in Christ. (Eph. 2:8) If We sincerely repent of our sin and accept Christ’s lordship in our lives We are justified before God.(1 John 1:9)"
@@ -17,7 +18,7 @@ export default function StatementOfFaith() {
     // const sf9 = "• We believe that the second coming of Christ is literal and inevitable (1 Thes. 4:16-17). We will all stand before God in the final judgment and receive eternal reward or judgment (Rev 20:11-13). Heaven is literal/eternal and Hell is literal/eternal and the place of torment for all who reject Christ. (John 14:12, Rev 20: 10, 15)"
     // const sf10 = "• We believe that We are to identify and actively participate with the local and visible church of Christ. (Heb 10:25)"
     // const sf11 = "• We believe that the church’s Great Commission is to go to all people, in all places, to win and disciple them to Jesus Christ.(James 5:20, Mark 16:15, 2 Cor 5:18-21)."
-    const lusCov = "• We Affirm the "
+    const lusCov = "We Affirm the "
 
     return (
         <HomeLayout>
@@ -51,7 +52,8 @@ export default function StatementOfFaith() {
                     <h2 className={`text-black text-xl mb-6`}>{sf9}</h2>
                     <h2 className={`text-black text-xl mb-6`}>{sf10}</h2>
                     <h2 className={`text-black text-xl mb-6`}>{sf11}</h2> */}
-                    <h2 className={`text-black text-xl mb-6`}>{lusCov}<Link className="underline" target='_blank' href="https://lausanne.org/content/covenant/lausanne-covenant">Lausanne Covenant.</Link></h2>
+                    <h2 className={`text-black text-xl mb-6`}>{subTitle}</h2>
+                    <h2 className={`text-black text-xl mb-6`}>{lusCov}<Link className="underline" traget="_blank" href="https://lausanne.org/content/covenant/lausanne-covenant">Lausanne Covenant</Link>.</h2>
                     </div>
                     </div>
                 </div>

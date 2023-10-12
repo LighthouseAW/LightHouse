@@ -29,8 +29,8 @@ export default function Staff() {
                         <p className={`z-20 pb-4 text-black text-4xl font-bold`}>{sec1Title}</p>
                         <div className='flex  space-x-16'>
                             <div className="w-1/2 flex-col relative z-20">
-                                <p className={`z-20 text-black text-xl pb-4x`}>{sec1}</p>
-                                <p className={`z-20 text-black text-xl`}>{sec2}</p>
+                                <p className={`z-20 text-black text-xl pb-4`}>{sec1}</p>
+                                <p className={`z-20 text-black text-xl pb-4`}>{sec2}</p>
                             </div>
                             <div className="w-1/2 relative z-20 flex items-center justify-center pb-20">
                                 <div>

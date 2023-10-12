@@ -19,10 +19,11 @@ module.exports = {
         'projectsBreak': "url('../public/images/projectsBreak.jpeg')",
         'projBreak2': "url('../public/images/projBreak2.jpeg')",
         'SOFCall': "url('../public/images/SOFCall.jpeg')",
+        'CoreValues': "url('../public/images/CoreValues.jpeg')",
         'aboutBreak2': "url('../public/images/aboutBreak22.jpeg')",
         'car1': "url('../public/carousel/Carousel1.jpeg')",
         'car2': "url('../public/carousel/Carousel4.jpeg')",
-        'car3': "url('../public/carousel/Carousel2.jpeg')",
+        'car3': "url('../public/carousel/meetingNeed.jpeg')",
         'car4': "url('../public/carousel/Carousel5.jpeg')"
       },
       colors: {
