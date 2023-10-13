@@ -193,8 +193,8 @@ export default function Navbar() {
                         </Link>
     </div>
     </>
-            : <div className="static right-0 mx-28">
-                <div className="top-8 w-full flex items-center justify-center text-xl">
+            : <div className="right-0">
+                <div className="top-8 w-full flex items-center justify-center text-xl pr-8">
                     <div className="relative">
                 <div className="dropdown-container hover:bg-orange-200">
                     <Link
