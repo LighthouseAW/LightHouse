@@ -1,9 +1,27 @@
 import HomeLayout from '../../components/HomeLayout';
 import Image from "next/image";
 import Link from "next/link";
-import AboutNav from '../../components/NavBars/AboutNav'
+import AboutNav from '../../components/NavBars/AboutNav';
+import React, { useState, useEffect } from "react";
 
 export default function StatementOfFaith() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkIsMobile = () => {
+            const userAgent = window.navigator.userAgent;
+            setIsMobile(/iPhone|iPad|iPod|Android/i.test(userAgent));
+        };
+
+        checkIsMobile();
+
+        window.addEventListener("resize", checkIsMobile);
+
+        return () => {
+            window.removeEventListener("resize", checkIsMobile);
+        };
+    }, []);
+
 
     const title = "Statement of Faith"
     const subTitle = "Lighthouse Arab World is in the process of revising its Statement of Faith."
@@ -27,8 +45,8 @@ export default function StatementOfFaith() {
                 <div className="flex-grow w-5/6 pt-40 pb-20 text-white z-20 relative">
                     <div className="bg-white/50 rounded-lg p-4">
                     <div className="flex justify-between items-center pb-4">
-                        <h2 className={`text-black text-6xl font-bold mb-16`}>{title}</h2>
-                        <div className="relative">
+                        <h2 className={`${isMobile ? "text-center text-5xl" : "text-6xl"} text-black  font-bold mb-16`}>{title}</h2>
+                        {isMobile ? <></> : <div className="relative">
                         <Image alt="picture" src="/images/SOF.jpeg" width="400" height="400" className="z-20 relative p-2"/>
                             <svg className="z-10 absolute top-0 right-0 mt-8 mr-44  hidden lg:block" width="263" height="250" fill="none" viewBox="0 0 404 384" aria-hidden="true">
                                 <defs>
@@ -39,7 +57,7 @@ export default function StatementOfFaith() {
                                     <rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect>
                                 <rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect>
                             </svg>
-                        </div>
+                        </div>}
                     </div>
                     {/* <h2 className={`text-black text-xl mb-6`}>{sf1}</h2>
                     <h2 className={`text-black text-xl mb-6`}>{sf2}</h2>
