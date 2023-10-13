@@ -35,6 +35,17 @@ export default function Hero({ heading, message }) {
                     {/* <button className={`bg-white text-xl text-black rounded-full py-3 text-center justify-center ${isMobile ? 'px-1 pt-6 ' : 'px-6'}`} href="/give">Give Now</button> */}
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white"></div>
                     <div className="relative z-30">
+                        {isMobile ?
+                        <ModalVideo
+                            // thumb={VideoThumb}
+                            thumbWidth={384}
+                            thumbHeight={216}
+                            thumbAlt="Modal video thumbnail"
+                            video={youtubeVideoId}
+                            videoWidth={350}
+                            videoHeight={196.875}
+                            className="relative z-30"
+                        /> :
                         <ModalVideo
                             // thumb={VideoThumb}
                             thumbWidth={384}
@@ -45,8 +56,9 @@ export default function Hero({ heading, message }) {
                             videoHeight={450}
                             className="relative z-30"
                         />
+                        }
                         <Link
-                            className={`bg-[#f18802] text-2xl text-white rounded-full py-3 text-center justify-center ${isMobile ? 'px-1 pt-6 ' : 'px-6'}`} 
+                            className={`bg-[#f18802] text-2xl text-white rounded-full py-3 text-center justify-center ${isMobile ? 'px-4 ' : 'px-6'}`} 
                             href="/give"
                             onClick={() => {
                             setSelectedLink("Home");

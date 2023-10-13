@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CarouselCard from "./CarouselCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -10,6 +10,23 @@ import Image4 from '../public/carousel/Carousel4.jpeg';
 import Image5 from '../public/carousel/Carousel5.jpeg';
 
 export default function Carousel() {
+  const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkIsMobile = () => {
+            const userAgent = window.navigator.userAgent;
+            setIsMobile(/iPhone|iPad|iPod|Android/i.test(userAgent));
+        };
+
+        checkIsMobile();
+
+        window.addEventListener("resize", checkIsMobile);
+
+        return () => {
+            window.removeEventListener("resize", checkIsMobile);
+        };
+    }, []);
+
   const images = [
     { image: Image1, url: "/mission", name: "Rania", title: "Our Mission", bg: 'bg-slate-100', text: "Rania is a Christian woman in her 40’s. She was an urgent case back in 2021 due to self harm and suicide attempts caused by domestic violence and abuse that took place in her household. We got in touch with her through Telegram and our team prayed and ministered to her needs. She continues to be discipled by us today." },
     { image: Image2, url: "/about/statementOfFaith", name: "Ashraf", title: "What we believe", bg: 'bg-slate-200', text: "Ashraf currently lives with his mother and has two siblings in middle school. He currently attends college where he studies engineering. Ashraf contacted us wanting to know the differences between Islam and Christianity. He has since put his faith in Christ, and currently attends a home church." },
@@ -24,14 +41,18 @@ export default function Carousel() {
   ];
 
   const settings = {
+    accessibility: true,
+    arrows: true,
     infinite: true,
     speed: 2500, // Adjust the speed for smoother scrolling
-    slidesToShow: 3, // Set the number of slides to show
-    slidesToScroll: 3, // Set the number of slides to scroll
+    slidesToShow: isMobile ? 1 : 3, // Set the number of slides to show
+    slidesToScroll: isMobile ? 1 : 3, // Set the number of slides to scroll
     autoplay: true,
-    autoplaySpeed: 2000, // Change the interval duration (in milliseconds) as needed
+    autoplaySpeed: 5000, // Change the interval duration (in milliseconds) as needed
     centerMode: false, // Enable center mode
     centerPadding: "8", // Adjust the center padding as needed
+    prevArrow: <SamplePrevArrow />,  // Custom previous arrow component
+    nextArrow: <SampleNextArrow />,  // Custom next arrow component
   };
 
   return (
@@ -62,5 +83,24 @@ function createButton(url, title) {
         <a href={url}>{title}</a>
       </button>
     </>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { onClick } = props;
+  return (
+    <div className="cursor-pointer absolute left-2 top-48 z-30 text-2xl" onClick={onClick}>
+      ←
+    </div>
+  );
+}
+
+// Custom next arrow component
+function SampleNextArrow(props) {
+  const { onClick } = props;
+  return (
+    <div className=" cursor-pointer absolute right-2 top-48 z-30 text-2xl" onClick={onClick}>
+      →
+    </div>
   );
 }

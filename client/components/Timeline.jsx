@@ -4,6 +4,23 @@ import Image from 'next/image';
 export default function Timeline() {
     const [activeTab, setActiveTab] = useState(1);
     const [selectedTabs, setSelectedTabs] = useState([]);
+    const [isMobile, setIsMobile] = useState(false);
+
+
+    useEffect(() => {
+        const checkIsMobile = () => {
+            const userAgent = window.navigator.userAgent;
+            setIsMobile(/iPhone|iPad|iPod|Android/i.test(userAgent));
+        };
+
+        checkIsMobile();
+
+        window.addEventListener("resize", checkIsMobile);
+
+        return () => {
+            window.removeEventListener("resize", checkIsMobile);
+        };
+    }, []);
 
     const tabContents = [
         'Talk show format program distributed by other Christian satellite TV channels Production of St Augustine Son of Her Tears, full length feature film about the early life of the North African theologian St Augustine',
@@ -42,14 +59,14 @@ export default function Timeline() {
     }, [])
 
     return (
-        <div className="flex justify-center items-center mt-40">
-        <div className="w-5/6">
+        <div className={`flex justify-center items-center mt-40`}>
+        <div className={` ${isMobile ? "" : "w-5/6"}`}>
             {/* Tabs */}
-            <div className="flex items-center justify-center">
+            <div className={`${isMobile ? "grid grid-cols-3" : "flex"} items-center justify-center`}>
             {tabLabels.map((label, index) => (
                 <div
                 key={index}
-                className={`cursor-pointer px-4 py-2 text-lg border-b-2 ${
+                className={`cursor-pointer ${isMobile ? "" : "py-2"} px-4 text-lg border-b-2 ${
                     selectedTabs.includes(index + 1) ? 'bg-orange-200 text-black' : ''
                 }`}
                 onClick={() => handleTabClick(index + 1)}
@@ -60,12 +77,11 @@ export default function Timeline() {
             </div>
 
             {/* Content */}
-            <div className="mt-6 p-6 border border-gray-300 rounded text-lg flex items-center justify-between">
-            <div className="w-1/2">
+            <div className={`mt-6 p-6 border border-gray-300 rounded text-lg ${isMobile ? "flex-col" : ""} flex items-center justify-between`}>
+            <div className={`${isMobile ? "" : "w-1/2"} `}>
                 <p className="text-xl font-bold">{tabLabels[activeTab-1]}</p>
                 <p>{tabContents[activeTab - 1]}</p>
             </div>
-
             <Image
                 src={tabImages[activeTab - 1]}
                 alt={`Image for Year ${activeTab + 2012}`}
