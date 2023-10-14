@@ -53,10 +53,10 @@ export default function Give() {
                     { isMobile ? 
                     <div className = "flex flex-col justify-center items-center h-screen w-screen">
                         <div className='absolute top-0 kindful-embed-wrapper' id='kindful-donate-form-c685c50a-25c6-48be-bf8e-1a34b337a64c'></div>
-                        <div style={{ paddingTop: '72rem' }}>
+                        <div style={{ paddingTop: '84rem' }}>
                         <GiftInfo />
                         </div>
-                        <div >
+                        <div className="pb-8">
                         <DonatingSection />
                         </div>
                         {/* <DonatingSection /> */}
@@ -76,8 +76,8 @@ export default function Give() {
 
                 </div>
             </div>
-            <div className='pt-72 items-center'>
-                    <div className='relative bg-rug h-96 bg-no-repeat bg-cover bg-center '>
+            <div className={`items-center ${isMobile ? "pt-96" : "pt-72 "}`}>
+                    <div className={`${isMobile ? "mb-72" : ""} relative bg-rug h-96 bg-no-repeat bg-cover bg-center`}>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-color to-transparent"></div>
                 </div>

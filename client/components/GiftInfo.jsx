@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function DonatingSection() {
     const [expand1, setExpand1] = useState(false);
@@ -6,6 +6,22 @@ export default function DonatingSection() {
     const [expand3, setExpand3] = useState(false);
     const [expand4, setExpand4] = useState(false);
     const [expand5, setExpand5] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkIsMobile = () => {
+            const userAgent = window.navigator.userAgent;
+            setIsMobile(/iPhone|iPad|iPod|Android/i.test(userAgent));
+        };
+
+        checkIsMobile();
+
+        window.addEventListener("resize", checkIsMobile);
+
+        return () => {
+            window.removeEventListener("resize", checkIsMobile);
+        };
+    }, []);
 
     const toggleExpand = (index) => {
         switch (index) {
@@ -41,7 +57,7 @@ export default function DonatingSection() {
 
 
     return (
-        <div className="w-5/8 bg-white/50 rounded-lg p-8 mr-12 text-black z-20">
+        <div className={`${isMobile ? "px-2" : " w-5/8 mr-12 "} bg-white/50 rounded-lg p-8 text-black z-20`}>
             <h3 className="text-3xl pb-4" >Your Gift makes the following possible:</h3>
             <div className="sentence py-4">
                 <p>

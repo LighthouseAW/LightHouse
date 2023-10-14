@@ -20,18 +20,16 @@ export default function Contact() {
     };
   }, []);
 
-  const inTouch= "We'll be in Touch!"
-
   if (state.succeeded) {
       return (
         <div className="flex items-center justify-center h-screen bg-fixed bg-center bg-cover ">
-          <h2 className="text-6xl text-black font-bold pb-5">{inTouch}</h2>
+          <h2 className="text-6xl text-black font-bold pb-5">We'll be in Touch!!</h2>
         </div>
       );
   }
 
   return (
-    <div className="flex items-center justify-center py-20 bg-fixed bg-center bg-cover ">
+    <div className="flex items-center justify-center py-12 bg-fixed bg-center bg-cover ">
       <div className={`p-5 text-black z-[2] text-center ${ isMobile ? "" : "w-[900px]"}`}>
         <form onSubmit={handleSubmit}>
           <div>
