@@ -10,6 +10,22 @@ export default function Project() {
     const [project, setProject] = useState([]);
     const router = useRouter()
     const id = router.query.id
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkIsMobile = () => {
+            const userAgent = window.navigator.userAgent;
+            setIsMobile(/iPhone|iPad|iPod|Android/i.test(userAgent));
+        };
+
+        checkIsMobile();
+
+        window.addEventListener("resize", checkIsMobile);
+
+        return () => {
+            window.removeEventListener("resize", checkIsMobile);
+        };
+    }, []);
 
     useEffect(() => {
         fetch(`/api/projects/${id}`)
@@ -27,7 +43,7 @@ export default function Project() {
                 <div className="absolute inset-0 bg-gradient-to-b from-slate-300 to-transparent">
                 </div>
                 <Link href="/projects" className="absolute top-32 left-16 z-30 underline text-black px-4 py-2 rounded-md ">← Go Back</Link>
-                    <div className="flex flex-col text-center text-l items-center justify-center z-20 relative pt-40 text-black p-4 space-y-6 w-1/2">
+                    <div className={`flex flex-col text-center text-l items-center justify-center z-20 relative pt-40 text-black p-4 space-y-6 ${isMobile ? "" : "w-1/2"} `}>
                         <h1 className="text-6xl">{project.name}</h1>
                         <div classname="">{project.subtitle}</div>
                         <VideoPlayer link={project.video} />

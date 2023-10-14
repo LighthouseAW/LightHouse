@@ -5,9 +5,25 @@ import Groups from "../../components/Groups"
 
 export default function WhereWeServe() {
     const [groups, setGroups] = useState({})
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        fetch(`https://api.joshuaproject.net/v1/countries.json?api_key=5378a7708ebc&primary_languages=arb`)
+        const checkIsMobile = () => {
+            const userAgent = window.navigator.userAgent;
+            setIsMobile(/iPhone|iPad|iPod|Android/i.test(userAgent));
+        };
+
+        checkIsMobile();
+
+        window.addEventListener("resize", checkIsMobile);
+
+        return () => {
+            window.removeEventListener("resize", checkIsMobile);
+        };
+    }, []);
+
+    useEffect(() => {
+        fetch(`https://api.joshuaproject.net/v1/countries.json?api_key=5378a7708ebc&ids=ag+%7C+ba+%7C+dj+%7C+eg+%7C+iz+%7C+jo+%7C+ku+%7C+le+%7C+ly+%7C+mr+%7C+mo+%7C+mu+%7C+qa+%7C+sa+%7C+su+%7C+sy+%7C+ts+%7C+ae+%7C+ym+&primary_languages=arb`)
             .then(res => res.json())
             .then(groups => {
                 setGroups(groups);
@@ -29,8 +45,8 @@ export default function WhereWeServe() {
         <HomeLayout>
             <div className='min-h-screen bg-white bg-cover bg-no-repeat flex items-center justify-center'>
                 <div className="absolute inset-0 bg-gradient-to-b from-slate-300 to-transparent"></div>
-                    <div className="w-5/6 justify-center flex pt-32 ">
-                        <div className="w-1/2 pt-12 z-20 relative">
+                    <div className={`${isMobile ? "flex-col" : ""} w-5/6 justify-center flex pt-32 `}>
+                        <div className={`${isMobile ? "" : "w-1/2 "} pt-12 z-20 relative`}>
                             <p className={`z-20 text-black text-6xl font-bold pb-8`}>{title1}</p>
                             <p className={`z-20 text-black text-xl font-bold pb-2`}>{title2}</p>
                             <p className={`z-20 text-black py-1 flex text-xl`}><p className='pl-2'>{title3}</p></p>
@@ -39,7 +55,7 @@ export default function WhereWeServe() {
                             <p className={`z-20 text-black py-1 flex text-xl`}>{dotSpace}<p className='pl-2'>{title6}</p></p>
                             <p className={`z-20 text-black py-1 flex text-xl`}>{dotSpace}<p className='pl-2'>{title7}</p></p>
                         </div>
-                        <div className=" w-1/2 flex flex-col items-center justify-center text-white">
+                        <div className={`${isMobile ? "" : "w-1/2"}  flex flex-col items-center justify-center text-white`}>
                         <Groups groups={groups} />
                     </div>
                 </div>

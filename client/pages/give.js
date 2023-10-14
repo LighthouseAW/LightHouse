@@ -7,6 +7,22 @@ import Contact from "../components/Contact"
 
 export default function Give() {
     const [scriptLoaded, setScriptLoaded] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkIsMobile = () => {
+            const userAgent = window.navigator.userAgent;
+            setIsMobile(/iPhone|iPad|iPod|Android/i.test(userAgent));
+        };
+
+        checkIsMobile();
+
+        window.addEventListener("resize", checkIsMobile);
+
+        return () => {
+            window.removeEventListener("resize", checkIsMobile);
+        };
+    }, []);
 
     useEffect(() => {
         if (!scriptLoaded) {
@@ -31,10 +47,21 @@ export default function Give() {
     return (
         <HomeLayout>
             <div className='h-screen bg-about bg-cover bg-no-repeat '>
-                <div className="static px-48 pt-36 z-20 text-white text-3xl"><h2>{title}</h2></div>
+                <div className={`${isMobile ? " px-2 text-2xl" : "px-48 text-3xl"} static  pt-36 z-20 text-white `}><h2>{title}</h2></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                 <div className="flex-col text-white relative z-20">
-                    <div className="flex-col">
+                    { isMobile ? 
+                    <div className = "flex flex-col justify-center items-center h-screen w-screen">
+                        <div className='absolute top-0 kindful-embed-wrapper' id='kindful-donate-form-c685c50a-25c6-48be-bf8e-1a34b337a64c'></div>
+                        <div style={{ paddingTop: '72rem' }}>
+                        <GiftInfo />
+                        </div>
+                        <div >
+                        <DonatingSection />
+                        </div>
+                        {/* <DonatingSection /> */}
+                    </div> : 
+                <div className="flex-col">
                     <div className="flex w-full">
                     <div className='kindful-embed-wrapper pt-24 absolute left-40 top-0' id='kindful-donate-form-c685c50a-25c6-48be-bf8e-1a34b337a64c'></div>
                             <div className = "w-3/5"></div>
@@ -45,23 +72,11 @@ export default function Give() {
                     <div className= "px-48">
                     <DonatingSection />
                     </div>
-                    </div>
-                    {/* <div className="absolute bg-white w-full h-[700px]"></div> */}
+                    </div>}
 
-                    {/* <div className="absolute bottom-96 bg-white w-full h-96"></div> */}
                 </div>
             </div>
-            {/* <div className='relative bg-rug h-96 bg-no-repeat bg-cover bg-center '>
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
-                </div> */}
             <div className='pt-72 items-center'>
-                {/* <div className="flex w-full">
-                        <div className="w-3/5 z-20 relative">
-                        </div>
-                        <div className="w-2/5 text-black z-20">
-                        <DonatingSection />
-                        </div>
-                    </div> */}
                     <div className='relative bg-rug h-96 bg-no-repeat bg-cover bg-center '>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-color to-transparent"></div>

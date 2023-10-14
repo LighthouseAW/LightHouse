@@ -1,10 +1,26 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styled from "styled-components";
 import { Play } from "phosphor-react";
 import ReactPlayer from "react-player/lazy";
 
 export default function VideoPlayer({ link }) {
     const playerRef = useRef();
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkIsMobile = () => {
+            const userAgent = window.navigator.userAgent;
+            setIsMobile(/iPhone|iPad|iPod|Android/i.test(userAgent));
+        };
+
+        checkIsMobile();
+
+        window.addEventListener("resize", checkIsMobile);
+
+        return () => {
+            window.removeEventListener("resize", checkIsMobile);
+        };
+    }, []);
 
     console.log("Link prop:", link); // Add this line for debugging
 
@@ -19,8 +35,8 @@ export default function VideoPlayer({ link }) {
                 <iframe
                     title="vimeo-player"
                     src={link}
-                    width="640"
-                    height="360"
+                    width={isMobile ? "320" : "640"}
+                    height={isMobile ? "180" : "360"}
                     allowFullScreen
                 />
                 </div>
@@ -34,8 +50,8 @@ export default function VideoPlayer({ link }) {
                 <iframe
                     title="youtube-player"
                     src={youtubeEmbedUrl}
-                    width="640"
-                    height="360"
+                    width={isMobile ? "320" : "640"}
+                    height={isMobile ? "180" : "360"}
                     allowFullScreen
                 />
                 </div>

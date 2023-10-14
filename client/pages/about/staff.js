@@ -39,12 +39,12 @@ export default function Staff() {
 
     return (
         <HomeLayout>
-            <div className='h-full bg-slate-300 bg-cover bg-no-repeat'>
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
+            <div className='h-full bg-white bg-cover bg-no-repeat'>
+                <div className="absolute inset-0 bg-gradient-to-b from-slate-300 to-transparent"></div>
                 <div className={`${isMobile ? "" : "px-44"} relative z-20 pt-48`}>
                         <p className={`${isMobile ? "text-center" : ""} z-20 pb-4 text-black text-4xl font-bold`}>{sec1Title}</p>
                         <div className={`${isMobile ? "text-center" : ""} flex  space-x-16 `}>
-                            <div className={`${isMobile ? "" : "w-1/2"}  flex-col relative z-20`}>
+                            <div className={`${isMobile ? "px-2" : "w-1/2"}  flex-col relative z-20`}>
                                 <p className={`z-20 text-black text-xl pb-4`}>{sec1}</p>
                                 <p className={`z-20 text-black text-xl pb-4`}>{sec2}</p>
                             </div>

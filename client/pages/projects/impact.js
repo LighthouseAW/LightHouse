@@ -3,8 +3,25 @@ import ProjectsNav from '../../components/NavBars/ProjectsNav'
 import StatisticsComponent from "../../components/StatisticsComponent"
 import Image from "next/image"
 import Link from "next/link"
+import React, { useState, useEffect } from 'react'
 
 export default function Impact() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkIsMobile = () => {
+            const userAgent = window.navigator.userAgent;
+            setIsMobile(/iPhone|iPad|iPod|Android/i.test(userAgent));
+        };
+
+        checkIsMobile();
+
+        window.addEventListener("resize", checkIsMobile);
+
+        return () => {
+            window.removeEventListener("resize", checkIsMobile);
+        };
+    }, []);
 
     const breakText = "We believe the light of God’s love penetrates the darkness"
 
@@ -15,17 +32,17 @@ export default function Impact() {
                     {/* <div className="pt-20">
                         <ProjectsNav />
                     </div> */}
-                    <div className="flex-col pt-28 px-16 items-center justify-center z-20 relative">
+                    <div className={`flex-col ${isMobile ? "" : "px-16 "} pt-28 items-center justify-center z-20 relative`}>
                     <h1 className="text-3xl font-semibold mb-4 z-20 relative">Ministry Statistics</h1>
 
                         <div className = "flex">
-                        <div className="w-1/2 p-12 ">
+                        {isMobile ? <></>:<div className="w-1/2 p-12 ">
                         <div className="relative">
                         <svg className="z-10 absolute top-0 left-0 -mt-11 -ml-24 hidden lg:block" width="504" height="384" fill="none" viewBox="0 0 404 384" aria-hidden="true"><defs><pattern id="de316486-4a29-4312-bdfc-fbce2132a2c1" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="2" height="2" className="text-mustard" fill="black"></rect></pattern></defs><rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect><rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect></svg>
                                     <Image alt="picture" src="/images/howReach.jpeg" width="650" height="650" className="z-20 relative" />
                             </div>
-                        </div>
-                <div className="p-12 w-1/2 flex flex-col items-center justify-center text-white">
+                        </div>}
+                <div className={`${isMobile ? '' : 'w-1/2 p-12 '} flex flex-col items-center justify-center text-white`}>
                     <div className="items-center justify-center">
                         <StatisticsComponent
                         title="Daily Impact"
@@ -45,10 +62,10 @@ export default function Impact() {
                         <StatisticsComponent
                         title="Training"
                         value="50+"
-                        description="Arab Christians training in media and mission"
+                        description="Arab Christians trained in media and mission"
                         />
                         <StatisticsComponent
-                        title="Secular Outreach"
+                        title="Pre-evangelism"
                         value="Millions"
                         description="Connected though secular channels"
                         />
@@ -61,7 +78,7 @@ export default function Impact() {
                     </div>
                 </div>
                 </div></div>
-                <div className='h-20 p-24 items-center justify-center'>
+                <div className={`${isMobile ? "pt-8" : "h-20  p-24"} items-center justify-center`}>
             </div>
             <div className="bg-color pb-12">
                 <div className='z-20 relative'>

@@ -2,8 +2,25 @@ import HomeLayout from '../../components/HomeLayout';
 import MissionNav from '../../components/NavBars/MissionNav'
 import Image from "next/image"
 import Link from "next/link"
+import React, { useEffect, useState } from "react"
 
 export default function Mission() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkIsMobile = () => {
+            const userAgent = window.navigator.userAgent;
+            setIsMobile(/iPhone|iPad|iPod|Android/i.test(userAgent));
+        };
+
+        checkIsMobile();
+
+        window.addEventListener("resize", checkIsMobile);
+
+        return () => {
+            window.removeEventListener("resize", checkIsMobile);
+        };
+    }, []);
 
     const title = "Our Values"
     const vt1 = "1. We believe that God loves all"
@@ -33,7 +50,7 @@ export default function Mission() {
                     <div className="bg-white/30 rounded-lg p-4">
                     <div className="flex justify-between items-center">
                         <h2 className={`text-black text-6xl font-bold mb-14`}>{title}</h2>
-                        <div className="relative">
+                        {isMobile ? <></> : <div className="relative">
                             <Image alt="picture" src="/images/values2.png" className="relative z-20" width="500" height="500"/>
                             <svg className="z-10 absolute top-0 right-0 mt-4 mr-64  hidden lg:block" width="263" height="250" fill="none" viewBox="0 0 404 384" aria-hidden="true">
                                 <defs>
@@ -44,7 +61,7 @@ export default function Mission() {
                                     <rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect>
                                 <rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect>
                             </svg>
-                        </div>
+                        </div>}
                     </div>
                     <h2 className={`text-black text-3xl font-bold`}>{vt1}</h2>
                     <p className={`text-black py-5 text-l mb-2`}>{v1}</p>

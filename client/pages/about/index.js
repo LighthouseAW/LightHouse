@@ -46,7 +46,7 @@ export default function About() {
                         <p className={`${isMobile ? 'text-center' : "" }  z-20 pb-4 text-black text-4xl font-bold`}>{sec1Title}</p>
                         <div className={`flex ${isMobile ? 'items-center justify-center' : ""}  space-x-16`}>
                             <div className={`${isMobile ? "" : "w-1/2"} flex relative z-20`}>
-                                <p className={` ${isMobile ? 'text-center' : "" } z-20 text-black text-xl`}>{sec1}</p>
+                                <p className={` ${isMobile ? 'text-center ' : "" } z-20 text-black text-xl`}>{sec1}</p>
                             </div>
                             {isMobile ? <></> : <div className="w-1/2 relative z-20 flex items-center justify-center pb-20">
                                 <div>
@@ -61,7 +61,7 @@ export default function About() {
                 </div>
             <div className='flex items-center justify-center bg-color '>
             <div className={`${isMobile ? 'text-center pt-12' : "px-44" } relative z-20 pb-12`}>
-                        <p className={`z-20 pb-4 text-black text-4xl ${isMobile ? "" : "w-1/2 text-right pl-96"} font-bold `}>{sec2Title}</p>
+                        <p className={`z-20 pb-4 text-black text-4xl ${isMobile ? "" : "text-right pl-96"} font-bold `}>{sec2Title}</p>
                         <div className='flex space-x-16'>
                         {isMobile ? <></> : <div className="w-1/2 relative z-20 flex items-center justify-center pb-20">
                                 <div>
