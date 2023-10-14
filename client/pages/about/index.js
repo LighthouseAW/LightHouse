@@ -42,7 +42,7 @@ export default function About() {
         <HomeLayout>
             <div className='h-full bg-white bg-cover bg-no-repeat flex items-center justify-center '>
                 <div className="absolute inset-0 bg-gradient-to-b from-slate-300 to-transparent"></div>
-                    <div className={`${isMobile ? 'text-center' : "px-44" } relative z-20 pt-48`}>
+                    <div className={`${isMobile ? 'text-center px-2' : "px-44" } relative z-20 pt-48`}>
                         <p className={`${isMobile ? 'text-center' : "" }  z-20 pb-4 text-black text-4xl font-bold`}>{sec1Title}</p>
                         <div className={`flex ${isMobile ? 'items-center justify-center' : ""}  space-x-16`}>
                             <div className={`${isMobile ? "" : "w-1/2"} flex relative z-20`}>
@@ -60,7 +60,7 @@ export default function About() {
                     </div>
                 </div>
             <div className='flex items-center justify-center bg-color '>
-            <div className={`${isMobile ? 'text-center pt-12' : "px-44" } relative z-20 pb-12`}>
+            <div className={`${isMobile ? 'text-center pt-12 px-2' : "px-44" } relative z-20 pb-12`}>
                         <p className={`z-20 pb-4 text-black text-4xl ${isMobile ? "" : "text-right pl-96"} font-bold `}>{sec2Title}</p>
                         <div className='flex space-x-16'>
                         {isMobile ? <></> : <div className="w-1/2 relative z-20 flex items-center justify-center pb-20">
@@ -78,7 +78,7 @@ export default function About() {
                     </div>
                 </div>
                 <div className='flex items-center justify-center bg-color '>
-                <div className={`${isMobile ? 'text-center' : "px-44" } relative z-20 pb-32`}>
+                <div className={`${isMobile ? 'text-center px-2' : "px-44" } relative z-20 pb-32`}>
                         <p className={`z-20 pb-4 text-black text-4xl font-bold`}>{sec3Title}</p>
                         <div className='flex  space-x-16'>
                             <div className={`${isMobile ? "" : "w-1/2"} flex relative z-20`}>
