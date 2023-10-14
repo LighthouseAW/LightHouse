@@ -78,7 +78,7 @@ export default function Impact() {
                     </div>
                 </div>
                 </div></div>
-                <div className={`${isMobile ? "pt-8" : "h-20  p-24"} items-center justify-center`}>
+                <div className={`${isMobile ? "pt-24" : "h-20  p-24"} items-center justify-center`}>
             </div>
             <div className="bg-color pb-12">
                 <div className='z-20 relative'>

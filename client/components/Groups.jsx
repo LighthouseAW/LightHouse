@@ -10,7 +10,7 @@ export default function Groups({ groups }) {
     }
 
     return (
-        <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-8 p-6 z-20">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 p-6 z-20">
             {groups?.length > 0 && groups?.map((group) => (
                 <div key={group.population} className=" bg-slate-300 text-black rounded-lg text-center items-center flex flex-col">
                     <div className="p-4">{group.Ctry}</div>
