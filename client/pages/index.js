@@ -68,7 +68,7 @@ export default function Home() {
       <div className='relative bg-rug p-40 mt-48 bg-no-repeat bg-cover bg-center '>
         <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
       </div>
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-64 z-10 w-5/6 justify-center m-auto h-[400px] flex">
+      <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 ${isMobile ? "translate-y-64  h-[300px]" : "translate-y-64 h-[400px]"}  z-10 w-5/6 justify-center m-auto flex`}>
         <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
         <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black/50'></div>
         {breakContent.map((item, index) => (
