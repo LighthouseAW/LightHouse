@@ -29,9 +29,9 @@ export default function Hero({ heading, message }) {
         <div className='h-screen bg-home bg-cover bg-no-repeat flex items-center justify-center'>
             <div className="absolute top-0 left-0 right-0 bottom-0"/>
             <div className="text-black z-[2] text-center">
-                <h2 className={`z-20 relative text-6xl font-bold`}>{heading}</h2>
-                <p className={`z-20 text-black relative py-5 text-3xl`}>{message}</p>
-                <div className='flex justify-center gap-40'>
+                <h2 className={`z-20 relative ${isMobile ? "text-4xl" : "text-6xl "} font-bold`}>{heading}</h2>
+                <p className={`z-20 text-black relative py-5 ${isMobile ? "text-2xl" : "text-3xl "}`}>{message}</p>
+                    <div className='flex justify-center gap-40'>
                     {/* <button className={`bg-white text-xl text-black rounded-full py-3 text-center justify-center ${isMobile ? 'px-1 pt-6 ' : 'px-6'}`} href="/give">Give Now</button> */}
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white"></div>
                     <div className="relative z-30">
