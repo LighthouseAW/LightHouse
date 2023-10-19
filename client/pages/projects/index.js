@@ -6,7 +6,6 @@ import CreateProject from "../../components/CreateProject"
 import Link from "next/link";
 import Image from "next/image"
 import ProjectsNav from '../../components/NavBars/ProjectsNav'
-import ProjectFeature from "../../components/ProjectFeature"
 
 export default function Projects() {
     const [user, setUser] = useContext(UserContext);
