@@ -30,10 +30,10 @@ export default function About() {
     }, []);
 
     const sec1Title = "Arabs need to hear the Gospel"
-    const sec1 = "The Arab world encompasses the land where Christianity was born and also lies at the heart of the Muslim world. The vast majority have little access to the gospel and don’t have a church in their community. Lighthouse Arab World focuses on people groups who have little opportunity to hear and understand the gospel. With a few exceptions, many cities and regions still have no Christian presence. Where there is a presence, the Church is often under pressure, and Christians experience persecution."
+    const sec1 = "The Arab world encompasses the land where Christianity was born and also lies at the heart of the Muslim world. The vast majority of people have little access to the gospel or a church in their community. Lighthouse Arab World focuses on people groups who have little opportunity to hear and understand the gospel. With a few exceptions, many cities and regions still have no Christian presence. Where there is a presence, the Church is often under pressure, and Christians experience persecution."
 
     const sec2Title = "From the Arab World, To the Arab World, In the Arab World"
-    const sec2 = " We want our audience to see faces and voices that they recognize, that speak to them on a deep level. Our content is primarily in Arabic, written and produced by those with a passion to reach the Arab mind and Arab heart. Many on our team come from a Muslim background, creating a passion to reach their families and communities, and disciple those on the same journey they went on to discover Jesus and a life devoted to the one true God. We use all aspects of media, but especially social media and even over the air television to connect with our Arabic audience and show them that being a Christian and participating in culture is possible."
+    const sec2 = "We want our audience to see faces and voices that they recognize, that speak to them on a deep level. Our content is primarily in Arabic, written and produced by those with a passion to reach the Arab mind and Arab heart. Many on our team come from a Muslim background, creating a passion to reach their families and communities, and disciple those on the same journey they went on to discover Jesus, and a life devoted to the one true God. We use all aspects of media, but especially social media and even over the air secular television to connect with our Arabic audience and show them that being a Christian and participating in culture is possible."
 
     const sec3Title = "Where we are"
     const sec3 = "Our organization is headquartered in Beirut, Lebanon; yet we also have team members in Egypt, Tunisia, Morocco and the United States. Our goal is to create the highest quality content possible to eliminate unnecessary barriers to the message of Jesus Christ and the Bible. "
@@ -42,11 +42,11 @@ export default function About() {
         <HomeLayout>
             <div className='h-full bg-white bg-cover bg-no-repeat flex items-center justify-center '>
                 <div className="absolute inset-0 bg-gradient-to-b from-slate-300 to-transparent"></div>
-                    <div className={`${isMobile ? 'text-center px-2' : "px-44" } relative z-20 pt-48`}>
+                    <div className={`${isMobile ? 'text-center' : "px-44" } relative z-20 pt-48`}>
                         <p className={`${isMobile ? 'text-center' : "" }  z-20 pb-4 text-black text-4xl font-bold`}>{sec1Title}</p>
                         <div className={`flex ${isMobile ? 'items-center justify-center' : ""}  space-x-16`}>
                             <div className={`${isMobile ? "" : "w-1/2"} flex relative z-20`}>
-                                <p className={` ${isMobile ? 'text-center ' : "" } z-20 text-black text-xl`}>{sec1}</p>
+                                <p className={` ${isMobile ? 'text-center px-2' : "" } z-20 text-black text-xl`}>{sec1}</p>
                             </div>
                             {isMobile ? <></> : <div className="w-1/2 relative z-20 flex items-center justify-center pb-20">
                                 <div>
@@ -60,7 +60,7 @@ export default function About() {
                     </div>
                 </div>
             <div className='flex items-center justify-center bg-color '>
-            <div className={`${isMobile ? 'text-center pt-12 px-2' : "px-44" } relative z-20 pb-12`}>
+            <div className={`${isMobile ? 'text-center pt-12' : "px-44" } relative z-20 pb-12`}>
                         <p className={`z-20 pb-4 text-black text-4xl ${isMobile ? "" : "text-right pl-96"} font-bold `}>{sec2Title}</p>
                         <div className='flex space-x-16'>
                         {isMobile ? <></> : <div className="w-1/2 relative z-20 flex items-center justify-center pb-20">
@@ -72,17 +72,17 @@ export default function About() {
                                 </div>
                             </div>}
                             <div className={`${isMobile ? "" : "w-1/2 text-right"} flex relative z-20`}>
-                                <p className={`z-20 text-black text-xl ${isMobile ? "" : "text-right"}`}>{sec2}</p>
+                                <p className={`z-20 text-black text-xl ${isMobile ? "px-2" : "text-right"}`}>{sec2}</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className='flex items-center justify-center bg-color '>
-                <div className={`${isMobile ? 'text-center px-2' : "px-44" } relative z-20 pb-32`}>
+                <div className={`${isMobile ? 'text-center' : "px-44" } relative z-20 pb-32`}>
                         <p className={`z-20 pb-4 text-black text-4xl font-bold`}>{sec3Title}</p>
                         <div className='flex  space-x-16'>
                             <div className={`${isMobile ? "" : "w-1/2"} flex relative z-20`}>
-                                <p className={`z-20 text-black text-xl`}>{sec3}</p>
+                                <p className={`z-20 text-black text-xl px-2`}>{sec3}</p>
                             </div>
                             {isMobile ? <></> : <div className="w-1/2 relative z-20 flex items-center justify-center pb-20">
                                 <div>

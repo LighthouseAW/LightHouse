@@ -23,7 +23,7 @@ export default function WhereWeServe() {
     }, []);
 
     useEffect(() => {
-        fetch(`https://api.joshuaproject.net/v1/countries.json?api_key=5378a7708ebc&ids=ag+%7C+ba+%7C+dj+%7C+eg+%7C+iz+%7C+jo+%7C+ku+%7C+le+%7C+ly+%7C+mr+%7C+mo+%7C+mu+%7C+qa+%7C+sa+%7C+su+%7C+sy+%7C+ts+%7C+ae+%7C+ym+&primary_languages=arb`)
+        fetch(`https://api.joshuaproject.net/v1/countries.json?api_key=5378a7708ebc&ids=ag+%7C+ba+%7C+eg+%7C+iz+%7C+jo+%7C+ku+%7C+le+%7C+ly+%7C+mr+%7C+mo+%7C+mu+%7C+qa+%7C+sa+%7C+su+%7C+sy+%7C+ts+%7C+ae+%7C+ym+&primary_languages=arb`)
             .then(res => res.json())
             .then(groups => {
                 setGroups(groups);

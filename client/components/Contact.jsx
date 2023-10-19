@@ -76,7 +76,7 @@ export default function Contact() {
               type="checkbox"
               name="subscribe"
               value="true"
-              className="px-4"
+              className="px-4 cursor-pointer"
             />
             <p>Subscribe to our Newsletter</p>
           </div>

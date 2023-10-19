@@ -71,7 +71,7 @@ export default function StatementOfFaith() {
                     <h2 className={`text-black text-xl mb-6`}>{sf10}</h2>
                     <h2 className={`text-black text-xl mb-6`}>{sf11}</h2> */}
                     <h2 className={`text-black text-xl mb-6`}>{subTitle}</h2>
-                    <h2 className={`text-black text-xl mb-6`}>{lusCov}<Link className="underline" traget="_blank" href="https://lausanne.org/content/covenant/lausanne-covenant">Lausanne Covenant</Link>.</h2>
+                    <h2 className={`text-black text-xl mb-6`}>{lusCov}<Link className="underline" target="_blank" href="https://lausanne.org/content/covenant/lausanne-covenant">Lausanne Covenant</Link>.</h2>
                     </div>
                     </div>
                 </div>

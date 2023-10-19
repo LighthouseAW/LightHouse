@@ -57,9 +57,9 @@ export default function Footer() {
                     <div className="w-32"></div>
                         <h3 className="font-bold text-base ml-auto">Follow
                             <div className={`flex space-x-5 ${isMobile ? "" : "pr-20"} pt-4`}>
-                        <Link href="https://www.facebook.com/lighthouseaw" ><Image src={fb} width="11.25" height="18" alt="Facebook" /></Link>
+                        <Link target="_blank" href="https://www.facebook.com/lighthouseaw" ><Image src={fb} width="11.25" height="18" alt="Facebook" /></Link>
                             {/* <Image src={twitter} width="18" height="18" alt="Twitter" /> */}
-                        <Link href="https://www.youtube.com/@LighthouseAW" ><Image src={youtube} width="11.25" height="18" alt="YouTube" /></Link>
+                        <Link target="_blank" href="https://www.youtube.com/@LighthouseAW" ><Image src={youtube} width="11.25" height="18" alt="YouTube" /></Link>
                             </div>
                             <div className="pt-6">
                                 <Link href="/login" >

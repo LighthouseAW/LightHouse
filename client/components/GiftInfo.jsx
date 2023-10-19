@@ -45,7 +45,7 @@ export default function DonatingSection() {
         }
     };
 
-    const donQ1 = "• Reaching people with the Gospel in the Middle East and North Africa where they rarely know anyone else Christian and are desperately in need of the hope and love of Jesus"
+    const donQ1 = "• Reaching people with the Gospel in the Middle East and North Africa where they are desperately in need of the hope and love of Jesus"
 
     const donQ2 = "• Training of Christian Arabs in media and in mission"
 

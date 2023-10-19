@@ -6,6 +6,7 @@ import CreateProject from "../../components/CreateProject"
 import Link from "next/link";
 import Image from "next/image"
 import ProjectsNav from '../../components/NavBars/ProjectsNav'
+import ProjectFeature from "../../components/ProjectFeature"
 
 export default function Projects() {
     const [user, setUser] = useContext(UserContext);
@@ -48,8 +49,8 @@ export default function Projects() {
     const break2 = "Films like 'Son of her Tears' have been shown in Arab World theaters and film festivals"
     const break3 = 'Learn about our Outreach Projects ↓'
 
-    const break21 = "Your gifts help make the gospel available to the world"
-    const break22 = "We are so thankful for the support that you give"
+    const break21 = "Your gifts help make the gospel available to the Arab World"
+    const break22 = "We are thankful for your partnership"
 
     return (
         <HomeLayout>
@@ -81,9 +82,9 @@ export default function Projects() {
                                 {break1}
                             </p>
                             <div className="flex items-center justify-center space-x-6">
-                            <div
+                            {/* <div
                                 className="text-black  text-center text-2xl font-bold mb-8 z-20 relative"
-                                >{break2}</div>
+                                >{break2}</div> */}
                         </div>
                             <p className='text-black mt-2 text-center text-4xl font-bold mb-6 z-20 relative'>
                                 {break3}
