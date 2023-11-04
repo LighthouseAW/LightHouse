@@ -54,7 +54,7 @@ export default function Hero({ heading, message }) {
                             videoHeight={450}
                             className="relative z-30" />
                         }
-                    <Link
+                    {/* <Link
                         className={`bg-[#f18802] text-2xl text-white rounded-full py-3 text-center justify-center ${
                             isMobile ? 'px-4' : 'px-6'
                         }`}
@@ -65,7 +65,7 @@ export default function Hero({ heading, message }) {
                         }}
                     >
                         Give
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
         </div>

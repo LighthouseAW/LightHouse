@@ -32,7 +32,7 @@ export default function WhereWeServe() {
     }, []);
 
     const title1 = 'Where We Serve'
-    const title2 = 'Lighthouse Arab World was born in the hearts and minds of a small group of people in North Africa who believed, and continue to believe that it is possible to break down walls of hate towards Christ and Christians. The countries that comprise the Middle East and North Africa are some of the least reached in the world, and for people groups that are categorized as reached, the church is very small and often underground. '
+    const title2 = 'Lighthouse Arab World was born in the hearts and minds of a small group of people in North Africa who believed, and continue to believe that it is possible to break down walls of hate towards Christ and Christians. The countries that comprise the Middle East and North Africa are some of the least reached in the world, and for people groups that are categorized as reached, the church is very small and often underground. Through our social media content, streaming mobile applications and over the air television shows, Lighthouse intends to touch each and every person in this region.'
     const title3 = 'Statistics of Note for the Middle East and North Africa: '
     const title4 = 'Total Population: 407,817,000'
     const title5 = 'Of the total, 5.5% are Christian and 1.5% Evangelical'
