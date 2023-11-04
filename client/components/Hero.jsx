@@ -40,11 +40,11 @@ export default function Hero({ heading, message }) {
                             thumbHeight={216}
                             thumbAlt="Modal video thumbnail"
                             video={youtubeVideoId}
-                            videoWidth={350}
-                            videoHeight={196.875}
+                            videoWidth={320}
+                            videoHeight={180}
                             className="relative z-30"
                         />
-                     : 
+                        :
                         <ModalVideo
                             thumbWidth={384}
                             thumbHeight={216}

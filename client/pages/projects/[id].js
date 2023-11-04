@@ -47,13 +47,19 @@ export default function Project() {
                         <h1 className="text-6xl">{project.name}</h1>
                         <div classname="">{project.subtitle}</div>
                         <VideoPlayer link={project.video} />
+                        <div className="flex flex-col" >
                         {project.website && project.website !== "" && (
                             <Link href={project.website} target='_blank' className="rounded-lg p-2 underline">Website →</Link>
                         )}
-                        <div classname=" text-center text-xl p-4">{project.mission_statement}</div>
-                        <div classname=" text-center text-xl p-4">{project.about}</div>
-                        <div classname=" text-center text-xl p-4">{project.blurb}</div>
-
+                        {project.facebook && project.facebook !== "" && (
+                            <Link href={project.facebook} target='_blank' className="rounded-lg p-2 underline">Facebook →</Link>
+                        )}
+                        {project.app && project.app !== "" && (
+                            <Link href={project.app} target='_blank' className="rounded-lg p-2 underline">Download our App →</Link>
+                        )}</div>
+                        <div className=" text-center text-xl p-4">{project.mission_statement}</div>
+                        <div className=" text-center text-xl p-4">{project.about}</div>
+                        <div className=" text-center text-xl p-4">{project.blurb}</div>
                     </div>
                 </div>
             <div className='bg-color grid pb-20 items-center justify-center'>

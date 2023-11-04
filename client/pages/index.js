@@ -42,23 +42,26 @@ export default function Home() {
   const breakContent = [
     {
       title: "Gospel through Media",
-      text: "We use social media, internet technology, and films to communicate the gospel to Arabic speakers throughout the world.",
+      text: "We use social media, radio, internet technology, and films to communicate the gospel to Arabic speakers throughout the world.",
       background: "bg-car1",
+      textColor: "text-white",
     },
     {
       title: "Train and Replicate",
       text: "We believe in training and mentoring Arab Christians to use art, such as media, to communicate the gospel to their communities, cities and nations.",
       background: "bg-car2",
+      textColor: "text-black",
     },
-    {
-      title: "Meeting the need",
-      text: "The Middle East and North Africa frequently experience natural and man-made disasters. Our ministry invests people, time, and money where God calls us to care for those in need.",
-      background: "bg-car3",
-    },
+    // {
+    //   title: "Meeting the need",
+    //   text: "The Middle East and North Africa frequently experience natural and man-made disasters. Our ministry invests people, time, and money where God calls us to care for those in need.",
+    //   background: "bg-car3",
+    // },
     {
       title: "Art opens hearts",
       text: "We believe that art opens doors to evangelism and discipleship that are typically closed to traditional methods, especially in the Arab World.",
       background: "bg-car4",
+      textColor: "text-white",
     },
   ];
 
@@ -68,12 +71,12 @@ export default function Home() {
       <div className={`relative bg-rug p-40 mt-48 bg-no-repeat bg-cover bg-center `}>
         <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
       </div>
-      <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 ${isMobile ? "translate-y-64  h-[300px]" : "translate-y-64 h-[400px]"}  z-10 w-5/6 justify-center m-auto flex`}>
-        <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
-        <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black/50'></div>
+      <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 ${isMobile ? "translate-y-64  h-[300px]" : "translate-y-64 h-[400px]"}  z-10 w-5/6 justify-center m-auto flex ${isMobile ? "space-x-2" : 'space-x-12'}`}>
+        {/* <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
+        <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black/50'></div> */}
         {breakContent.map((item, index) => (
-          <div className={`w-1/4 flex flex-col items-center justify-between pt-6 ${item.background} bg-cover bg-center`} key={index}>
-            <p className={`text-black text-center ${isMobile ? "" : "text-2xl"}  z-20`}>{item.title}</p>
+          <div className={`w-1/3 rounded-lg flex flex-col items-center justify-between pt-6 ${item.background} bg-cover bg-center`} key={index}>
+            <p className={`${item.textColor} text-center ${isMobile ? "" : "text-2xl"}  z-20`}>{item.title}</p>
             {isMobile ? (
               <div className="p-4">
                 <button
