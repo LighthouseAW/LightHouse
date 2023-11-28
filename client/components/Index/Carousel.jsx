@@ -3,11 +3,11 @@ import CarouselCard from "./CarouselCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image1 from '../public/carousel/Carousel1.jpeg';
-import Image2 from '../public/carousel/Carousel2.jpeg';
-import Image3 from '../public/carousel/Carousel3.jpeg';
-import Image4 from '../public/carousel/Carousel4.jpeg';
-import Image5 from '../public/carousel/Carousel5.jpeg';
+import Image1 from '../../public/carousel/Carousel1.jpeg';
+import Image2 from '../../public/carousel/Carousel2.jpeg';
+import Image3 from '../../public/carousel/Carousel3.jpeg';
+import Image4 from '../../public/carousel/Carousel4.jpeg';
+import Image5 from '../../public/carousel/Carousel5.jpeg';
 
 export default function Carousel() {
   const [isMobile, setIsMobile] = useState(false);
