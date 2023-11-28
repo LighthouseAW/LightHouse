@@ -22,9 +22,10 @@ module.exports = {
         'CoreValues': "url('../public/images/CoreValues.jpeg')",
         'aboutBreak2': "url('../public/images/aboutBreak22.jpeg')",
         'car1': "url('../public/carousel/Carousel1.jpeg')",
-        'car2': "url('../public/carousel/Carousel4.jpeg')",
+        'car2': "url('../public/carousel/Car6.jpeg')",
         'car3': "url('../public/carousel/meetingNeed.jpeg')",
-        'car4': "url('../public/carousel/Carousel5.jpeg')"
+        'car4': "url('../public/carousel/Carousel5.jpeg')",
+        'car6': "url('../public/carousel/Nolla in studio.jpeg')"
       },
       colors: {
         color: 'white',
