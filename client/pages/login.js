@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import HomeLayout from '../components/HomeLayout';
+import HomeLayout from '../components/Index/HomeLayout';
 import UserContext from "../context/UserContext";
 import SignIn from "../components/SignIn";
 

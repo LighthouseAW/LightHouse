@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import ModalVideo from "./ModalVideo";
-import { useActiveLink } from '../context/ActiveLinkContext';
+import { useActiveLink } from '../../context/ActiveLinkContext';
 
 export default function Hero({ heading, message }) {
     const [isMobile, setIsMobile] = useState(false);

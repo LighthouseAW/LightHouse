@@ -1,4 +1,4 @@
-import HomeLayout from '../../components/HomeLayout';
+import HomeLayout from '../../components/Index/HomeLayout';
 import ProjectsNav from '../../components/NavBars/ProjectsNav'
 import StatisticsComponent from "../../components/StatisticsComponent"
 import Image from "next/image"

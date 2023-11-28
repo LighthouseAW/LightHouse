@@ -1,4 +1,4 @@
-import HomeLayout from '../../components/HomeLayout';
+import HomeLayout from '../../components/Index/HomeLayout';
 import ProjectsNav from '../../components/NavBars/ProjectsNav'
 import React, { useState, useEffect, useContext } from 'react';
 import Groups from "../../components/Groups"

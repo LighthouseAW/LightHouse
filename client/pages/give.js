@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import HomeLayout from '../components/HomeLayout';
+import HomeLayout from '../components/Index/HomeLayout';
 import Link from "next/link"
 import DonatingSection from "../components/DonatingSection"
 import GiftInfo from "../components/GiftInfo"

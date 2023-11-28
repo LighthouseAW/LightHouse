@@ -1,4 +1,4 @@
-import HomeLayout from '../../components/HomeLayout';
+import HomeLayout from '../../components/Index/HomeLayout';
 import MissionNav from '../../components/NavBars/MissionNav'
 import Image from "next/image"
 import Link from "next/link"

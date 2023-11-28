@@ -1,6 +1,6 @@
 import UserContext from '../../context/UserContext';
 import React, { useState, useEffect, useContext } from 'react';
-import HomeLayout from '../../components/HomeLayout';
+import HomeLayout from '../../components/Index/HomeLayout';
 import ProjectMap from "../../components/ProjectMap";
 import CreateProject from "../../components/CreateProject"
 import Link from "next/link";

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import HomeLayout from '../../components/HomeLayout';
+import HomeLayout from '../../components/Index/HomeLayout';
 import Link from "next/link";
 import Image from 'next/image'
 import AboutNav from '../../components/NavBars/AboutNav'
-import ModalVideo from "../../components/ModalVideo";
+import ModalVideo from "../../components/Index/ModalVideo";
 import Timeline from "../../components/Timeline";
 import { useActiveLink } from '../../context/ActiveLinkContext';
 

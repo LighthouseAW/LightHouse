@@ -1,4 +1,4 @@
-import HomeLayout from '../components/HomeLayout';
+import HomeLayout from '../components/Index/HomeLayout';
 import Contacto from '../components/Contact';
 
 export default function Contact() {
