@@ -1,10 +1,11 @@
 import React, { useContext, useState, useEffect } from "react";
-import Hero from '../components/Hero'
-import HomeLayout from '../components/HomeLayout';
+import Hero from '../components/Index/Hero'
+import HomeLayout from '../components/Index/HomeLayout';
 import Link from 'next/link'
-import Carousel from '../components/Carousel'
+import Carousel from '../components/Index/Carousel'
 import Contact from "../components/Contact"
-import TextModal from "../components/TextModal"
+import TextModal from "../components/Index/TextModal"
+import IndexContainer from "@/components/Index/IndexContainer";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -43,14 +44,14 @@ export default function Home() {
     {
       title: "Gospel through Media",
       text: "We use social media, radio, internet technology, and films to communicate the gospel to Arabic speakers throughout the world.",
-      background: "bg-car1",
+      background: "bg-car6",
       textColor: "text-white",
     },
     {
       title: "Train and Replicate",
       text: "We believe in training and mentoring Arab Christians to use art, such as media, to communicate the gospel to their communities, cities and nations.",
-      background: "bg-car2",
-      textColor: "text-black",
+      background: "bg-car1",
+      textColor: "text-white",
     },
     // {
     //   title: "Meeting the need",
@@ -68,12 +69,12 @@ export default function Home() {
   return (
     <HomeLayout>
       <Hero heading="Lighthouse Arab World" message="Reaching the heart of the Arab World with the Gospel of Jesus" />
-      <div className={`relative bg-rug p-40 mt-48 bg-no-repeat bg-cover bg-center `}>
+      <div className='relative bg-rug p-40 mt-48 bg-no-repeat bg-cover bg-center '>
         <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
       </div>
       <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 ${isMobile ? "translate-y-64  h-[300px]" : "translate-y-64 h-[400px]"}  z-10 w-5/6 justify-center m-auto flex ${isMobile ? "space-x-2" : 'space-x-12'}`}>
-        {/* <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
-        <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black/50'></div> */}
+        {/* <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div> */}
+        {/* <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black/50'></div> */}
         {breakContent.map((item, index) => (
           <div className={`w-1/3 rounded-lg flex flex-col items-center justify-between pt-6 ${item.background} bg-cover bg-center`} key={index}>
             <p className={`${item.textColor} text-center ${isMobile ? "" : "text-2xl"}  z-20`}>{item.title}</p>
@@ -93,10 +94,17 @@ export default function Home() {
                 />
               </div>
             ) : (
-              <p className="text-white text-center  z-20 px-4 pb-6">{item.text}</p>
+              <div className="p-4">
+              <div className="p-2 bg-slate-500/50 rounded-lg">
+              <p className="text-white text-center  z-20 px-4">{item.text}</p>
+              </div>
+              </div>
             )}
           </div>
         ))}
+      </div>
+      <div>
+        <IndexContainer />
       </div>
       <Carousel />
       <div>

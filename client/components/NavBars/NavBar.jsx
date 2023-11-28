@@ -8,6 +8,7 @@ export default function Navbar() {
     const { selectedSubLink, setSelectedSubLink } = useActiveLink();
     const [isMobile, setIsMobile] = useState(false);
     const [screenSize, setScreenSize] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     const navbarRef = useRef(null);
 
@@ -55,8 +56,33 @@ export default function Navbar() {
         };
     }, []);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const handleScroll = () => {
+        const scrollTop = window.pageYOffset;
+        setIsScrolled(scrollTop > 0);
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <div  className={`fixed ${ isMobile ? 'w-full justify-between' : 'w-full'} z-40 h-20 flex bg-slate-100 text-black items-center`} >
+        <div  className={`fixed ${ isMobile ? 'w-full justify-between' : 'w-full'} z-40 h-20 flex ${isScrolled ? "bg-slate-100 transition-all ease-out duration-300" : `${selectedLink=='Give' ? "bg-slate-100" : ''}`} ${selectedLink=='give' ? "bg-slate-100" : ''}  text-black items-center`} >
             <div className={`${isMobile ? 'px-12' : "flex-grow mx-16" } flex  z-11 text-3xl`}>
                     <Link href="/" onClick={() => {
                         setSelectedLink("Home");
@@ -197,24 +223,24 @@ export default function Navbar() {
             : <div className="right-0">
                 <div className="top-8 w-full flex items-center justify-center text-xl pr-8">
                     <div className="relative">
-                <div className="dropdown-container hover:bg-orange-200">
+                <div className="dropdown-container ">
                     <Link
                         href="/about"
-                        className={`h-20 w-60 hover:bg-orange-300 flex justify-center items-center text-2xl relative ${selectedLink === "about" ? "bg-orange-300" : ""}`}
+                        className={`h-20 w-60 hover:text-orange-300 flex justify-center items-center text-2xl relative ${selectedLink === "about" ? "text-orange-400" : ""}`}
                         onClick={() => {
                             setSelectedLink("about");
                             setSelectedSubLink("AboutLighthouse");
                         }}>
                         About Us
                     </Link>
-                        <div className="absolute top-full left-0 w-full bg-orange-200 rounded-b-md shadow-md mt-0 opacity-0 pointer-events-none -mt-0">
+                        <div className={`absolute top-full left-0 w-full ${isScrolled ? 'bg-slate-100 shadow-md' : ""} rounded-b-md mt-0 opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none -mt-0`}>
                             <p className="h-12 m-0">
                                 <Link href="/about"
                                 onClick={() => {
                                     setSelectedLink("about");
                                     setSelectedSubLink("AboutLighthouse");
                                 }}
-                                className={`hover:bg-orange-300 block w-full h-full flex justify-center text-center items-center ${selectedSubLink === "AboutLighthouse" ? "underline" : ""}`}
+                                className={`hover:text-orange-300 block w-full h-full flex justify-center text-center items-center ${selectedSubLink === "AboutLighthouse" ? "underline" : ""}`}
                                 >About Lighthouse</Link>
                             </p>
                             <p className="h-12 m-0">
@@ -223,7 +249,7 @@ export default function Navbar() {
                                     setSelectedLink("about");
                                     setSelectedSubLink("StatementOfFaith");
                                 }}
-                                className={`hover:bg-orange-300 block w-full h-full flex justify-center text-center items-center ${selectedSubLink === "StatementOfFaith" ? "underline" : ""}`}
+                                className={`hover:text-orange-300 block w-full h-full flex justify-center text-center items-center ${selectedSubLink === "StatementOfFaith" ? "underline" : ""}`}
                                 >Statement of Faith</Link>
                             </p>
                             <p className="h-12 m-0">
@@ -232,17 +258,17 @@ export default function Navbar() {
                                     setSelectedLink("about");
                                     setSelectedSubLink("Staff");
                                 }}
-                                className={`hover:bg-orange-300 block w-full h-full flex justify-center text-center items-center ${selectedSubLink === "Staff" ? "underline" : ""}`}
+                                className={`hover:text-orange-300 block w-full h-full flex justify-center text-center items-center ${selectedSubLink === "Staff" ? "underline" : ""}`}
                                 >Team & Leadership</Link>
                             </p>
                             </div>
                         </div>
                     </div>
                         <div className="relative">
-                            <div className="dropdown-container hover:bg-orange-200">
+                            <div className="dropdown-container ">
                                 <Link
                                     href="/mission"
-                                    className={`h-20 w-60 hover:bg-orange-300 flex justify-center items-center text-2xl relative ${selectedLink === "mission" ? "bg-orange-300" : ""}`}
+                                    className={`h-20 w-60 hover:text-orange-300 flex justify-center items-center text-2xl relative ${selectedLink === "mission" ? "text-orange-400" : ""}`}
                                     onClick={() => {
                                         setSelectedLink("mission");
                                         setSelectedSubLink("missionStatement");
@@ -250,10 +276,10 @@ export default function Navbar() {
                                 >
                                     Our Mission
                                 </Link>
-                                <div className="absolute top-full left-0 w-full bg-orange-200 rounded-b-md shadow-md mt-0 opacity-0 pointer-events-none -mt-0">
+                                <div className={`absolute top-full left-0 w-full ${isScrolled ? 'bg-slate-100 shadow-md' : ""} rounded-b-md mt-0 opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none -mt-0`}>
                                     <p className="h-12 m-0">
                                         <Link href="/mission" 
-                                        className={`hover:bg-orange-300 block w-full h-full flex justify-center text-center items-center ${selectedSubLink === "missionStatement" ? "underline" : ""}`}
+                                        className={`hover:text-orange-300 block w-full h-full flex justify-center text-center items-center ${selectedSubLink === "missionStatement" ? "underline" : ""}`}
                                         onClick={() => {
                                             setSelectedLink("mission");
                                             setSelectedSubLink("missionStatement");
@@ -262,7 +288,7 @@ export default function Navbar() {
                                     </p>
                                     <p className="h-12 m-0">
                                         <Link href="/mission/coreValues" 
-                                        className={`hover:bg-orange-300 block w-full h-full flex justify-center text-center items-center ${selectedSubLink === "coreValues" ? "underline" : ""}`}
+                                        className={`hover:text-orange-300 block w-full h-full flex justify-center text-center items-center ${selectedSubLink === "coreValues" ? "underline" : ""}`}
                                         onClick={() => {
                                             setSelectedLink("mission");
                                             setSelectedSubLink("coreValues");
@@ -273,10 +299,10 @@ export default function Navbar() {
                             </div>
                         </div>
                         <div className="relative">
-                            <div className="dropdown-container hover:bg-orange-200">
+                            <div className="dropdown-container ">
                                 <Link
                                     href="/projects"
-                                    className={`h-20 w-60 hover:bg-orange-300 flex justify-center items-center text-2xl relative ${selectedLink === "ourWork" ? "bg-orange-300" : ""}`}
+                                    className={`h-20 w-60 hover:text-orange-300 flex justify-center items-center text-2xl relative ${selectedLink === "ourWork" ? "text-orange-400" : ""}`}
                                     onClick={() => {
                                         setSelectedLink("ourWork");
                                         setSelectedSubLink("ourWork");
@@ -284,14 +310,14 @@ export default function Navbar() {
                                 >
                                     Our Work
                                 </Link>
-                                <div className="absolute top-full left-0 w-full bg-orange-200 rounded-b-md shadow-md mt-0 opacity-0 pointer-events-none -mt-0">
+                                <div className={`absolute top-full left-0 w-full ${isScrolled ? 'bg-slate-100 shadow-md' : ""} rounded-b-md mt-0 opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none -mt-0`}>
                                     <p className="h-12 m-0">
-                                        <Link href="/projects" 
+                                        <Link href="/projects"
                                             onClick={() => {
                                                 setSelectedLink("ourWork");
                                                 setSelectedSubLink("ourWork");
                                             }}
-                                            className={`hover:bg-orange-300 block w-full h-full flex justify-center text-center items-center ${selectedSubLink === "ourWork" ? "underline" : ""}`}
+                                            className={`hover:text-orange-300 block w-full h-full flex justify-center text-center items-center ${selectedSubLink === "ourWork" ? "underline" : ""}`}
                                         >How we reach people</Link>
                                     </p>
                                     <p className="h-12 m-0">
@@ -300,7 +326,7 @@ export default function Navbar() {
                                             setSelectedLink("ourWork");
                                             setSelectedSubLink("impact");
                                         }}
-                                        className={`hover:bg-orange-300 block w-full h-full flex justify-center text-center items-center ${selectedSubLink === "impact" ? "underline" : ""}`}
+                                        className={`hover:text-orange-300 block w-full h-full flex justify-center text-center items-center ${selectedSubLink === "impact" ? "underline" : ""}`}
                                         >Our Impact</Link>
                                     </p>
                                     <p className="h-12 m-0">
@@ -309,22 +335,26 @@ export default function Navbar() {
                                             setSelectedLink("ourWork");
                                             setSelectedSubLink("whereWeServe");
                                         }}
-                                        className={`hover:bg-orange-300 block w-full h-full flex justify-center text-center items-center ${selectedSubLink === "whereWeServe" ? "underline" : ""}`}
+                                        className={`hover:text-orange-300 block w-full h-full flex justify-center text-center items-center ${selectedSubLink === "whereWeServe" ? "underline" : ""}`}
                                         >Where we serve</Link>
                                     </p>
                                 </div>
                             </div>
                         </div>
+                        <div className="">
+                            <div className="hover:outline-orange-300 outline-[#f18802] outline outline-2 rounded-full">
                         <Link
                         href="/give"
                         onClick={() => {
                             setSelectedLink("give");
                             setSelectedSubLink("give");
                         }}
-                        className={`text-white h-20 w-60 bg-[#f18802] flex justify-center items-center text-2xl ${selectedSubLink === "give" ? "underline" : ""}`}
+                        className={`hover:text-orange-300 text-[#f18802] h-16 w-48 flex justify-center items-center text-2xl ${selectedSubLink === "give" ? "underline" : ""}`}
                         >
                         Give
                         </Link>
+                        </div>
+                        </div>
                 </div>
             </div>}
         </div>
