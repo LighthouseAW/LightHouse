@@ -57,19 +57,19 @@ export default function IndexContainer() {
                 </div>
                 <div className="flex items-center justify-center mb-4">
                 <div className={`${isMobile ? "w-1/3 p-2" : "w-1/3 p-8"}`}>
-                    <Link href="/projects/1"  className="text-center flex flex-col items-center">
+                    <Link href="/projects/belight-community"  className="text-center flex flex-col items-center">
                         <img width="300" height="300" src="/images/indexContainer/Belight.png" alt="Image 1" className=" cursor-pointer rounded-lg" />
                             BeLight community →
                     </Link>
                 </div>
                 <div className={`${isMobile ? "w-1/3 p-2" : "w-1/3 p-8"}`}>
-                    <Link href="/projects/2" className="text-center flex flex-col items-center">
+                    <Link href="/projects/belight-fm-105-7" className="text-center flex flex-col items-center">
                         <img  width="300" height="300" src="/images/indexContainer/BeLightFM.jpg" alt="Image 2" className="cursor-pointer rounded-lg" />
                         BeLight FM →
                     </Link>
                 </div>
                 <div className={`${isMobile ? "w-1/3 p-2" : "w-1/3 p-8"}`}>
-                    <Link href="/projects/3" className="text-center flex flex-col items-center">
+                    <Link href="/projects/lighthouse-school-of-creative-arts" className="text-center flex flex-col items-center">
                         <img  width="300" height="300" src="/images/indexContainer/LighthouseCreativeSchoolOfArts.jpeg" alt="Image 2" className="cursor-pointer rounded-lg" />
                             Lighthouse School of Arts →
                     </Link>
