@@ -1,8 +1,8 @@
 import UserContext from '../../context/UserContext';
 import React, { useState, useEffect, useContext } from 'react';
 import HomeLayout from '../../components/Index/HomeLayout';
-import ProjectMap from "../../components/ProjectMap";
-import CreateProject from "../../components/CreateProject"
+import ProjectMap from "../../components/Projects/ProjectMap";
+import CreateProject from "../../components/Projects/CreateProject"
 import Link from "next/link";
 import Image from "next/image"
 import ProjectsNav from '../../components/NavBars/ProjectsNav'

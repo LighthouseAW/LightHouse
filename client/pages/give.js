@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import HomeLayout from '../components/Index/HomeLayout';
 import Link from "next/link"
-import DonatingSection from "../components/DonatingSection"
-import GiftInfo from "../components/GiftInfo"
+import DonatingSection from "../components/Give/DonatingSection"
+import GiftInfo from "../components/Give/GiftInfo"
 import Contact from "../components/Contact"
 
 export default function Give() {
