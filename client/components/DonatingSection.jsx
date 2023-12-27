@@ -36,7 +36,7 @@ export default function DonatingSection() {
     const donA14 = "Write the campaign name on the memo line of yout check so we know how to direct your gift."
     const donA15 = "Also, please call (303) 503-6898 if you have any questions or would like to give over the phone."
 
-    const donQ2 = "Non-cash assets?"
+    const donQ2 = "How can I donate non-cash assets?"
     const donA2 = "If you would like to give non-cash assets such as investment securities, please contact Neil Holsteen at neil@lighthouseaw.org"
 
     const donQ3 = "Can I get a tax receipt if I live in Canada?"
