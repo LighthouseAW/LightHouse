@@ -34,12 +34,6 @@ export default function Projects() {
             .then(projects => setProjects(projects))
     }, []);
 
-    useEffect(() => {
-        fetch(`/api/projects/1`)
-            .then(res => res.json())
-            .then(project => setProject(project))
-    }, []);
-
     const title1 = 'Ministry and strategy must change to reach Arab Muslims'
     const title2 = 'We see art opening hearts across the Arab World'
     const title3 = 'There has been missionary efforts in the Middle East and North Africa for 150 years. While God has worked in miraculous and transformative ways, we believe that missions in the region must change and focus on new and unique methods that break through historic barriers.'

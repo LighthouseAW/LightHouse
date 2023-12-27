@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :blogposts
     resources :forms
     resources :project_photos
-    resources :projects
+    resources :projects, only: [:index, :show], param: :slug
     # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
     
       post "/login", to: "sessions#create"

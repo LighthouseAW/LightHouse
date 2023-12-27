@@ -6,7 +6,7 @@ class Api::ProjectsController < ApplicationController
     end
 
     def show
-        proj = Project.find(params[:id])
+        proj = Project.find_by(slug: params[:slug])
         render json: proj
     end
 end
