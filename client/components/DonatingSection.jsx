@@ -37,7 +37,7 @@ export default function DonatingSection() {
     const donA15 = "Also, please call (303) 503-6898 if you have any questions or would like to give over the phone."
 
     const donQ2 = "How can I donate non-cash assets?"
-    const donA2 = "If you would like to give non-cash assets such as investment securities, please contact Neil Holsteen at neil@lighthouseaw.org"
+    const donA2 = "If you would like to give non-cash assets such as investment securities, please contact us at info@lighthouseaw.org"
 
     const donQ3 = "Can I get a tax receipt if I live in Canada?"
     const donA31 = "If you're in Canada and would like to give to Lighthouse Arab World, mail to: "

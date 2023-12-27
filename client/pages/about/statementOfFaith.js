@@ -85,12 +85,12 @@ export default function StatementOfFaith() {
                             </p>
                             <div className="flex items-center justify-center space-x-6">
                             <Link
-                                href="/give"
+                                href="/about/staff"
                                 className="text-black underline text-center text-2xl font-bold mb-8 z-20 relative"
                                 onClick={() => {
                                     setSelectedLink("Home");
                                     setSelectedSubLink("");}}
-                                >Get Involved →</Link>
+                                >Learn about our Team →</Link>
                         </div>
                             <p className='text-black mt-2 text-center text-4xl font-bold mb-6 z-20 relative'>
                             </p>

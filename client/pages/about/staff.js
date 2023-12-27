@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link"
 import AboutNav from '../../components/NavBars/AboutNav'
 import React, { useState, useEffect, useContext } from 'react';
-import BodMap from "../../components/BodMap"
+import BodMap from "../../components/About/BodMap"
 
 export default function Staff() {
     const [employees, setEmployees] = useState([])
@@ -39,16 +39,16 @@ export default function Staff() {
 
     return (
         <HomeLayout>
-            <div className='h-full bg-white bg-cover bg-no-repeat'>
+            <div className='h-full bg-white bg-cover bg-no-repeat flex items-center justify-center'>
                 <div className="absolute inset-0 bg-gradient-to-b from-slate-300 to-transparent"></div>
-                <div className={`${isMobile ? "" : "px-44"} relative z-20 pt-48`}>
+                <div className={`${isMobile ? "" : ""} w-5/6 relative z-20 pt-48`}>
                         <p className={`${isMobile ? "text-center" : ""} z-20 pb-4 text-black text-4xl font-bold`}>{sec1Title}</p>
                         <div className={`${isMobile ? "text-center" : ""} flex  space-x-16 `}>
-                            <div className={`${isMobile ? "px-2" : "w-1/2"}  flex-col relative z-20`}>
+                            <div className={`${isMobile ? " px-2" : "w-1/2"}  flex-col relative z-20`}>
                                 <p className={`z-20 text-black text-xl pb-4`}>{sec1}</p>
                                 <p className={`z-20 text-black text-xl pb-4`}>{sec2}</p>
                             </div>
-                            {isMobile ? <></> : <div className="w-1/2 relative z-20 flex items-center justify-center pb-20">
+                            {isMobile ? <></> : <div className="w-1/2 relative z-20 flex items-center justify-center pb-12">
                                 <div>
                                     <div className="relative ">
                                     <svg className="z-10 absolute top-0 right-0 -mt-11 -mr-24 hidden lg:block" width="504" height="384" fill="none" viewBox="0 0 404 384" aria-hidden="true"><defs><pattern id="de316486-4a29-4312-bdfc-fbce2132a2c1" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="2" height="2" className="text-mustard" fill="black"></rect></pattern></defs><rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect><rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect></svg>
@@ -62,20 +62,11 @@ export default function Staff() {
                     <div className="bg-color ">
                         <div className='z-20 relative'>
                             <div className="flex items-center">
-                                <div className="  flex flex-col items-center w-5/6 bg-band bg-cover bg-no-repeat justify-center m-auto">
+                                <div className="  flex flex-col items-center w-5/6 bg-slate-200 bg-cover bg-no-repeat justify-center m-auto ">
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                                     <p className={`text-[#f18802] mt-8 text-center ${isMobile ? "text-2xl" : 'text-6xl'} font-bold pb-10 z-20 relative`}>
                                         {breakWords}
                                     </p>
-                                    <div className="flex items-center justify-center space-x-6">
-                                    <Link
-                                        href="/give"
-                                        className="text-black underline text-center text-2xl font-bold mb-8 z-20 relative"
-                                        onClick={() => {
-                                            setSelectedLink("Home");
-                                            setSelectedSubLink("");}}
-                                        >Get Involved →</Link>
-                                </div>
                                     <p className='text-black mt-2 text-center text-4xl font-bold mb-6 z-20 relative'>
                                         Board of Directors ↓
                                     </p>
@@ -86,6 +77,27 @@ export default function Staff() {
                 <div className='grid mb-10 items-center justify-center'>
                 <BodMap employees={employees} />
             </div>
+            <div className="bg-color pb-12">
+                        <div className='z-20 relative'>
+                            <div className="flex items-center">
+                                <div className="  flex flex-col items-center w-5/6 bg-band bg-cover bg-no-repeat justify-center m-auto">
+                                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
+                                    <p className={`text-[#f18802] mt-8 text-center ${isMobile ? "text-2xl" : 'text-6xl'} font-bold pb-10 z-20 relative`}>
+                                        {breakWords}
+                                    </p>
+                                    <div className="flex items-center justify-center space-x-6">
+                                    <Link
+                                        href="/mission"
+                                        className="text-black underline text-center text-2xl font-bold mb-8 z-20 relative"
+                                        onClick={() => {
+                                            setSelectedLink("Home");
+                                            setSelectedSubLink("");}}
+                                        >Our Mission→</Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </HomeLayout>
     )
 }

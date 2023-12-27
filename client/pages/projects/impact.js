@@ -1,6 +1,6 @@
 import HomeLayout from '../../components/Index/HomeLayout';
 import ProjectsNav from '../../components/NavBars/ProjectsNav'
-import StatisticsComponent from "../../components/StatisticsComponent"
+import StatisticsComponent from "../../components/Projects/StatisticsComponent"
 import Image from "next/image"
 import Link from "next/link"
 import React, { useState, useEffect } from 'react'
@@ -90,12 +90,12 @@ export default function Impact() {
                             </p>
                             <div className="flex items-center justify-center space-x-6">
                             <Link
-                                href="/give"
+                                href="/projects/whereWeServe"
                                 className="text-black underline text-center text-2xl font-bold mb-8 z-20 relative"
                                 onClick={() => {
                                     setSelectedLink("Home");
                                     setSelectedSubLink("");}}
-                                >Get Involved →</Link>
+                                >See where we serve →</Link>
                         </div>
                             <p className='text-black mt-2 text-center text-4xl font-bold mb-6 z-20 relative'>
                             </p>

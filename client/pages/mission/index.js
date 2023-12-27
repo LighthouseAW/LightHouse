@@ -36,7 +36,7 @@ export default function Mission() {
         <HomeLayout>
             <div className='h-full bg-white bg-cover bg-no-repeat flex items-center justify-center '>
                 <div className="absolute inset-0 z-20 bg-gradient-to-b from-slate-300 to-transparent"></div>
-                <div className={`${isMobile ? " px-2 pb-8" : "px-32"}  relative z-20 pt-48`}>
+                <div className={`${isMobile ? " px-2 pb-8" : ""} w-5/6 relative z-20 pt-48`}>
                         <p className={`z-20 pb-4 text-black text-5xl font-bold`}>{missionTitle}</p>
                         <div className='flex  space-x-14'>
                             <div className={`${isMobile ? "" : " w-1/2"} flex  relative z-20`}>
@@ -53,32 +53,8 @@ export default function Mission() {
                         </div>
                     </div>
                 </div>
-            <div className="bg-color ">
-                <div className='z-20 relative'>
-                    <div className="flex items-center">
-                        <div className="  flex flex-col items-center w-5/6 bg-band bg-cover bg-no-repeat justify-center m-auto">
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
-                            <p className={`text-[#f18802] mt-8 text-center ${isMobile ? "text-3xl" : "text-6xl"}  font-bold pb-10 z-20 relative`}>
-                                {breakWords}
-                            </p>
-                            <div className="flex items-center justify-center space-x-6">
-                            <Link
-                                href="/give"
-                                className="text-black underline text-center text-2xl font-bold mb-8 z-20 relative"
-                                onClick={() => {
-                                    setSelectedLink("Home");
-                                    setSelectedSubLink("");}}
-                                >Get Involved →</Link>
-                        </div>
-                            <p className='text-black mt-2 text-center text-4xl font-bold mb-6 z-20 relative'>
-                                Learn about our Vision↓
-                            </p>
-                    </div>
-                </div>
-            </div>
-        </div>
             <div className='flex items-center justify-center  bg-color '>
-                <div className={`${isMobile ? "px-2" : "px-32"}  relative z-20 pb-20 pt-20 `}>
+                <div className={`${isMobile ? "px-2" : ""} w-5/6 relative z-20 pb-20 pt-8 `}>
                     <p className={`z-20 pb-4 text-black text-4xl font-bold ${isMobile ? "" : "pl-96 text-right"}  `}>{visionTitle2}</p>
                         <div className='flex space-x-16'>
                         {isMobile ? <></>:<div className="w-1/2 relative z-20 flex items-center justify-center pb-20">
@@ -110,6 +86,27 @@ export default function Mission() {
                     </div>
                         </div>
                 </div> */}
+        </div>
+        <div className="bg-color pb-12">
+                <div className='z-20 relative'>
+                    <div className="flex items-center">
+                        <div className="  flex flex-col items-center w-5/6 bg-band bg-cover bg-no-repeat justify-center m-auto">
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
+                            <p className={`text-[#f18802] mt-8 text-center ${isMobile ? "text-3xl" : "text-6xl"}  font-bold pb-10 z-20 relative`}>
+                                {breakWords}
+                            </p>
+                            <div className="flex items-center justify-center space-x-6">
+                            <Link
+                                href="/coreValues"
+                                className="text-black underline text-center text-2xl font-bold mb-8 z-20 relative"
+                                onClick={() => {
+                                    setSelectedLink("Home");
+                                    setSelectedSubLink("");}}
+                                >Our Core Values →</Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         </HomeLayout>
     )
