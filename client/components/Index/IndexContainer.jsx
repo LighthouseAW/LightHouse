@@ -34,26 +34,34 @@ export default function IndexContainer() {
                 <div className='relative flex flex-wrap'>
                 <div className={`${isMobile ? "w-1/2 p-4" : "w-1/4 p-8"}`}>
                     <Link href="/about"  className="text-center flex flex-col items-center">
+                    <div className="hover-zoom rounded-lg">
                         <img width="400" height="400" src="/images/about.jpeg" alt="Image 1" className=" cursor-pointer rounded-lg" />
+                        </div>
                         About us →
                     </Link>
                 </div>
                 <div className={`${isMobile ? "w-1/2 p-4" : "w-1/4 p-8"}`}>
                 <Link href="/mission"  className="text-center flex flex-col items-center">
+                <div className="hover-zoom rounded-lg">
                     <img  width="400" height="400" src="/images/beaLight.jpeg" alt="Image 2" className="cursor-pointer rounded-lg" />
+                    </div>
                     Our Mission  →
                 </Link>
                 </div>
                 {/* ... (repeat similar structure for other images) */}
                 <div className={`${isMobile ? "w-1/2 p-4" : "w-1/4 p-8"}`}>
                     <Link href="/impact"  className="text-center flex flex-col items-center">
+                    <div className="hover-zoom rounded-lg">
                     <img width="400" height="400" src="/images/howReach2.jpeg" alt="Image 1" className=" cursor-pointer rounded-lg" />
+                    </div>
                         Our Impact →
                     </Link>
                 </div>
                 <div className={`${isMobile ? "w-1/2 p-4" : "w-1/4 p-8"}`}>
                 <Link href="/projects" className="text-center flex flex-col items-center">
+                <div className="hover-zoom rounded-lg">
                     <img  width="400" height="400" src="/images/Men Cooking.png" alt="Image 2" className="cursor-pointer rounded-lg" />
+                    </div>
                     Learn about how we reach people →
                 </Link>
                 </div>
@@ -63,19 +71,25 @@ export default function IndexContainer() {
                 <div className="flex items-center justify-center">
                 <div className={`${isMobile ? "w-1/3 p-2" : "w-1/3 p-8"}`}>
                     <Link href="/projects/belight-community"  className="text-center flex flex-col items-center">
+                    <div className="hover-zoom rounded-lg">
                         <img width="300" height="300" src="/images/indexContainer/Belight.png" alt="Image 1" className=" cursor-pointer rounded-lg" />
+                        </div>
                             BeLight community →
                     </Link>
                 </div>
                 <div className={`${isMobile ? "w-1/3 p-2" : "w-1/3 p-8"}`}>
                     <Link href="/projects/belight-fm-105-7" className="text-center flex flex-col items-center">
+                    <div className="hover-zoom rounded-lg">
                         <img  width="300" height="300" src="/images/indexContainer/BeLightFM.jpg" alt="Image 2" className="cursor-pointer rounded-lg" />
+                        </div>
                         BeLight FM →
                     </Link>
                 </div>
                 <div className={`${isMobile ? "w-1/3 p-2" : "w-1/3 p-8"}`}>
                     <Link href="/projects/lighthouse-school-of-creative-arts3" className="text-center flex flex-col items-center">
-                        <img  width="300" height="300" src="/images/indexContainer/LighthouseCreativeSchoolOfArts.jpeg" alt="Image 2" className="cursor-pointer rounded-lg" />
+                    <div className="hover-zoom rounded-lg">
+                        <img  width="300" height="300" src="/images/indexContainer/LighthouseCreativeSchoolOfArts.jpeg" alt="Image 2" className="hover-zoom cursor-pointer rounded-lg" />
+                        </div>
                             Lighthouse School of Arts →
                     </Link>
                 </div>
@@ -84,19 +98,25 @@ export default function IndexContainer() {
             <div className="flex flex-wrap items-center justify-center">
             <div className={`${isMobile ? "w-1/3 p-2" : "w-1/3 p-8"}`}>
                     <Link href="/projects/lighthouse-cinema"  className="text-center flex flex-col items-center">
-                        <img width="300" height="300" src="/images/indexContainer/LighthouseCinema.png" alt="Image 1" className=" cursor-pointer rounded-lg" />
+                    <div className="hover-zoom rounded-lg">
+                        <img width="300" height="300" src="/images/indexContainer/LighthouseCinema.png" alt="Image 1" className="hover-zoom cursor-pointer rounded-lg" />
+                        </div>
                             Lighthouse Cinema →
                     </Link>
                 </div>
                 <div className={`${isMobile ? "w-1/3 p-2" : "w-1/3 p-8"}`}>
                     <Link href="/projects/behelp" className="text-center flex flex-col items-center">
-                        <img  width="300" height="300" src="/images/indexContainer/BeHelp.jpeg" alt="Image 2" className="cursor-pointer rounded-lg" />
+                        <div className="hover-zoom rounded-lg">
+                        <img  width="300" height="300" src="/images/indexContainer/BeHelp.jpeg" alt="Image 2" className={`hover-zoom image cursor-pointer rounded-lg`}/>
+                        </div>
                         BeHelp →
                     </Link>
                 </div>
                 <div className={`${isMobile ? "w-1/3 p-2" : "w-1/3 p-8"}`}>
                     <Link href="/projects/why-art-matters" className="text-center flex flex-col items-center">
-                        <img  width="300" height="300" src="/images/indexContainer/WAM.jpeg" alt="Image 2" className="cursor-pointer rounded-lg" />
+                    <div className="hover-zoom rounded-lg">
+                        <img  width="300" height="300" src="/images/indexContainer/WAM.jpeg" alt="Image 2" className="cursor-pointer rounded-lg hover-zoom" />
+                        </div>
                             Why Art Matters →
                     </Link>
                 </div>

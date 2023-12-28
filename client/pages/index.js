@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Carousel from '../components/Index/Carousel'
 import Contact from "../components/Contact"
 import TextModal from "../components/Index/TextModal"
-import IndexContainer from "../components/Index/IndexContainer";
+import IndexContainer from "@/components/Index/IndexContainer";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -76,7 +76,7 @@ export default function Home() {
         {/* <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div> */}
         {/* <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black/50'></div> */}
         {breakContent.map((item, index) => (
-          <div className={`w-1/3 rounded-lg flex flex-col items-center justify-between pt-6 ${item.background} bg-cover bg-center`} key={index}>
+          <div className={`w-1/3 rounded-lg flex flex-col items-center break-content-item justify-between pt-6 ${item.background} bg-cover bg-center`} key={index}>
             <p className={`${item.textColor} text-center ${isMobile ? "" : "text-2xl"}  z-20`}>{item.title}</p>
             {isMobile ? (
               <div className="p-4">
@@ -96,7 +96,7 @@ export default function Home() {
             ) : (
               <div className="p-4">
               <div className="p-2 bg-slate-500/50 rounded-lg">
-              <p className="text-white text-center  z-20 px-4">{item.text}</p>
+              <p className="text-white text-center hover-text z-20 px-4">{item.text}</p>
               </div>
               </div>
             )}
