@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Carousel from '../components/Index/Carousel'
 import Contact from "../components/Contact"
 import TextModal from "../components/Index/TextModal"
-import IndexContainer from "@/components/Index/IndexContainer";
+import IndexContainer from "../components/Index/IndexContainer";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
