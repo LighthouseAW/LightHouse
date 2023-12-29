@@ -97,7 +97,7 @@ export default function Mission() {
                             </p>
                             <div className="flex items-center justify-center space-x-6">
                             <Link
-                                href="/coreValues"
+                                href="/mission/coreValues"
                                 className="text-black underline text-center text-2xl font-bold mb-8 z-20 relative"
                                 onClick={() => {
                                     setSelectedLink("Home");

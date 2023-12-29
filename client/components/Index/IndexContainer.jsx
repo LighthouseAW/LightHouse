@@ -50,7 +50,7 @@ export default function IndexContainer() {
                 </div>
                 {/* ... (repeat similar structure for other images) */}
                 <div className={`${isMobile ? "w-1/2 p-4" : "w-1/4 p-8"}`}>
-                    <Link href="/impact"  className="text-center flex flex-col items-center">
+                    <Link href="/projects/impact"  className="text-center flex flex-col items-center">
                     <div className="hover-zoom rounded-lg">
                     <img width="400" height="400" src="/images/howReach2.jpeg" alt="Image 1" className=" cursor-pointer rounded-lg" />
                     </div>
@@ -86,7 +86,7 @@ export default function IndexContainer() {
                     </Link>
                 </div>
                 <div className={`${isMobile ? "w-1/3 p-2" : "w-1/3 p-8"}`}>
-                    <Link href="/projects/lighthouse-school-of-creative-arts3" className="text-center flex flex-col items-center">
+                    <Link href="/projects/lighthouse-school-of-creative-arts" className="text-center flex flex-col items-center">
                     <div className="hover-zoom rounded-lg">
                         <img  width="300" height="300" src="/images/indexContainer/LighthouseCreativeSchoolOfArts.jpeg" alt="Image 2" className="hover-zoom cursor-pointer rounded-lg" />
                         </div>
