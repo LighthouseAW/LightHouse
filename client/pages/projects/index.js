@@ -34,9 +34,9 @@ export default function Projects() {
             .then(projects => setProjects(projects))
     }, []);
 
-    const title1 = 'Ministry and strategy must change to reach Arab Muslims'
+    const title1 = 'Ministry and strategy must change'
     const title2 = 'We see art opening hearts across the Arab World'
-    const title3 = 'There has been missionary efforts in the Middle East and North Africa for 150 years. While God has worked in miraculous and transformative ways, we believe that missions in the region must change and focus on new and unique methods that break through historic barriers.'
+    const title3 = 'There have been missionary efforts in the Middle East and North Africa for 150 years. While God has worked in miraculous and transformative ways, we believe that missions in the region must change and focus on new and unique methods that break through historic barriers.'
 
     const break1 = 'We believe that art and media can communicate truth on a deep level'
     const break2 = "Films like 'Son of her Tears' have been shown in Arab World theaters and film festivals"

@@ -29,7 +29,7 @@ export default function Mission() {
     const missionTitle = "Our Mission"
     const missionWords = "Building bridges in a hostile environment and breaking down walls of hate, we use the power of the arts and media to bring the light of Jesus to the Arab World."
     const visionTitle2 = "Our Vision"
-    const visionWords = "We envision a future where the gospel of Jesus Christ is advancing among all peoples of the Arab World, where believers are bold and empowered to reach out to their neighbors, where the Church is healthy, growing and united in love, and where believers from Muslim backgrounds are living with dignity and thriving in their own cultures while contributing to its flourishing."
+    const visionWords = "We envision a future where the gospel of Jesus Christ is advancing among all peoples of the Arab World, where believers are bold and empowered to reach out to their neighbors, where the Church is healthy, growing and united in love, and where believers are living with dignity and thriving in their own cultures while contributing to its flourishing."
 
 
     return (

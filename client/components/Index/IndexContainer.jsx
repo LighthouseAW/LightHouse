@@ -30,14 +30,14 @@ export default function IndexContainer() {
             <div className={`${isMobile ? "" : "pb-12 px-12"} `}>
             <div className="relative text-center items-center justify-center mb-4 bg-slate-100 rounded-lg z-20">
                 {/* First row with 2 by 2 layout */}
-                <h1 className="text-3xl pt-6">Learn about Lighthouse Arab World</h1>
+                <h1 className="text-3xl pt-6">Learn About Lighthouse Arab World</h1>
                 <div className='relative flex flex-wrap'>
                 <div className={`${isMobile ? "w-1/2 p-4" : "w-1/4 p-8"}`}>
                     <Link href="/about"  className="text-center flex flex-col items-center">
                     <div className="hover-zoom rounded-lg">
                         <img width="400" height="400" src="/images/about.jpeg" alt="Image 1" className=" cursor-pointer rounded-lg" />
                         </div>
-                        About us →
+                        About Us →
                     </Link>
                 </div>
                 <div className={`${isMobile ? "w-1/2 p-4" : "w-1/4 p-8"}`}>
@@ -61,8 +61,8 @@ export default function IndexContainer() {
                 <Link href="/projects" className="text-center flex flex-col items-center">
                 <div className="hover-zoom rounded-lg">
                     <img  width="400" height="400" src="/images/Men Cooking.png" alt="Image 2" className="cursor-pointer rounded-lg" />
-                    </div>
-                    Learn about how we reach people →
+                    </div>  
+                    Learn About How We Reach People →
                 </Link>
                 </div>
                 </div>

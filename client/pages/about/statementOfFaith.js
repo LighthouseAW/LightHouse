@@ -36,7 +36,7 @@ export default function StatementOfFaith() {
     // const sf9 = "• We believe that the second coming of Christ is literal and inevitable (1 Thes. 4:16-17). We will all stand before God in the final judgment and receive eternal reward or judgment (Rev 20:11-13). Heaven is literal/eternal and Hell is literal/eternal and the place of torment for all who reject Christ. (John 14:12, Rev 20: 10, 15)"
     // const sf10 = "• We believe that We are to identify and actively participate with the local and visible church of Christ. (Heb 10:25)"
     // const sf11 = "• We believe that the church’s Great Commission is to go to all people, in all places, to win and disciple them to Jesus Christ.(James 5:20, Mark 16:15, 2 Cor 5:18-21)."
-    const lusCov = "We Affirm the "
+    const lusCov = "We also affirm the "
 
     return (
         <HomeLayout>
