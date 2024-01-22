@@ -96,7 +96,7 @@ export default function Home() {
             ) : (
               <div className="p-4">
               <div className="p-2 bg-slate-500/50 rounded-lg">
-              <p className="text-white text-center hover-text z-20 px-4">{item.text}</p>
+              <p className="text-white text-center hover-text z-20 px-2">{item.text}</p>
               </div>
               </div>
             )}
