@@ -44,11 +44,14 @@ pBelightFm = Project.create(name: 'Belight FM 105.7',
     facebook: "https://www.facebook.com/Belight.fm",
     app: "https://belight.fm/downloadApp")
 
-pLighthouseSchool = Project.create(name: 'Lighthouse School of Creative Arts',
+pLighthouseSchool = Project.create(name: 'Mission and Media Training Center',
     subtitle: 'Reaching the Arab World through Replication',
     blurb: "",
-    mission_statement: "Today, media is defining the general understanding and the worldview of people across the world, and the Middle East is no exception. Equipping an enlightened generation with what's needed to produce quality media is of utmost importance, and this is our tool of choice in LSCA.", 
-    about: "This training is designed to find passionate local talents, train them, invest in them spiritually, technically and aesthetically to be able to return to their nations with a thorough understanding of the effectiveness of media, holding the keys to delivering God's message of love in the best way possible.",
+    mission_statement: "MMTC (Mission and Media Training Center) combines three interconnected units serving one integrated mission, that of an improved and expanded ability to shepherd those who have come to Christ, or are exploring doing so in this area so hostile to the Gospel.", 
+    about: "The three MMTC units are:
+    The Training Unit is a 3-month intensive creative educational experience that is conducted in three phases (both offline and online) with  participants from the MENA region. This unit teaches students many facets of creative and professional level forms of photography, cinematography, design, lighting, editing and writing. This instruction enables students to return to their home countries in the Middle East and North Africa (MENA) to impact their communities utilizing the power of the arts. At Lighthouse we have seen first hand how Art Opens Hearts! Our flagship in this unit is the successful LSCA (Lighthouse School of Creative Arts) that has been going on steadily for the past three years.
+    The Discipleship Unit teaches a mobilized systematic method of discipling both in person and online, tailored to meet the needs of our participants. This enables us to respond in various locations as needed. 
+    The Information Unit is an online data research center, collecting and analyzing data about mission work in the MENA region. This unit serves as a valuable resource to develop strategies advancing the work in the region, creating partnerships between mission organizations, and for the sharing of information.",
     website: "",
     video: "https://player.vimeo.com/video/690528560",
     facebook: "",
