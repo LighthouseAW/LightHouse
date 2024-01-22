@@ -32,7 +32,10 @@ pBelight = Project.create(name: 'Belight Community',
     website: "https://belight.io/",
     video: "https://player.vimeo.com/video/690513901",
     facebook: "",
-    app: "")
+    app: "",
+    module1: "",
+    module2: "",
+    module3: "")
 
 pBelightFm = Project.create(name: 'Belight FM 105.7',
     subtitle: 'Sharing God\'s love to a country and region desperately in need of hope', 
@@ -42,20 +45,23 @@ pBelightFm = Project.create(name: 'Belight FM 105.7',
     website: "https://www.belight.fm/",
     video: "https://www.youtube.com/watch?v=KJR-4rhw6Hk",
     facebook: "https://www.facebook.com/Belight.fm",
-    app: "https://belight.fm/downloadApp")
+    app: "https://belight.fm/downloadApp",
+    module1: "",
+    module2: "",
+    module3: "")
 
 pLighthouseSchool = Project.create(name: 'Mission and Media Training Center',
     subtitle: 'Reaching the Arab World through Replication',
     blurb: "",
     mission_statement: "MMTC (Mission and Media Training Center) combines three interconnected units serving one integrated mission, that of an improved and expanded ability to shepherd those who have come to Christ, or are exploring doing so in this area so hostile to the Gospel.", 
-    about: "The three MMTC units are:
-    The Training Unit is a 3-month intensive creative educational experience that is conducted in three phases (both offline and online) with  participants from the MENA region. This unit teaches students many facets of creative and professional level forms of photography, cinematography, design, lighting, editing and writing. This instruction enables students to return to their home countries in the Middle East and North Africa (MENA) to impact their communities utilizing the power of the arts. At Lighthouse we have seen first hand how Art Opens Hearts! Our flagship in this unit is the successful LSCA (Lighthouse School of Creative Arts) that has been going on steadily for the past three years.
-    The Discipleship Unit teaches a mobilized systematic method of discipling both in person and online, tailored to meet the needs of our participants. This enables us to respond in various locations as needed. 
-    The Information Unit is an online data research center, collecting and analyzing data about mission work in the MENA region. This unit serves as a valuable resource to develop strategies advancing the work in the region, creating partnerships between mission organizations, and for the sharing of information.",
+    about: "The three MMTC units are:",
     website: "",
     video: "https://player.vimeo.com/video/690528560",
     facebook: "",
-    app: "")
+    app: "",
+    module1: "The Training Unit is a 3-month intensive creative educational experience that is conducted in three phases (both offline and online) with  participants from the MENA region. This unit teaches students many facets of creative and professional level forms of photography, cinematography, design, lighting, editing and writing. This instruction enables students to return to their home countries in the Middle East and North Africa (MENA) to impact their communities utilizing the power of the arts. At Lighthouse we have seen first hand how Art Opens Hearts! Our flagship in this unit is the successful LSCA (Lighthouse School of Creative Arts) that has been going on steadily for the past three years.",
+    module2: "The Discipleship Unit teaches a mobilized systematic method of discipling both in person and online, tailored to meet the needs of our participants. This enables us to respond in various locations as needed. ",
+    module3: "The Information Unit is an online data research center, collecting and analyzing data about mission work in the MENA region. This unit serves as a valuable resource to develop strategies advancing the work in the region, creating partnerships between mission organizations, and for the sharing of information.")
 
 pLighthouseCin = Project.create(name: 'Lighthouse Cinema',
     subtitle: 'Breaking down walls of hate and building bridges through Cinema and Documentaries', 
@@ -65,7 +71,10 @@ pLighthouseCin = Project.create(name: 'Lighthouse Cinema',
     website: "",
     video: "https://www.youtube.com/watch?v=RpsTu2pku30&feature=youtu.be",
     facebook: "",
-    app: "")
+    app: "",
+    module1: "",
+    module2: "",
+    module3: "")
 
 pBeHelp = Project.create(name: 'BeHelp',
     subtitle: 'Lighthouse Arab World ministers to the poor, the needy and the outcast in the name of Jesus Christ.', 
@@ -75,7 +84,10 @@ pBeHelp = Project.create(name: 'BeHelp',
     website: "",
     video: "https://player.vimeo.com/video/690530124",
     facebook: "",
-    app: "")
+    app: "",
+    module1: "",
+    module2: "",
+    module3: "")
 
 pWAM = Project.create(name: 'Why Art Matters',
     subtitle: 'Art is God’s fingerprint and Satan’s stolen treasure. ',
@@ -85,7 +97,10 @@ pWAM = Project.create(name: 'Why Art Matters',
     website: "",
     video: "https://www.youtube.com/watch?v=6bYRXqFrbTE",
     facebook: "",
-    app: "")
+    app: "",
+    module1: "",
+    module2: "",
+    module3: "")
 
 pBelight_photo = pBelight.project_photos.create(title: 'BeLight Photo')
 pBelight_photo.photo.attach(io: File.open(Rails.root.join('public', 'images', 'Belight.png')), filename: 'Belight.png')

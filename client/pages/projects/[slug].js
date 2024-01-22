@@ -64,6 +64,9 @@ export default function Project() {
                         )}</div>
                         <div className=" text-center text-xl p-4">{project.mission_statement}</div>
                         <div className=" text-center text-xl p-4">{project.about}</div>
+                        <div className=" text-center text-xl p-4">{project.module1}</div>
+                        <div className=" text-center text-xl p-4">{project.module2}</div>
+                        <div className=" text-center text-xl p-4">{project.module3}</div>
                         <div className=" text-center text-xl p-4">{project.blurb}</div>
                     </div>
                 </div>
