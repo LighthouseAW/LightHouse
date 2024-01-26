@@ -1,7 +1,8 @@
 import HomeLayout from '../../components/Index/HomeLayout';
 import ProjectsNav from '../../components/NavBars/ProjectsNav'
 import React, { useState, useEffect, useContext } from 'react';
-import Groups from "../../components/Projects/Groups"
+import Groups from "../../components/Projects/Groups";
+import Image from "next/image";
 
 export default function WhereWeServe() {
     const [groups, setGroups] = useState({})
