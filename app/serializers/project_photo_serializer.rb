@@ -6,6 +6,6 @@ class ProjectPhotoSerializer < ActiveModel::Serializer
   end
 
   def photo_token
-    object.photo.token if object.photo.attached?(:token)
+    object.token
   end
 end
