@@ -12,6 +12,7 @@ require "action_mailbox/engine"
 require "action_text/engine"
 require "action_view/railtie"
 require "action_cable/engine"
+
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -27,6 +28,7 @@ module Jonnyniceproject
 
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore
+    config.active_storage.variant_processor = :mini_magick
 
     # Configuration for the application, engines, and railties goes here.
     #

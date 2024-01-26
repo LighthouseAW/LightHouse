@@ -14,6 +14,8 @@ gem "puma", "~> 5.0"
 
 gem 'friendly_id', '~> 5.4'
 
+gem "mini_magick"
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
