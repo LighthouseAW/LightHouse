@@ -5,7 +5,8 @@ export default function ProjectMap({ projects }) {
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 p-6 mt-20">
             {projects.map((project, index) => {
-                const photoUrl = `https://lighthouseaw.onrender.com${project.project_photos[0].photo_url}`;
+                const photoToken = project.project_photos[0].photo_token;
+                const photoUrl = `https://lighthouseaw.onrender.com${project.project_photos[0].photo_url}?token=${photoToken}`;
                 return (
                     <div key={index} className="bg-slate-300/70 rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300 flex flex-col justify-center items-center z-20">
                     <Link href={`/projects/${project.slug}`} className=" underline font-semibold text-black text-lg mb-2 text-center">{project.name}</Link>
