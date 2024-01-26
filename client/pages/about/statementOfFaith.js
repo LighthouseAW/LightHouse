@@ -27,7 +27,7 @@ export default function StatementOfFaith() {
     const subTitle = "Lighthouse Arab World is in the process of revising its Statement of Faith."
     const sub1 = "God"
     const sub2 = "God the Father"
-    const sub3 = "God the Sun"
+    const sub3 = "God the Son"
     const sub4 = "God the Holy Spirit"
     const sub5 = "Bible"
     const sub6 = "Humanity"
