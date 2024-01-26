@@ -54,18 +54,21 @@ export default function WhereWeServe() {
                             <p className={`z-20 text-black py-1 flex text-xl`}>{dotSpace}<p className='pl-2'>{title4}</p></p>
                             <p className={`z-20 text-black py-1 flex text-xl`}>{dotSpace}<p className='pl-2'>{title5}</p></p>
                             <p className={`z-20 text-black py-1 flex text-xl`}>{dotSpace}<p className='pl-2'>{title6}</p></p>
-                            <p className={`z-20 text-black py-1 flex text-xl`}>{dotSpace}<p className='pl-2'>{title7}</p></p>
+                            <p className={`z-20 text-black py-1 flex text-xl pb-8`}>{dotSpace}<p className='pl-2'>{title7}</p></p>
                         </div>
                         {/* <div className={`${isMobile ? "" : "w-1/2"}  flex flex-col items-center justify-center text-white`}>
                         <Groups groups={groups} />
                     </div> */}
-                </div>
-                {isMobile ? <></>:<div className="pt-14">
+                    <div>
+                        {/* <MapChart geojsonData={geojsonData} /> */}
+                        {isMobile ? <></>:<div className="pt-14">
                         <div className="relative">
                         {/* <svg className="z-10 absolute top-0 left-0 -mt-11 -ml-24 hidden lg:block" width="504" height="384" fill="none" viewBox="0 0 404 384" aria-hidden="true"><defs><pattern id="de316486-4a29-4312-bdfc-fbce2132a2c1" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="2" height="2" className="text-mustard" fill="black"></rect></pattern></defs><rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect><rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect></svg> */}
                                 <Image alt="picture" src="/images/MENA.png" width="650" height="650" className="z-20 l-24" />
                             </div>
                         </div>}
+                    </div>
+                </div>
             </div>
         </HomeLayout>
     )
