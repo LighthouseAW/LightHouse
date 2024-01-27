@@ -62,11 +62,21 @@ export default function Project() {
                         {project.app && project.app !== "" && (
                             <Link href={project.app} target='_blank' className="rounded-lg p-2 underline">Download our App →</Link>
                         )}</div>
-                        <div className=" text-center text-xl p-4">{project.mission_statement}</div>
-                        <div className=" text-center text-xl p-4">{project.about}</div>
-                        <div className=" text-center text-xl p-4">{project.module1}</div>
-                        <div className=" text-center text-xl p-4">{project.module2}</div>
-                        <div className=" text-center text-xl p-4">{project.module3}</div>
+                        {project.mission_statement && project.mission_statement !== "" && (
+                            <div className=" text-center text-xl p-4">{project.mission_statement}</div>
+                        )}
+                        {project.about && project.about !== "" && (
+                            <div className=" text-center text-xl p-4">{project.about}</div>
+                        )}
+                        {project.module1 && project.module1 !== "" && (
+                            <div className=" text-center text-xl p-4">{project.module1}</div>
+                        )}
+                        {project.module2 && project.module2 !== "" && (
+                            <div className=" text-center text-xl p-4">{project.module2}</div>
+                        )}
+                        {project.module3 && project.module3 !== "" && (
+                            <div className=" text-center text-xl p-4">{project.module3}</div>
+                        )}
                         <div className=" text-center text-xl p-4">{project.blurb}</div>
                     </div>
                 </div>
