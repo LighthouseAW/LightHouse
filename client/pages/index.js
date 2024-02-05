@@ -42,14 +42,14 @@ export default function Home() {
 
   const breakContent = [
     {
-      title: "Gospel through Media",
+      title: "Gospel Through Media",
       text: "We use social media, radio, internet technology, and films to communicate the gospel to Arabic speakers throughout the world.",
       background: "bg-car6",
       textColor: "text-white",
     },
     {
       title: "Train and Replicate",
-      text: "We believe in training and mentoring Arab Christians to use art, such as media, to communicate the gospel to their communities, cities and nations.",
+      text: "We believe in spiritual discipleship and training to build and empower Arab Christians and the Arab Church.",
       background: "bg-car1",
       textColor: "text-white",
     },
@@ -59,7 +59,7 @@ export default function Home() {
     //   background: "bg-car3",
     // },
     {
-      title: "Art opens hearts",
+      title: "Art Opens hearts",
       text: "We believe that art opens doors to evangelism and discipleship that are typically closed to traditional methods, especially in the Arab World.",
       background: "bg-car4",
       textColor: "text-white",
