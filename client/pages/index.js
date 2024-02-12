@@ -59,7 +59,7 @@ export default function Home() {
     //   background: "bg-car3",
     // },
     {
-      title: "Art Opens hearts",
+      title: "Art Opens Hearts",
       text: "We believe that art opens doors to evangelism and discipleship that are typically closed to traditional methods, especially in the Arab World.",
       background: "bg-car4",
       textColor: "text-white",
