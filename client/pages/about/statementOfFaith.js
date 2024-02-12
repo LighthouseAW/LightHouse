@@ -52,7 +52,7 @@ export default function StatementOfFaith() {
     const sf7 = "We believe that salvation and eternal life come solely through the death, burial, and resurrection of Jesus Christ. The good news is that, while we fail to meet God's just demands, Christ, in His perfect obedience to the law, fulfilled them. The Gospel declares that through His sacrifice on the cross, Christ paid for humanity's sins. God, by raising Christ from the dead, affirmed the sufficiency of this sacrifice. Every repentant sinner who trusts in Jesus experiences complete forgiveness, justification, spiritual rebirth, the indwelling of the Holy Spirit, and adoption into God's family—essentially, being born again into perfect spiritual union with Christ. This new life in Christ leads to ongoing holiness and culminates in the physical resurrection at Christ's return. In summary, we embrace salvation by grace alone, through faith alone, in Christ alone."
     const sf8 = "We believe that everyone who repents and trusts in Jesus becomes a member of his people, the Church. The Church is one spiritual body ruled by Jesus its head. It is manifested in numerous local gatherings. These local churches are characterized by a common worship of God, the pursuit of spiritual growth, and following Christ’s mission in the world. Spiritual growth is accomplished through the preaching of the Bible, prayer, the practice of spiritual gifts in love and holiness, and the observance of baptism and the Lord’s Supper. The mission of the Church is to make disciples of Jesus Christ by the power the Holy Spirit who dwells within each believer to provide guidance and power for obedience to God."
     const sf9 = "We believe in the coming physical return of Jesus to the earth to subdue his enemies and reign with his people in his kingdom. We believe in the eternal punishment of God’s enemies in the Lake of Fire. All those who continue in rebellion against God will experience his just wrath and punishment for their sins. This includes both demons and all nonbelievers.  We also believe in eternal life for God’s people in the new heavens and new earth where God will be glorified and enjoyed forever."
-    const lusCov = "We Affirm the "
+    const lusCov = "We also Affirm the "
 
     return (
         <HomeLayout>
@@ -102,7 +102,7 @@ export default function StatementOfFaith() {
                     <h2 className={`text-black text-2xl font-bold mb-1`}>{sub9}</h2>
                     <h2 className={`text-black text-xl mb-1`}>{sf9}</h2>
                     <h2 className={`text-black text-l mb-6`}>{vs9}</h2>
-                    <h2 className={`text-black text-xl mb-6`}>{subTitle}</h2>
+                    // <h2 className={`text-black text-xl mb-6`}>{subTitle}</h2>
                     <h2 className={`text-black text-xl mb-6`}>{lusCov}<Link className="underline" target="_blank" href="https://lausanne.org/content/covenant/lausanne-covenant">Lausanne Covenant</Link>.</h2>
                     </div>
                     </div>
