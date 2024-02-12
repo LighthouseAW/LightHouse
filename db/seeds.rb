@@ -50,10 +50,10 @@ pBelightFm = Project.create(name: 'BeLight FM 105.7',
     module2: "",
     module3: "")
 
-pLighthouseSchool = Project.create(name: 'Mission and Media Training Center',
+pLighthouseSchool = Project.create(name: 'Media and Mission Training Center',
     subtitle: 'Reaching the Arab World through Replication',
     blurb: "",
-    mission_statement: "MMTC (Mission and Media Training Center) combines three interconnected units serving one integrated mission, that of an improved and expanded ability to shepherd those who have come to Christ, or are exploring doing so in this area so hostile to the Gospel.", 
+    mission_statement: "MMTC (Media and Mission Training Center) combines three interconnected units serving one integrated mission, that of an improved and expanded ability to shepherd those who have come to Christ, or are exploring doing so in this area so hostile to the Gospel.", 
     about: "The three MMTC units are:",
     website: "",
     video: "https://player.vimeo.com/video/690528560",
