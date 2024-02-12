@@ -24,11 +24,11 @@ emp5 = Employee.create(name: "Douglas Barnett", role: "", blurb: "Dr. Douglas Ba
 emp6 = Employee.create(name: "Ken Supernault", role: "", blurb: "Ken has served on the board of Lighthouse Arab World Ministers for 2 years. He is a self employed contractor and has been in business for 35 years. He and his wife Tina have 5 children and soon to be 8 grandchildren." )
 
 
-pBelight = Project.create(name: 'BeLight Community',
-    subtitle: 'BeLight is a streaming platform connected to the world\'s social media platforms.', 
+pBelight = Project.create(name: 'Belight Community',
+    subtitle: 'Belight is a streaming platform connected to the world\'s social media platforms.', 
     blurb: "Please consider joining this effort to reach across the Arabic world in a unique way.", 
     mission_statement: "Our mission is to bring high quality evangelistic content to the Arabic speaking world. We believe now is the time for something different!", 
-    about: "BeLight is designed to share the hope of the gospel of Jesus Christ in unique and innovative ways, through videos, live events, evangelistic programs, teaching and worship videos. But why build an Arabic streaming platform? Aren't YouTube, Facebook, Instagram and even TikTok enough? We see this as an opportunity to not only consolidate high quality Arabic Christian content into a single location, but to uniquely communicate with an audience that live in a difficult context. While the historic Christian church has functioned with some freedom in Egypt, Jordan, and Lebanon, it is heavily persecuted in most other countries in the Middle East and North Africa. We are building a platform and experience that they can trust, where they can be free to ask questions, engage in discipleship, and grow in their faith. ",
+    about: "Belight is designed to share the hope of the gospel of Jesus Christ in unique and innovative ways, through videos, live events, evangelistic programs, teaching and worship videos. But why build an Arabic streaming platform? Aren't YouTube, Facebook, Instagram and even TikTok enough? We see this as an opportunity to not only consolidate high quality Arabic Christian content into a single location, but to uniquely communicate with an audience that live in a difficult context. While the historic Christian church has functioned with some freedom in Egypt, Jordan, and Lebanon, it is heavily persecuted in most other countries in the Middle East and North Africa. We are building a platform and experience that they can trust, where they can be free to ask questions, engage in discipleship, and grow in their faith. ",
     website: "https://belight.io/",
     video: "https://player.vimeo.com/video/690513901",
     facebook: "",
@@ -37,7 +37,7 @@ pBelight = Project.create(name: 'BeLight Community',
     module2: "",
     module3: "")
 
-pBelightFm = Project.create(name: 'BeLight FM 105.7',
+pBelightFm = Project.create(name: 'Belight FM 105.7',
     subtitle: 'Sharing God\'s love to a country and region desperately in need of hope', 
     blurb: "Our aim is to build bridges with our listeners regardless of their background through our one and only Jesus.", 
     mission_statement: "A unique opportunity for evangelical voice over Lebanon, our mission is to declare the light of Jesus and shout out loud “LET THERE BE LIGHT” over the darkness and hostile environment we live in. Through our radio station programs, we aim to fill the air of Lebanon with hope faith, and joy. ", 
