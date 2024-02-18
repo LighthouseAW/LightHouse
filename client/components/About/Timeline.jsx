@@ -30,7 +30,7 @@ export default function Timeline() {
         'Lighthouse responds to the humanitarian crisis caused by the Beirut explosion through BeHelp, an arm of Lighthouse dedicated to caring for those in need in the region as the Lord guides them.',
         'Launch of Belight FM, a 24/7 radio station with a variety of programs including worship, music, Bible teaching from different local churches, and live shows during rush hours; where our listeners can participate, share their inputs, and ask questions. Our radio is also available online through our website and mobile app, where we have listeners from over 80 different countries.',
         'Lighthouse conducts their first full-scale training program for media, art and mission called Lighthouse School of Creative Arts. Through the years this school has trained and deployed over 50 media missionaries in the region.',
-        'Lighthouse leads 3rd annual Lighthouse School of Creative Arts in partnership with Operation Mobilization MENA focusing on media, storytelling, and mission. ',
+        'Lighthouse leads the 3rd annual Lighthouse School of Creative Arts in partnership with Operation Mobilization MENA focusing on media, storytelling, and mission. ',
         'Lighthouse response to Morocco Earthquake primarily in the mountainous area villages with food, shelter and spiritual encouragement.',
     ];
 
