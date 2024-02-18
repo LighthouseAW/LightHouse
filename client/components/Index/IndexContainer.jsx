@@ -74,7 +74,7 @@ export default function IndexContainer() {
                     <div className="hover-zoom rounded-lg">
                         <img width="300" height="300" src="/images/indexContainer/Belight.png" alt="Image 1" className=" cursor-pointer rounded-lg" />
                         </div>
-                            BeLight Community →
+                            Belight Community →
                     </Link>
                 </div>
                 <div className={`${isMobile ? "w-1/3 p-2" : "w-1/3 p-8"}`}>
@@ -82,7 +82,7 @@ export default function IndexContainer() {
                     <div className="hover-zoom rounded-lg">
                         <img  width="300" height="300" src="/images/indexContainer/BeLightFM.jpg" alt="Image 2" className="cursor-pointer rounded-lg" />
                         </div>
-                        BeLight FM →
+                        Belight FM →
                     </Link>
                 </div>
                 <div className={`${isMobile ? "w-1/3 p-2" : "w-1/3 p-8"}`}>
