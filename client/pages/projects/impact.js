@@ -51,8 +51,8 @@ export default function Impact() {
                         />
                         <StatisticsComponent
                         title="Monthly Impact"
-                        value="15+"
-                        description="New Followers of Christ each month"
+                        value="Millions"
+                        description="Connected through multiple channels"
                         />
                         <StatisticsComponent
                         title="Growing connections"
@@ -63,11 +63,6 @@ export default function Impact() {
                         title="Training"
                         value="50+"
                         description="Arab Christians trained in media and mission"
-                        />
-                        <StatisticsComponent
-                        title="Pre-evangelism"
-                        value="Millions"
-                        description="Connected though secular channels"
                         />
                         <StatisticsComponent
                         title="BelightFM"
