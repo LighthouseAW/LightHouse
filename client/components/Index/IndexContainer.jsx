@@ -88,9 +88,9 @@ export default function IndexContainer() {
                 <div className={`${isMobile ? "w-1/3 p-2" : "w-1/3 p-8"}`}>
                     <Link href="/projects/mission-and-media-training-center" className="text-center flex flex-col items-center">
                     <div className="hover-zoom rounded-lg">
-                        <img  width="300" height="300" src="/images/indexContainer/LighthouseCreativeSchoolOfArts.jpeg" alt="Image 2" className="hover-zoom cursor-pointer rounded-lg" />
+                        <img  width="300" height="300" src="/images/indexContainer/MediaandMissionTrainingCenter.jpeg" alt="Image 2" className="hover-zoom cursor-pointer rounded-lg" />
                         </div>
-                        Mission and Media Training Center →
+                        Media and Mission Training Center →
                     </Link>
                 </div>
                 {/* ... (repeat similar structure for smaller images) */}
