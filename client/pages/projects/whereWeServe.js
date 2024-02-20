@@ -64,7 +64,7 @@ export default function WhereWeServe() {
                         {isMobile ? <></>:<div className="pt-14">
                         <div className="relative">
                         {/* <svg className="z-10 absolute top-0 left-0 -mt-11 -ml-24 hidden lg:block" width="504" height="384" fill="none" viewBox="0 0 404 384" aria-hidden="true"><defs><pattern id="de316486-4a29-4312-bdfc-fbce2132a2c1" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="2" height="2" className="text-mustard" fill="black"></rect></pattern></defs><rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect><rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"></rect></svg> */}
-                                <Image alt="picture" src="/images/alex-azabache-hz4tKDvQHoo-unsplash.jpg" width="650" height="650" className="z-20" />
+                                <Image alt="picture" src="/images/alex-azabache-hz4tKDvQHoo-unsplash.jpg" width="500" height="500" className="z-20" />
                             </div>
                         </div>}
                     </div>
