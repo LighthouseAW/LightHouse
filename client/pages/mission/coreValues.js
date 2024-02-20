@@ -51,8 +51,8 @@ export default function Mission() {
                     <div className="flex justify-between items-center">
                         <h2 className={`text-black text-6xl font-bold mb-14`}>{title}</h2>
                         {isMobile ? <></> : <div className="relative">
-                            <Image alt="picture" src="/images/CoreValues.jpeg" className="relative z-20" width="300" height="300"/>
-                            <svg className="z-10 absolute top-0 right-0 mt-4 mr-64  hidden lg:block" width="263" height="250" fill="none" viewBox="0 0 404 384" aria-hidden="true">
+                            <Image alt="picture" src="/images/CoreValues.jpeg" className="relative z-20" width="400" height="400"/>
+                            <svg className="z-10 absolute top-0 right-0 mt-4 mr-48  hidden lg:block" width="263" height="250" fill="none" viewBox="0 0 404 384" aria-hidden="true">
                                 <defs>
                                     <pattern id="de316486-4a29-4312-bdfc-fbce2132a2c1" x="0" y="0" width="26" height="26" patternUnits="userSpaceOnUse">
                                         <rect x="0" y="0" width="2" height="2" className="text-mustard" fill="black"></rect>
