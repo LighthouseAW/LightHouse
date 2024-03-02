@@ -9,7 +9,7 @@ export default function ProjectMap({ projects }) {
                 if (firstPhoto) {
                     const photoToken = firstPhoto.photo_token;
                     const timestamp = new Date().getTime();
-                    const photoUrl = `https://lighthouseaw.onrender.com${firstPhoto.photo_url}?token=${photoToken}&timestamp=${timestamp}`;
+                    const photoUrl = `https://lighthouseawapp.onrender.com${firstPhoto.photo_url}?token=${photoToken}&timestamp=${timestamp}`;
 
                     console.log("Generated Photo URL:", photoUrl);
                 return (
