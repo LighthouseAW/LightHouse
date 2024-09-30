@@ -154,7 +154,7 @@ export default function Navbar() {
                                         handleClick();
                                     }}
                                 >
-                                    Our Mission
+                                    Mission & Vision
                                 </Link>
                                 <Link href="/mission"
                                         className={`hover:bg-slate-200 block w-full h-full flex justify-center text-center items-center ${selectedSubLink === "missionStatement" ? "underline" : ""}`}
@@ -274,7 +274,7 @@ export default function Navbar() {
                                         setSelectedSubLink("missionStatement");
                                     }}
                                 >
-                                    Our Mission
+                                    Mission & Vision
                                 </Link>
                                 <div className={`absolute top-full left-0 w-full bg-slate-100 shadow-md rounded-b-md mt-0 opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none -mt-0`}>
                                     <p className="h-12 m-0">
