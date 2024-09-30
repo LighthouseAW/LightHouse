@@ -33,7 +33,7 @@ export default function Staff() {
     console.log(employees)
 
     const sec1Title = "Lighthouse Arab World Team"
-    const sec1 = "The Lighthouse Arab World team is headquartered in Beirut Lebanon but has also team members across the Middle East and North Africa in Egypt, Tunisia and Morocco. Each person brings a passion to see Jesus known and worshipped across the Arab World and a skillset in media such as film directing, video editing, radio programming, script writing, presenting and many other areas. "
+    const sec1 = "The Lighthouse Arab World ministry and partners live and operate in the Middle East and North Africa, primarily in Lebanon, Egypt and Morocco. Each person brings a passion to see Jesus known and worshipped across the Arab World and a skillset in media such as film directing, video editing, radio programming, script writing, presenting and many other areas. "
     const sec2 = "The team is supported by a fundraising and operations team based in the United States. "
     const breakWords = "We believe the light of God’s love penetrates the darkness"
 
