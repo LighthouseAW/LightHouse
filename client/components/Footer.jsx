@@ -44,7 +44,7 @@ export default function Footer() {
             });
     }
 
-    const footText="Lighthouse Arab World, a ministry of Lighthouse Media NA Inc. is a 501(C)(3) Not-for-profit organzation. Copyright 2019-2023 All Rights Reserved."
+    const footText="Lighthouse Arab World, a ministry of Lighthouse Media NA Inc. is a 501(C)(3) Not-for-profit organzation. Copyright 2019-2025 All Rights Reserved."
 
     return (
         <footer className="bg-zinc-900 footer">
@@ -79,7 +79,7 @@ export default function Footer() {
                     </div>
                 <div className="flex">
                     <ul className="flex mt-10">
-                        <li className="font-light text-sm mb-2 pr-2">@ 2023 Lighthouse</li>
+                        <li className="font-light text-sm mb-2 pr-2">@ 2025 Lighthouse</li>
                     </ul>
                 </div>
             </div>
