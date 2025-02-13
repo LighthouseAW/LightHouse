@@ -38,7 +38,7 @@ pBelight = Project.create(name: 'Belight Community',
     module2: "",
     module3: "")
 
-pBelightFm = Project.create(name: 'Belight FM 105.7',
+pBelightFm = Project.create(name: 'Belight FM 104.1',
     subtitle: 'Sharing God\'s love to a country and region desperately in need of hope', 
     blurb: "Our aim is to build bridges with our listeners regardless of their background through our one and only Jesus.", 
     mission_statement: "A unique opportunity for evangelical voice over Lebanon, our mission is to declare the light of Jesus and shout out loud “LET THERE BE LIGHT” over the darkness and hostile environment we live in. Through our radio station programs, we aim to fill the air of Lebanon with hope faith, and joy. ", 
