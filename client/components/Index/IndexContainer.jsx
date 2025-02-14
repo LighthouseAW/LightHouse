@@ -78,7 +78,7 @@ export default function IndexContainer() {
                     </Link>
                 </div>
                 <div className={`${isMobile ? "w-1/3 p-2" : "w-1/3 p-8"}`}>
-                    <Link href="/projects/belight-fm-105-7" className="text-center flex flex-col items-center">
+                    <Link href="/projects/belight-fm-104-1" className="text-center flex flex-col items-center">
                     <div className="hover-zoom rounded-lg">
                         <img  width="300" height="300" src="/images/indexContainer/BeLightFM.jpg" alt="Image 2" className="cursor-pointer rounded-lg" />
                         </div>
