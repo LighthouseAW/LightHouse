@@ -25,6 +25,7 @@ module.exports = {
         'car2': "url('../public/carousel/Car6.jpeg')",
         'car3': "url('../public/carousel/meetingNeed.jpeg')",
         'car4': "url('../public/carousel/Carousel5.jpeg')",
+        'wam25table': "url('../public/images/wam25headphoto.jpeg')",
         'car6': "url('../public/carousel/Nolla in studio.jpeg')"
       },
       colors: {
