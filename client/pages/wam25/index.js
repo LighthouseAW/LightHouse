@@ -183,7 +183,7 @@ export default function Projects() {
                                </div>
                            {/* <div className="absolute inset-0 bg-gradient-to-b  from-transparent to-color h-[750px] w-[800px]"></div> */}
                            </div>}
-                           <div className={`${isMobile ? "" : "w-1/2 "}  relative z-20`}>
+                           <div className={`${isMobile ? "" : "w-1/2 "}  relative z-20  mb-12`}>
                                    <Image alt="picture" src={wamMidHeadText} width="500" height="500" className="relative z-20" />
                                 <p className={`z-20 text-[#dca936] text-4xl font-bold`}>{title2}</p>
                                 <div className="w-3/4">
