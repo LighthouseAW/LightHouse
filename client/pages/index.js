@@ -2,10 +2,12 @@ import React, { useContext, useState, useEffect } from "react";
 import Hero from '../components/Index/Hero'
 import HomeLayout from '../components/Index/HomeLayout';
 import Link from 'next/link'
+import Image from 'next/image',
 import Carousel from '../components/Index/Carousel'
 import Contact from "../components/Contact"
 import TextModal from "../components/Index/TextModal"
 import IndexContainer from "../components/Index/IndexContainer";
+import WAMLoGO from '../public/wamstuff/WAMLoGO.png';
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -68,6 +70,11 @@ export default function Home() {
 
   return (
     <HomeLayout>
+      <div className="absolute top-24 right-4 z-30">
+        <Link href="/wam25">
+          <button className="bg-[#07545c] p-2 rounded-lg">
+            <Image src={WAMLoGO} alt="Why Art Matters Logo" width={200} height={200} />
+          </button>
       <Hero heading="Lighthouse Arab World" message="Reaching the heart of the Arab World with the Gospel of Jesus" />
       <div className='relative bg-rug p-40 mt-48 bg-no-repeat bg-cover bg-center '>
         <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
