@@ -157,18 +157,20 @@ export default function Projects() {
     return (
         <HomeLayout>
          <div className="relative min-h-screen bg-wam25table bg-cover bg-no-repeat flex items-center justify-center">
-  {/* Gradient overlays */}
-  <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#024249] to-transparent"></div>
-  <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-[#024249]"></div>
-
-  {/* Main content */}
-  <div className="flex flex-col p-36 items-center space-y-6 justify-center w-full z-20">
-    <Image src={wamHeadText} width="800" height="800" className="pt-52" />
-    <button>
-      <Image src={wamButton} width="350" height="350" />
-    </button>
-  </div>
-</div>
+              {/* Gradient overlays */}
+              <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#024249] to-transparent"></div>
+              <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-[#024249]"></div>
+                
+                  {/* Main content */}
+                  <div className="flex flex-col p-36 items-center space-y-6 justify-center w-full z-20">
+                    <Image src={wamHeadText} width="800" height="800" className="pt-52" />
+                    <Link href="https://www.eventbrite.com/e/why-art-matters-tickets-1383824780169" passHref>
+                        <button>
+                            <Image src={wamButton} width={350} height={350} alt="WAM Button" />
+                        </button>
+                    </Link>
+                  </div>
+                </div>
 
                 <div className='flex items-center justify-center  bg-[#024249] '>
                     <div className="flex items-center justify-center z-20">
@@ -342,7 +344,11 @@ export default function Projects() {
                                     <div className="">
                         <div className="flex flex-col justify-center items-center space-y-12 py-24 relative z-20">
                             <p className={` z-20 text-white text-xl text-center  mt-12 w-2/3`}>{inviteText}</p>
-                            <button><Image src={wamButton} width='350' height='350'/></button>
+                            <Link href="https://www.eventbrite.com/e/why-art-matters-tickets-1383824780169" passHref>
+                                <button>
+                                    <Image src={wamButton} width={350} height={350} alt="WAM Button" />
+                                </button>
+                            </Link>
                         </div></div>
 
                     </div>
@@ -405,7 +411,7 @@ export default function Projects() {
                             <div className="bg-[#07545c] rounded-3xl w-1/2 flex flex-col items-center justify-center my-12 p-4">
                                 <p className={` z-20 text-white text-xl py-4 text-center`}>{sponsInt}</p>
                                 <p className={` z-20 text-white text-xl py-6 text-center`}>{sponsInt2}</p>
-                                <button className="bg-[#dca936] rounded-2xl py-4 px-8">{sponsButton}</button>
+                                <Link href="/contact" ><button className="bg-[#dca936] rounded-2xl py-4 px-8">{sponsButton}</button></Link>
                             </div>
                         </div>
                     </div>
