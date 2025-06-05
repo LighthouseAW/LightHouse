@@ -1,11 +1,11 @@
 import React, { useContext, useState, useEffect } from "react";
 import Hero from '../components/Index/Hero'
 import HomeLayout from '../components/Index/HomeLayout';
-import Link from 'next/link'
-import Image from 'next/image',
-import Carousel from '../components/Index/Carousel'
-import Contact from "../components/Contact"
-import TextModal from "../components/Index/TextModal"
+import Link from 'next/link';
+import Image from 'next/image';
+import Carousel from '../components/Index/Carousel';
+import Contact from "../components/Contact";
+import TextModal from "../components/Index/TextModal";
 import IndexContainer from "../components/Index/IndexContainer";
 import WAMLoGO from '../public/wamstuff/WAMLoGO.png';
 
