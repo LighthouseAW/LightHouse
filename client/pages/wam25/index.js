@@ -164,7 +164,7 @@ export default function Projects() {
                   {/* Main content */}
                   <div className="flex flex-col p-36 items-center space-y-6 justify-center w-full z-20">
                     <Image src={wamHeadText} width="800" height="800" className="pt-52" />
-                    <Link href="https://www.eventbrite.com/e/why-art-matters-tickets-1383824780169" passHref>
+                    <Link href="https://www.eventbrite.com/e/wam25-why-art-matters-conference-tickets-1404034086749" passHref>
                         <button>
                             <Image src={wamButton} width={350} height={350} alt="WAM Button" />
                         </button>
@@ -344,7 +344,7 @@ export default function Projects() {
                                     <div className="">
                         <div className="flex flex-col justify-center items-center space-y-12 py-24 relative z-20">
                             <p className={` z-20 text-white text-xl text-center  mt-12 w-2/3`}>{inviteText}</p>
-                            <Link href="https://www.eventbrite.com/e/why-art-matters-tickets-1383824780169" passHref>
+                            <Link href="https://www.eventbrite.com/e/wam25-why-art-matters-conference-tickets-1404034086749" passHref>
                                 <button>
                                     <Image src={wamButton} width={350} height={350} alt="WAM Button" />
                                 </button>
