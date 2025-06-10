@@ -162,7 +162,7 @@ export default function Projects() {
               <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-[#024249]"></div>
                 
                   {/* Main content */}
-                  <div className="flex flex-col p-36 items-center space-y-6 justify-center w-full z-20">
+                    <div className={`flex flex-col ${isMobile ? '' : 'p-36'} items-center space-y-6 justify-center w-full z-20`}>
                     <Image src={wamHeadText} width="800" height="800" className="pt-52" />
                     <Link href="https://www.eventbrite.com/e/wam25-why-art-matters-conference-tickets-1404034086749" passHref>
                         <button>
@@ -193,7 +193,8 @@ export default function Projects() {
                                 <p  className={`z-20 text-white pb-5 text-xl`}>{title4}</p>
                                 </div>
                                 {/* <Image alt="picture" src={wamAOH} width="600" height="400" className="relative z-20 rounded-3xl" /> */}
-                        
+                            {isMobile ? <><Image alt="picture" src={wamMidTextBoxLow} width="600" height="400" className="relative z-20 rounded-3xl" />
+                            </>:<></>}
                         <Image className="mt-12" src={AOH} width={800} height={800} alt="aohpic" />
                         </div>                           
                        </div>
