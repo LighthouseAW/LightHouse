@@ -61,7 +61,7 @@ export default function Projects() {
     const sponsButton = "I want to be a partner"
 
 
-    const invite = "invites you to join us"
+    const invite = "Invites you to join us"
     const inviteDate = "on September 5-7 for WAM25"
 
     const inviteText = "Secure your spot at this transformative event exploring the intersection of faith, art, and cultural impact."
