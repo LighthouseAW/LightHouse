@@ -526,7 +526,7 @@ export default function Projects() {
 
                                             <div className="">
                         <div className=" z-20 flex items-center justify-center space-x-24  ">
-                        <div className="flex items-center justify-center py-24 relative z-20">
+                        <div className="flex items-center justify-center py-24 relative z-20 space-x-24">
 
                                    <Image alt="picture" src={LocationPhoto} width="500" height="400" className="relative z-20 rounded-3xl" />
                                    <Image alt="picture" src={LocationInfo} width="415" height="400" className="relative z-20 rounded-3xl" />
