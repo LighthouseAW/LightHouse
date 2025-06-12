@@ -141,8 +141,7 @@ export default function Projects() {
             "Special speaker",
             "Award presentation",
             "Activities",
-            "Evening screening of “The Last Supper”",
-            "Discussion panel",
+            "Free Activities",
             ],
         },
         ];
