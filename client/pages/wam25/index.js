@@ -52,6 +52,7 @@ export default function Projects() {
     const title1 = 'Featured Speakers'
     const Sched = 'Schedule'
     const Deets = "Details upon Registration"
+    const Deets2 = "The conference will include opportunities for donors to explore mission partnerships."
 
     const sponsors = "Our Sponsors"
     const sponsGreat = 'We are grateful to these organizations for making this event possible.'
@@ -89,7 +90,7 @@ export default function Projects() {
 
     const title2 = 'Why Art Matters for the Kingdom'
     const title3 = 'WAM is an annual conference sponsored by Lighthouse Arab World for artists from North Africa and the Middle East from Muslim backgrounds and open to all Christians whatever their backgrounds, with the purpose of affirming, inspiring and encouraging the heart, mind and activity of Christian artists.'
-    const title4 = 'As a Christian media company operating in the Arab World, a majorly Muslim environment, we have seen first-hand how art can open doors for the gospel and for the advancement of the Kingdom of God, doors to human hearts that are often closed and resistant to traditional methods of ministry. Sadly, like so many of God’s good gifts, art has been twisted and used as a tool for the kingdom of darkness rather that the kingdom of light. Christian artists are often misunderstood, labeled as worldly, and ostracized from their Christian brothers and sisters. Our task at Lighthouse is to turn this around, helping artists to transform souls and to glorify God using our Art.'
+    const title4 = 'As a Christian media company operating in the Arab World, a majorly Muslim environment, we have seen first-hand how art can open doors for the gospel and for the advancement of the Kingdom of God, doors to human hearts that are often closed and resistant to traditional methods of ministry. Sadly, like so many of God’s good gifts, art has been twisted and used as a tool for the kingdom of darkness rather than the kingdom of light. Christian artists are often misunderstood, labeled as worldly, and ostracized from their Christian brothers and sisters. Our task at Lighthouse is to turn this around, helping artists to transform souls and to glorify God using our Art.'
 
     const textLAA = 'In recognition of outstanding contributions and lasting impact in ministry for serving the Lord Jesus Christ, Lighthouse Arab World and partners will present at WAM 25 the Life Achievement Award, celebrating God’s gift of the arts in building His Kingdom. Recipients are individuals who have dedicated their lives to creating art that glorifies God and effectively communicates the Gospel message to diverse audiences across the world.'
 
@@ -145,6 +146,8 @@ export default function Projects() {
             ],
         },
         ];
+
+    const BotText = 'Lighthouse Arab World is a mission organization working across the Arab world, using the power of art to communicate the gospel in often challenging and hostile environments.'
 
     const [activeDay, setActiveDay] = useState(0);
 
@@ -330,6 +333,7 @@ export default function Projects() {
                                             <p className={`italic z-20 text-white text-6xl  `}>{Sched}</p>
                                             <div className="h-[6px] w-96 bg-[#dca936] mt-4"></div>
                                             <p className={` z-20 text-white pt-4  `} >{Deets}</p>
+                                                <p className={`z-20 text-white pt-6 text-center text-xl`} >{Deets2}</p>\
                                             <div className="overflow-x-hidden">
                         <div className="flex flex-col justify-center items-start  pt-24 pb-16 mb-16 relative z-20">
                             {schedule.map(({ label, date, text }, index) => (
@@ -383,6 +387,7 @@ export default function Projects() {
                                             <p className={`italic z-20 text-white text-8xl  `}>{Sched}</p>
                                             <div className="h-[6px] w-96 bg-[#dca936] mt-4"></div>
                                             <p className={` z-20 text-white pt-4  `} >{Deets}</p>
+                                                <p className={` z-20 text-white text-center pt-6 text-2xl`} >{Deets2}</p>
                                             <div className="overflow-x-hidden">
                         <div className="flex flex-row justify-center items-start space-x-12 pt-24 pb-16 mb-16 relative z-20">
                             {schedule.map(({ label, date, text }, index) => (
@@ -574,6 +579,8 @@ export default function Projects() {
                                 <p className={` z-20 text-white text-xl py-6 text-center`}>{sponsInt2}</p>
                                 <Link href="/contact" ><button className="bg-[#dca936] rounded-2xl py-4 px-8">{sponsButton}</button></Link>
                             </div>
+                                <p className={` z-20 text-white text-xl py-8 px-8 text-center`}>{BotText}</p>
+
                         </div>
                     </div>
                 </div>
@@ -613,6 +620,7 @@ export default function Projects() {
                                 <p className={` z-20 text-white text-xl py-6 text-center`}>{sponsInt2}</p>
                                 <Link href="/contact" ><button className="bg-[#dca936] rounded-2xl py-4 px-8">{sponsButton}</button></Link>
                             </div>
+                            <p className={` z-20 text-white text-xl py-8 px-8 text-center`}>{BotText}</p>
                         </div>
                     </div>
                 </div>
