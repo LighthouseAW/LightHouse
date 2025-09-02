@@ -70,13 +70,15 @@ export default function Home() {
 
   return (
     <HomeLayout>
-      <div className="absolute top-24 right-4 z-30">
-        <Link href="/wam25">
-          <button className="bg-[#07545c] p-2 rounded-lg">
-            <Image src={WAMLoGO} alt="Why Art Matters Logo" width={200} height={200} />
-          </button>
-        </Link>
-      </div>
+
+    // Old WAM Button - maybe use again for something else
+      // <div className="absolute top-24 right-4 z-30">
+      //   <Link href="/wam25">
+      //     <button className="bg-[#07545c] p-2 rounded-lg">
+      //       <Image src={WAMLoGO} alt="Why Art Matters Logo" width={200} height={200} />
+      //     </button>
+      //   </Link>
+      // </div>
       <Hero heading="Lighthouse Arab World" message="Reaching the heart of the Arab World with the Gospel of Jesus" />
       <div className='relative bg-rug p-40 mt-48 bg-no-repeat bg-cover bg-center '>
         <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent'></div>
