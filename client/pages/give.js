@@ -67,4 +67,37 @@ export default function Give() {
             </div>
         </HomeLayout>
     )
+}                    { isMobile ? 
+                    <div className = "flex flex-col pt-8">
+                        {/* <div id='bloomerang-form-113664'></div> */}
+                        <div>
+                        <GiftInfo />
+                        </div>
+                        <div className="pb-8">
+                        <DonatingSection />
+                        </div>
+                    </div> : 
+                <div className="flex-col">
+                    <div className="flex w-full px-12">
+                    <div id='bloomerang-form-113664' className='pt-4 absolute left-40 top-0'></div>
+                            <div className="w-1/2 pt-4 text-black z-20">
+                            <GiftInfo />
+                        </div>
+                            <div className="w-1/2 pt-28">
+                            <DonatingSection />
+                        </div>
+                    </div>
+                    </div>}
+
+                </div>
+            </div>
+            <div className={`items-center ${isMobile ? "pt-12" : "pt-72 "}`}>
+                    <div className={`${isMobile ? "mb-72" : ""} relative bg-rug h-96 bg-no-repeat bg-cover bg-center`}>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-color to-transparent"></div>
+                </div>
+                <Contact />
+            </div>
+        </HomeLayout>
+    )
 }
