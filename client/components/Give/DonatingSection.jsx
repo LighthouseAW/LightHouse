@@ -54,7 +54,7 @@ export default function DonatingSection() {
 
 
     return (
-        <div className="w-5/8 bg-white rounded-md p-8 text-black z-20">
+        <div className="w-5/8 bg-white/50 rounded-md p-8 text-black z-20">
             <h3 className="text-3xl" >Other Ways to Give</h3>
             <div className="sentence">
                 <p>
