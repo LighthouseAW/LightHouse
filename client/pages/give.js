@@ -35,9 +35,9 @@ export default function Give() {
                 <div className="flex-col text-white relative z-20">
                     <div className="flex flex-col justify-center items-center pt-8"><script src="https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/lighthousearabworld/.widget-js/113664.js" type="text/javascript"></script></div>
                     { isMobile ? 
-                    <div className = "flex flex-col justify-center items-center h-screen w-screen">
+                    <div className = "flex flex-col pt-8">
                         {/* <div id='bloomerang-form-113664'></div> */}
-                        <div style={{ paddingTop: '84rem' }}>
+                        <div>
                         <GiftInfo />
                         </div>
                         <div className="pb-8">
@@ -58,7 +58,7 @@ export default function Give() {
 
                 </div>
             </div>
-            <div className={`items-center ${isMobile ? "pt-96" : "pt-72 "}`}>
+            <div className={`items-center ${isMobile ? "pt-12" : "pt-72 "}`}>
                     <div className={`${isMobile ? "mb-72" : ""} relative bg-rug h-96 bg-no-repeat bg-cover bg-center`}>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-color to-transparent"></div>
