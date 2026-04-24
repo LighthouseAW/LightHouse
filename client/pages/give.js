@@ -43,21 +43,17 @@ export default function Give() {
                         <div className="pb-8">
                         <DonatingSection />
                         </div>
-                        <Script 
-                src="https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/lighthousearabworld/.widget-js/113664.js" 
-                strategy="lazyOnload"
-            />
+                        <script src="https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/lighthousearabworld/.widget-js/113664.js" type="text/javascript"></script>
                     </div> : 
                 <div className="flex-col">
-                    <div className="flex w-full">
-                    <div id='bloomerang-form-113664' className='pt-24 absolute left-40 top-0'></div>
-                            <div className = "w-3/5"></div>
-                            <div className="w-1/2 pt-28 text-black z-20">
+                    <div className="flex w-full px-12">
+                    <div id='bloomerang-form-113664' className='pt-4 absolute left-40 top-0'></div>
+                            <div className="w-1/2 pt-4 text-black z-20">
                             <GiftInfo />
                         </div>
-                    </div>
-                    <div className= "px-48">
-                    <DonatingSection />
+                            <div className="w-1/2 pt-28">
+                            <DonatingSection />
+                        </div>
                     </div>
                     </div>}
 
