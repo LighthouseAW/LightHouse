@@ -36,14 +36,13 @@ export default function Give() {
                     <div className="flex flex-col justify-center items-center pt-8"><script src="https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/lighthousearabworld/.widget-js/113664.js" type="text/javascript"></script></div>
                     { isMobile ? 
                     <div className = "flex flex-col justify-center items-center h-screen w-screen">
-                        <div id='bloomerang-form-113664'></div>
+                        {/* <div id='bloomerang-form-113664'></div> */}
                         <div style={{ paddingTop: '84rem' }}>
                         <GiftInfo />
                         </div>
                         <div className="pb-8">
                         <DonatingSection />
                         </div>
-                        <script src="https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/lighthousearabworld/.widget-js/113664.js" type="text/javascript"></script>
                     </div> : 
                 <div className="flex-col">
                     <div className="flex w-full px-12">
