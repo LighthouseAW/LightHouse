@@ -26,18 +26,16 @@ export default function Give() {
 
     useEffect(() => {
         if (!scriptLoaded) {
-            const script = document.createElement("script");
-            script.src = 'https://lighthousearabworld.kindful.com/embeds/c685c50a-25c6-48be-bf8e-1a34b337a64c/init.js?type=form';
-            script.dataset.embedId = 'c685c50a-25c6-48be-bf8e-1a34b337a64c';
-            script.dataset.lookupType = 'jquery-selector';
-            script.dataset.lookupValue = '#kindful-donate-form-c685c50a-25c6-48be-bf8e-1a34b337a64c';
+            const bloomerangScript = document.createElement("script");
+            bloomerangScript.src = "https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/lighthousearabworld/.widget-js/113664.js";
+            bloomerangScript.type = "text/javascript";
 
-            document.head.appendChild(script);
+            document.head.appendChild(bloomerangScript);
 
             setScriptLoaded(true);
 
             return () => {
-                document.head.removeChild(script);
+                document.head.removeChild(bloomerangScript);
             };
         }
     }, [scriptLoaded]);
@@ -52,7 +50,7 @@ export default function Give() {
                 <div className="flex-col text-white relative z-20">
                     { isMobile ? 
                     <div className = "flex flex-col justify-center items-center h-screen w-screen">
-                        <div className='absolute top-0 kindful-embed-wrapper' id='kindful-donate-form-c685c50a-25c6-48be-bf8e-1a34b337a64c'></div>
+                        <div id='bloomerang-form-113664'></div>
                         <div style={{ paddingTop: '84rem' }}>
                         <GiftInfo />
                         </div>
@@ -63,7 +61,7 @@ export default function Give() {
                     </div> : 
                 <div className="flex-col">
                     <div className="flex w-full">
-                    <div className='kindful-embed-wrapper pt-24 absolute left-40 top-0' id='kindful-donate-form-c685c50a-25c6-48be-bf8e-1a34b337a64c'></div>
+                    <div id='bloomerang-form-113664' className='pt-24 absolute left-40 top-0'></div>
                             <div className = "w-3/5"></div>
                             <div className="w-1/2 pt-28 text-black z-20">
                             <GiftInfo />
