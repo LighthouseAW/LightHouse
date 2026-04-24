@@ -57,7 +57,7 @@ export default function DonatingSection() {
 
 
     return (
-        <div className={`${isMobile ? "px-2" : " w-5/8 mr-12 "} bg-white/50 rounded-lg p-8 text-black z-20`}>
+        <div className={`${isMobile ? "px-2" : " w-5/8 mr-12 bg-white/50"} rounded-lg p-8 text-black z-20`}>
             <h3 className="text-3xl pb-4" >Your Gift makes the following possible:</h3>
             <div className="sentence py-4">
                 <p>
