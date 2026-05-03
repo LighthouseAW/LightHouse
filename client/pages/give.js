@@ -33,7 +33,8 @@ export default function Give() {
                 <div className={`${isMobile ? " px-2 text-2xl" : "px-48 text-3xl"} static  pt-36 z-20 text-white `}><h2>{title}</h2></div>
                 <div className={`absolute inset-0 ${isMobile ? "" : "bg-gradient-to-b from-transparent to-color"}`}></div>
                 <div className="flex-col text-white relative z-20">
-                    <div className="flex flex-col justify-center items-center pt-8"><script src="https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/lighthousearabworld/.widget-js/113664.js" type="text/javascript"></script></div>
+                    <div className="flex flex-col justify-center items-center pt-8">
+                        <script src="https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/lighthousearabworld/.widget-js/113664.js" type="text/javascript"></script>                    </div>
                     { isMobile ? 
                     <div className = "flex flex-col pt-8">
                         {/* <div id='bloomerang-form-113664'></div> */}
