@@ -33,9 +33,8 @@ export default function Give() {
                 <div className={`${isMobile ? " px-2 text-2xl" : "px-48 text-3xl"} static  pt-36 z-20 text-white `}><h2>{title}</h2></div>
                 <div className={`absolute inset-0 ${isMobile ? "" : "bg-gradient-to-b from-transparent to-color"}`}></div>
                 <div className="flex-col text-white relative z-20">
-                    <div class="qgiv-embed-container" data-qgiv-embed="true" data-embed-id="90997" data-embed="https://secure.qgiv.com/for/lighthousearabworld/embed/90997/amount/1842322/onetime/" data-width="630"></div>
-<script>(function(w, d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "https://secure.qgiv.com/resources/core/js/embed.js";fjs.parentNode.insertBefore(js, fjs);})(window, document, 'script', 'qgiv-embedjs');</script>
-        </div>
+    <script src="https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/lighthousearabworld/.widget-js/113664.js" type="text/javascript"></script>
+                </div>
                     { isMobile ? 
                     <div className = "flex flex-col pt-8">
                         {/* <div id='bloomerang-form-113664'></div> */}
