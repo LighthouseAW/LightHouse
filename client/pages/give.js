@@ -99,7 +99,7 @@ export default function Give() {
             </div>
 
             <div className={`relative z-10 items-center ${isMobile ? "pt-16" : "pt-72"}`}>
-                <div className={`${isMobile ? "mb-72" : "h-[500px]"} relative bg-rug h-16 bg-no-repeat bg-cover bg-center`}>
+                <div className={`${isMobile ? "mb-16" : "h-[500px]"} relative bg-rug h-16 bg-no-repeat bg-cover bg-center`}>
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                     <div className="absolute inset-0 bg-gradient-to-b from-color to-transparent"></div>
                 </div>
