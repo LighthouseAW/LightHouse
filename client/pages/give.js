@@ -17,15 +17,12 @@ export default function Give() {
         return () => window.removeEventListener("resize", checkIsMobile);
     }, []);
 
-    // Manually inject both embed scripts after mount
     useEffect(() => {
-        // Bloomerang
         const bloomerang = document.createElement("script");
         bloomerang.src = "https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/lighthousearabworld/.widget-js/113664.js";
         bloomerang.async = true;
         document.body.appendChild(bloomerang);
 
-        // Qgiv
         if (!document.getElementById("qgiv-embedjs")) {
             const qgiv = document.createElement("script");
             qgiv.id = "qgiv-embedjs";
@@ -35,7 +32,6 @@ export default function Give() {
         }
 
         return () => {
-            // Cleanup on unmount
             document.body.removeChild(bloomerang);
         };
     }, []);
@@ -51,7 +47,6 @@ export default function Give() {
                 <div className={`absolute inset-0 ${isMobile ? "" : "bg-gradient-to-b from-transparent to-color"}`}></div>
 
                 <div className="flex-col text-white relative z-20">
-                    {/* Qgiv embed container */}
                     <div className="flex flex-col justify-center items-center pt-8">
                         <div
                             className="qgiv-embed-container"
@@ -74,8 +69,7 @@ export default function Give() {
                     ) : (
                         <div className="flex-col">
                             <div className="flex w-full px-12">
-                                {/* Bloomerang target div */}
-                                <div id='bloomerang-form-113664' className='pt-4 absolute left-40 top-0'></div>
+                                // <div id='bloomerang-form-113664' className='pt-4 absolute left-40 top-0'></div>
                                 <div className="w-1/2 pt-4 text-black z-20">
                                     <GiftInfo />
                                 </div>
@@ -88,7 +82,8 @@ export default function Give() {
                 </div>
             </div>
 
-            <div className={`items-center ${isMobile ? "pt-12" : "pt-72"}`}>
+            {/* relative z-10 fixes the overlap with sections above on mobile */}
+            <div className={`relative z-10 items-center ${isMobile ? "pt-12" : "pt-72"}`}>
                 <div className={`${isMobile ? "mb-72" : ""} relative bg-rug h-96 bg-no-repeat bg-cover bg-center`}>
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                     <div className="absolute inset-0 bg-gradient-to-b from-color to-transparent"></div>
