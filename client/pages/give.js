@@ -18,21 +18,25 @@ export default function Give() {
     }, []);
 
     useEffect(() => {
-        const bloomerang = document.createElement("script");
-        bloomerang.src = "https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/lighthousearabworld/.widget-js/113664.js";
-        bloomerang.async = true;
-        document.body.appendChild(bloomerang);
+        const timer = setTimeout(() => {
+            const bloomerang = document.createElement("script");
+            bloomerang.src = "https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/lighthousearabworld/.widget-js/113664.js";
+            bloomerang.async = true;
+            document.body.appendChild(bloomerang);
 
-        if (!document.getElementById("qgiv-embedjs")) {
-            const qgiv = document.createElement("script");
-            qgiv.id = "qgiv-embedjs";
-            qgiv.src = "https://secure.qgiv.com/resources/core/js/embed.js";
-            qgiv.async = true;
-            document.body.appendChild(qgiv);
-        }
+            if (!document.getElementById("qgiv-embedjs")) {
+                const qgiv = document.createElement("script");
+                qgiv.id = "qgiv-embedjs";
+                qgiv.src = "https://secure.qgiv.com/resources/core/js/embed.js";
+                qgiv.async = true;
+                document.body.appendChild(qgiv);
+            }
+        }, 500);
 
         return () => {
-            document.body.removeChild(bloomerang);
+            clearTimeout(timer);
+            const bloomerang = document.querySelector('script[src*="bloomerang"]');
+            if (bloomerang) document.body.removeChild(bloomerang);
         };
     }, []);
 
@@ -40,7 +44,7 @@ export default function Give() {
 
     return (
         <HomeLayout>
-            <div className='h-screen bg-about bg-cover bg-no-repeat'>
+            <div className={`bg-about bg-cover bg-no-repeat ${isMobile ? "min-h-screen" : "h-screen"}`}>
                 <div className={`${isMobile ? "px-2 text-2xl" : "px-48 text-3xl"} static pt-36 z-20 text-white`}>
                     <h2>{title}</h2>
                 </div>
@@ -69,6 +73,7 @@ export default function Give() {
                     ) : (
                         <div className="flex-col">
                             <div className="flex w-full px-12">
+                                <div id='bloomerang-form-113664' className='pt-4 absolute left-40 top-0'></div>
                                 <div className="w-1/2 pt-4 text-black z-20">
                                     <GiftInfo />
                                 </div>
@@ -81,8 +86,7 @@ export default function Give() {
                 </div>
             </div>
 
-            {/* relative z-10 fixes the overlap with sections above on mobile */}
-            <div className={`relative z-10 items-center ${isMobile ? "pt-12" : "pt-72"}`}>
+            <div className={`relative z-10 items-center ${isMobile ? "pt-48" : "pt-72"}`}>
                 <div className={`${isMobile ? "mb-72" : ""} relative bg-rug h-96 bg-no-repeat bg-cover bg-center`}>
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                     <div className="absolute inset-0 bg-gradient-to-b from-color to-transparent"></div>
