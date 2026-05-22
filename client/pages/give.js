@@ -18,27 +18,39 @@ export default function Give() {
     }, []);
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            const bloomerang = document.createElement("script");
-            bloomerang.src = "https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/lighthousearabworld/.widget-js/113664.js";
-            bloomerang.async = true;
-            document.body.appendChild(bloomerang);
+    const timer = setTimeout(() => {
+        const bloomerang = document.createElement("script");
+        bloomerang.src = "https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/lighthousearabworld/.widget-js/113664.js";
+        bloomerang.async = true;
+        document.body.appendChild(bloomerang);
 
-            if (!document.getElementById("qgiv-embedjs")) {
-                const qgiv = document.createElement("script");
-                qgiv.id = "qgiv-embedjs";
-                qgiv.src = "https://secure.qgiv.com/resources/core/js/embed.js";
-                qgiv.async = true;
-                document.body.appendChild(qgiv);
-            }
-        }, 500);
-
-        return () => {
-            clearTimeout(timer);
-            const bloomerang = document.querySelector('script[src*="bloomerang"]');
-            if (bloomerang) document.body.removeChild(bloomerang);
+        // Hide Bloomerang's injected donate button after it loads
+        bloomerang.onload = () => {
+            const hideButton = setInterval(() => {
+                const btn = document.querySelector('.secure-btn-container');
+                if (btn) {
+                    btn.style.display = "none";
+                    clearInterval(hideButton);
+                }
+            }, 100);
+            setTimeout(() => clearInterval(hideButton), 5000);
         };
-    }, []);
+
+        if (!document.getElementById("qgiv-embedjs")) {
+            const qgiv = document.createElement("script");
+            qgiv.id = "qgiv-embedjs";
+            qgiv.src = "https://secure.qgiv.com/resources/core/js/embed.js";
+            qgiv.async = true;
+            document.body.appendChild(qgiv);
+        }
+    }, 500);
+
+    return () => {
+        clearTimeout(timer);
+        const bloomerang = document.querySelector('script[src*="bloomerang"]');
+        if (bloomerang) document.body.removeChild(bloomerang);
+    };
+}, []);
 
     const title = "MAKING GOD'S LOVE VISIBLE TO EVERYONE IN THE MIDDLE EAST AND NORTH AFRICA"
 
@@ -87,7 +99,7 @@ export default function Give() {
             </div>
 
             <div className={`relative z-10 items-center ${isMobile ? "pt-16" : "pt-72"}`}>
-                <div className={`${isMobile ? "mb-72" : ""} relative bg-rug h-96 bg-no-repeat bg-cover bg-center`}>
+                <div className={`${isMobile ? "mb-72" : "h-96"} relative bg-rug h-16 bg-no-repeat bg-cover bg-center`}>
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                     <div className="absolute inset-0 bg-gradient-to-b from-color to-transparent"></div>
                 </div>
