@@ -69,7 +69,6 @@ export default function Give() {
                     ) : (
                         <div className="flex-col">
                             <div className="flex w-full px-12">
-                                // <div id='bloomerang-form-113664' className='pt-4 absolute left-40 top-0'></div>
                                 <div className="w-1/2 pt-4 text-black z-20">
                                     <GiftInfo />
                                 </div>
