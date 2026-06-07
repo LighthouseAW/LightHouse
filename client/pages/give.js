@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import HomeLayout from '../components/Index/HomeLayout';
 import DonatingSection from "../components/Give/DonatingSection"
 import GiftInfo from "../components/Give/GiftInfo"
@@ -6,6 +7,7 @@ import Contact from "../components/Contact"
 
 export default function Give() {
     const [isMobile, setIsMobile] = useState(false);
+    const router = useRouter();
 
     useEffect(() => {
         const checkIsMobile = () => {
@@ -17,13 +19,16 @@ export default function Give() {
         return () => window.removeEventListener("resize", checkIsMobile);
     }, []);
 
-   useEffect(() => {
-    const timer = setTimeout(() => {
-         
-        const existing = document.querySelector('script[src*="bloomerang"]');
-        if (existing && existing.parentNode) {
-            existing.parentNode.removeChild(existing);
-        }
+    const initScripts = () => {
+        // Clean up any existing scripts
+        ['script[src*="bloomerang"]', '#qgiv-embedjs'].forEach(selector => {
+            const el = document.querySelector(selector);
+            if (el && el.parentNode) el.parentNode.removeChild(el);
+        });
+
+        // Also clear the bloomerang form container so it re-renders
+        const formContainer = document.getElementById('bloomerang-form-113664');
+        if (formContainer) formContainer.innerHTML = '';
 
         const bloomerang = document.createElement("script");
         bloomerang.src = "https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/lighthousearabworld/.widget-js/113664.js";
@@ -41,29 +46,35 @@ export default function Give() {
             setTimeout(() => clearInterval(hideButton), 5000);
         };
 
-        // Same for Qgiv
-        const existingQgiv = document.getElementById("qgiv-embedjs");
-        if (existingQgiv && existingQgiv.parentNode) {
-            existingQgiv.parentNode.removeChild(existingQgiv);
-        }
-
         const qgiv = document.createElement("script");
         qgiv.id = "qgiv-embedjs";
         qgiv.src = "https://secure.qgiv.com/resources/core/js/embed.js";
         qgiv.async = true;
         document.body.appendChild(qgiv);
-    }, 500);
-
-    return () => {
-        clearTimeout(timer);
-        const bloomerang = document.querySelector('script[src*="bloomerang"]');
-        if (bloomerang && bloomerang.parentNode) {
-            bloomerang.parentNode.removeChild(bloomerang);
-        }
     };
-}, []);
-    
- 
+
+    useEffect(() => {
+        const timer = setTimeout(initScripts, 500);
+
+        // Re-initialize when routing to this page
+        const handleRouteChange = (url) => {
+            if (url.includes('/give')) {
+                setTimeout(initScripts, 500);
+            }
+        };
+
+        router.events.on('routeChangeComplete', handleRouteChange);
+
+        return () => {
+            clearTimeout(timer);
+            router.events.off('routeChangeComplete', handleRouteChange);
+            const bloomerang = document.querySelector('script[src*="bloomerang"]');
+            if (bloomerang && bloomerang.parentNode) {
+                bloomerang.parentNode.removeChild(bloomerang);
+            }
+        };
+    }, []);
+
     const title = "MAKING GOD'S LOVE VISIBLE TO EVERYONE IN THE MIDDLE EAST AND NORTH AFRICA"
 
     return (
@@ -110,8 +121,8 @@ export default function Give() {
                 </div>
             </div>
 
-            <div className={`relative z-10 items-center ${isMobile ? "pt-16" : "pt-72"}`}>
-                <div className={`${isMobile ? "mb-16" : "h-[500px]"} relative bg-rug h-16 bg-no-repeat bg-cover bg-center`}>
+            <div className={`relative z-10 items-center ${isMobile ? "pt-24" : "pt-72"}`}>
+                <div className={`${isMobile ? "mb-72" : ""} relative bg-rug h-[500px] bg-no-repeat bg-cover bg-center`}>
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-color"></div>
                     <div className="absolute inset-0 bg-gradient-to-b from-color to-transparent"></div>
                 </div>
