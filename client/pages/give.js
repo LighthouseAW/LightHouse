@@ -19,6 +19,12 @@ export default function Give() {
 
    useEffect(() => {
     const timer = setTimeout(() => {
+         
+        const existing = document.querySelector('script[src*="bloomerang"]');
+        if (existing && existing.parentNode) {
+            existing.parentNode.removeChild(existing);
+        }
+
         const bloomerang = document.createElement("script");
         bloomerang.src = "https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/lighthousearabworld/.widget-js/113664.js";
         bloomerang.async = true;
@@ -35,13 +41,17 @@ export default function Give() {
             setTimeout(() => clearInterval(hideButton), 5000);
         };
 
-        if (!document.getElementById("qgiv-embedjs")) {
-            const qgiv = document.createElement("script");
-            qgiv.id = "qgiv-embedjs";
-            qgiv.src = "https://secure.qgiv.com/resources/core/js/embed.js";
-            qgiv.async = true;
-            document.body.appendChild(qgiv);
+        // Same for Qgiv
+        const existingQgiv = document.getElementById("qgiv-embedjs");
+        if (existingQgiv && existingQgiv.parentNode) {
+            existingQgiv.parentNode.removeChild(existingQgiv);
         }
+
+        const qgiv = document.createElement("script");
+        qgiv.id = "qgiv-embedjs";
+        qgiv.src = "https://secure.qgiv.com/resources/core/js/embed.js";
+        qgiv.async = true;
+        document.body.appendChild(qgiv);
     }, 500);
 
     return () => {
