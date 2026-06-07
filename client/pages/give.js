@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 import HomeLayout from '../components/Index/HomeLayout';
 import DonatingSection from "../components/Give/DonatingSection"
 import GiftInfo from "../components/Give/GiftInfo"
@@ -7,7 +6,6 @@ import Contact from "../components/Contact"
 
 export default function Give() {
     const [isMobile, setIsMobile] = useState(false);
-    const router = useRouter();
 
     useEffect(() => {
         const checkIsMobile = () => {
@@ -19,17 +17,30 @@ export default function Give() {
         return () => window.removeEventListener("resize", checkIsMobile);
     }, []);
 
-    const initScripts = () => {
-        // Clean up any existing scripts
-        ['script[src*="bloomerang"]', '#qgiv-embedjs'].forEach(selector => {
-            const el = document.querySelector(selector);
-            if (el && el.parentNode) el.parentNode.removeChild(el);
-        });
+    // Qgiv — cleans up and re-initializes on every mount
+    useEffect(() => {
+        const existingQgiv = document.getElementById("qgiv-embedjs");
+        if (existingQgiv && existingQgiv.parentNode) {
+            existingQgiv.parentNode.removeChild(existingQgiv);
+        }
 
-        // Also clear the bloomerang form container so it re-renders
-        const formContainer = document.getElementById('bloomerang-form-113664');
-        if (formContainer) formContainer.innerHTML = '';
+        const embedContainer = document.querySelector('.qgiv-embed-container');
+        if (embedContainer) embedContainer.innerHTML = '';
 
+        const qgiv = document.createElement("script");
+        qgiv.id = "qgiv-embedjs";
+        qgiv.src = "https://secure.qgiv.com/resources/core/js/embed.js";
+        qgiv.async = true;
+        document.body.appendChild(qgiv);
+
+        return () => {
+            const qgiv = document.getElementById("qgiv-embedjs");
+            if (qgiv && qgiv.parentNode) qgiv.parentNode.removeChild(qgiv);
+        };
+    }, []);
+
+    // Bloomerang — loads once and hides the injected donate button
+    useEffect(() => {
         const bloomerang = document.createElement("script");
         bloomerang.src = "https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/lighthousearabworld/.widget-js/113664.js";
         bloomerang.async = true;
@@ -46,32 +57,9 @@ export default function Give() {
             setTimeout(() => clearInterval(hideButton), 5000);
         };
 
-        const qgiv = document.createElement("script");
-        qgiv.id = "qgiv-embedjs";
-        qgiv.src = "https://secure.qgiv.com/resources/core/js/embed.js";
-        qgiv.async = true;
-        document.body.appendChild(qgiv);
-    };
-
-    useEffect(() => {
-        const timer = setTimeout(initScripts, 500);
-
-        // Re-initialize when routing to this page
-        const handleRouteChange = (url) => {
-            if (url.includes('/give')) {
-                setTimeout(initScripts, 500);
-            }
-        };
-
-        router.events.on('routeChangeComplete', handleRouteChange);
-
         return () => {
-            clearTimeout(timer);
-            router.events.off('routeChangeComplete', handleRouteChange);
             const bloomerang = document.querySelector('script[src*="bloomerang"]');
-            if (bloomerang && bloomerang.parentNode) {
-                bloomerang.parentNode.removeChild(bloomerang);
-            }
+            if (bloomerang && bloomerang.parentNode) bloomerang.parentNode.removeChild(bloomerang);
         };
     }, []);
 
