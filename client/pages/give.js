@@ -53,13 +53,7 @@ export default function Give() {
     };
 }, []);
     
-    return () => {
-        clearTimeout(timer);
-        const bloomerang = document.querySelector('script[src*="bloomerang"]');
-        if (bloomerang) document.body.removeChild(bloomerang);
-    };
-}, []);
-
+ 
     const title = "MAKING GOD'S LOVE VISIBLE TO EVERYONE IN THE MIDDLE EAST AND NORTH AFRICA"
 
     return (
