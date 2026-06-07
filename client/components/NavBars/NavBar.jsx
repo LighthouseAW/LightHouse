@@ -207,7 +207,7 @@ export default function Navbar() {
                                         }}
                                         className={`hover:bg-slate-200 block w-full h-full flex justify-center text-center items-center ${selectedSubLink === "whereWeServe" ? "underline" : ""}`}
                                         >Where we serve</Link>
-            <Link
+            <a
                         href="/give"
                         onClick={() => {
                             setSelectedLink("give");
@@ -217,7 +217,7 @@ export default function Navbar() {
                         className={`h-20 w-60 flex justify-center items-center text-2xl ${selectedSubLink === "give" ? "underline" : ""}`}
                         >
                         Give
-                        </Link>
+                        </a>
     </div>
     </>
             : <div className="right-0">
@@ -343,7 +343,7 @@ export default function Navbar() {
                         </div>
                         <div className="">
                             <div className="hover:outline-orange-300 outline-[#f18802] outline outline-2 rounded-full">
-                        <Link
+                        <a
                         href="/give"
                         onClick={() => {
                             setSelectedLink("give");
@@ -352,7 +352,7 @@ export default function Navbar() {
                         className={`hover:text-orange-300 text-[#f18802] h-16 w-48 flex justify-center items-center text-2xl ${selectedSubLink === "give" ? "underline" : ""}`}
                         >
                         Give
-                        </Link>
+                        </a>
                         </div>
                         </div>
                 </div>
