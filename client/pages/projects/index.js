@@ -108,9 +108,9 @@ export default function Projects() {
                                 className="text-black  text-center text-2xl font-bold mb-8 z-20 relative"
                                 >{break22}</div>
                         </div>
-                            <Link href='/give' className=' underline text-black mt-2 text-center text-4xl font-bold mb-6 z-20 relative'>
+                            <a href='/give' className=' underline text-black mt-2 text-center text-4xl font-bold mb-6 z-20 relative'>
                                 Give now →
-                            </Link>
+                            </a>
                     </div>
                 </div>
             </div>
