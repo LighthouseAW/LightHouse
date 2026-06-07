@@ -17,14 +17,13 @@ export default function Give() {
         return () => window.removeEventListener("resize", checkIsMobile);
     }, []);
 
-    useEffect(() => {
+   useEffect(() => {
     const timer = setTimeout(() => {
         const bloomerang = document.createElement("script");
         bloomerang.src = "https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/lighthousearabworld/.widget-js/113664.js";
         bloomerang.async = true;
         document.body.appendChild(bloomerang);
 
-        // Hide Bloomerang's injected donate button after it loads
         bloomerang.onload = () => {
             const hideButton = setInterval(() => {
                 const btn = document.querySelector('.secure-btn-container');
@@ -45,6 +44,15 @@ export default function Give() {
         }
     }, 500);
 
+    return () => {
+        clearTimeout(timer);
+        const bloomerang = document.querySelector('script[src*="bloomerang"]');
+        if (bloomerang && bloomerang.parentNode) {
+            bloomerang.parentNode.removeChild(bloomerang);
+        }
+    };
+}, []);
+    
     return () => {
         clearTimeout(timer);
         const bloomerang = document.querySelector('script[src*="bloomerang"]');
